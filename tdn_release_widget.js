@@ -10,6 +10,16 @@
 // NOTE: Keep this file plain JS (no HTML entities) and host it on GitHub RAW.
 (function () {
   try {
+    // #region agent log (debug-session)
+    function __rnlog(hypothesisId, location, message, data) {
+      try {
+        fetch('http://127.0.0.1:7242/ingest/2da23971-14ba-4513-a0c7-5c1989cfafda', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sessionId: 'debug-session', runId: 'run1', hypothesisId: hypothesisId, location: location, message: message, data: data || {}, timestamp: Date.now() }) }).catch(function () {});
+      } catch (e) {}
+    }
+    // #endregion agent log (debug-session)
+
+    __rnlog('A', 'tdn_release_widget.js:boot', 'script_start', { hasFetch: typeof fetch, href: String(location && location.href || '') });
+
     var GITHUB_OWNER = 'Juansimeoni';
     var GITHUB_REPO = 'ReleaseDatasul';
     var GITHUB_BRANCH = 'main';
@@ -142,6 +152,7 @@
     }
 
     function renderNotAvailable(container) {
+      __rnlog('D', 'tdn_release_widget.js:renderNotAvailable', 'render_not_available', {});
       container.innerHTML =
         '<div style="padding:18px; border-left:4px solid #FFAB00; background:#FFFAE6; color:#172b4d;">' +
           '<div style="font-weight:700;">Esse documento ainda não está disponível no momento.</div>' +
@@ -149,13 +160,18 @@
     }
 
     var container = byId('widget-container');
-    if (!container) return;
+    if (!container) {
+      __rnlog('C', 'tdn_release_widget.js:container', 'container_not_found', { ids: { widget: !!byId('widget-container'), version: !!byId('version-display'), last: !!byId('last-update') } });
+      return;
+    }
+    __rnlog('C', 'tdn_release_widget.js:container', 'container_found', { ids: { version: !!byId('version-display'), last: !!byId('last-update') } });
 
     // Try to show logo (optional)
     setTotvsLogo();
 
     var versionResolved = getVersionOverrideFromQuery() || getPageVersion();
     if (!versionResolved) {
+      __rnlog('C', 'tdn_release_widget.js:version', 'version_not_resolved', { title: String(document && document.title || '') });
       container.innerHTML =
         '<div style="padding:18px; border-left:4px solid #DE350B; background:#FFEBE6; color:#172b4d;">' +
           '<div style="font-weight:700; margin-bottom:6px;">Versão não identificada</div>' +
@@ -163,6 +179,7 @@
         '</div>';
       return;
     }
+    __rnlog('C', 'tdn_release_widget.js:version', 'version_resolved', { version: versionResolved });
 
     setText('version-display', versionResolved);
     var titleEl = byId('page-title');
@@ -173,6 +190,7 @@
 
     var pathInRepo = buildRepoPath(versionResolved);
     var rawUrl = RAW_BASE + pathInRepo;
+    __rnlog('B', 'tdn_release_widget.js:fetch', 'starting_fetch', { rawUrl: rawUrl, pathInRepo: pathInRepo });
 
     Promise.all([
       fetch(rawUrl, { cache: 'no-store' }),
@@ -181,6 +199,7 @@
       var rawResp = pair[0];
       var commitIso = pair[1];
 
+      __rnlog('B', 'tdn_release_widget.js:fetch', 'fetch_done', { rawOk: !!(rawResp && rawResp.ok), rawStatus: rawResp ? rawResp.status : null, commitIso: commitIso ? String(commitIso) : null });
       if (!rawResp || !rawResp.ok) {
         setText('last-update', 'N/A');
         renderNotAvailable(container);
@@ -189,6 +208,7 @@
 
       rawResp.text().then(function (t) {
         var content = (t || '').trim();
+        __rnlog('B', 'tdn_release_widget.js:fetch', 'raw_text_read', { length: content.length });
         if (!content) {
           setText('last-update', 'N/A');
           renderNotAvailable(container);
@@ -212,14 +232,17 @@
         container.innerHTML = '';
         container.appendChild(pre);
       }).catch(function () {
+        __rnlog('E', 'tdn_release_widget.js:fetch', 'raw_text_error', {});
         setText('last-update', 'Erro');
         renderNotAvailable(container);
       });
     }).catch(function () {
+      __rnlog('E', 'tdn_release_widget.js:fetch', 'promise_all_error', {});
       setText('last-update', 'Erro');
       renderNotAvailable(container);
     });
   } catch (e) {
+    __rnlog('E', 'tdn_release_widget.js:boot', 'top_level_exception', { name: e && e.name ? String(e.name) : null, msg: e && e.message ? String(e.message) : null });
     // If something goes very wrong, fail silently to avoid breaking the page.
   }
 })();
