@@ -1,0 +1,160 @@
+# Release Notes - 12.1.2507.9
+
+**Patch:** `acerto-12.1.2507.8-12.1.2507.9`
+**Versão destino:** `12.1.2507.9`
+**Data:** 17/12/2025 23:10
+
+## Alterações no Banco de Dados
+
+### **dthrgst**
+
+- **Tabela nova:** `integr_cand_aprov` _(campos omitidos)_
+- **Tabela nova:** `integr_cand_aprov_aux` _(campos omitidos)_
+- **Índice adicionado:** `intcandaprov` (tabela `integr_cand_aprov`)
+- **Índice adicionado:** `intcandaprovaux` (tabela `integr_cand_aprov_aux`)
+
+### **dthrtma**
+
+- **Campo adicionado:** `idi_trat_cart_pto_transf` (tabela `param_empres_tma`, tipo `integer`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `char_content` (tabela `metadata_biz_schema`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_biz_schema`)
+- **Campo atualizado:** `char_content` (tabela `metadata_model`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_model`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_model`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_model`)
+- **Campo atualizado:** `char_content` (tabela `metadata_object`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_object`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_object`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_object`)
+- **Campo atualizado:** `char_content` (tabela `metadata_ui`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_ui`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_ui`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_ui`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_biz_schema`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_biz_schema`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_model`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_model`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_object`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_object`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_ui`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_ui`, tipo `blob`)
+
+### **emsuni**
+
+- **Campo adicionado:** `val_base_reduc_integral` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_base_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_coef_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_max_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+
+### **mgind**
+
+- **Campo adicionado:** `ano-mes-apuracao` (tabela `item-doc-orig-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-nbs` (tabela `relac-class-trib`, tipo `character`)
+- **Índice renomeado:** `ch-class-trib` → `t-4aac40bf5926406e953b6c3d13371b`
+- **Índice renomeado:** `ch-class-trib2` → `t-f0a3b8164a1a4898b71d7c9080fae8`
+- **Índice adicionado:** `ch-class-trib3` (tabela `relac-class-trib`)
+- **Índice adicionado:** `ch-class-trib` (tabela `relac-class-trib`)
+- **Índice adicionado:** `ch-class-trib2` (tabela `relac-class-trib`)
+- **Índice removido:** `t-4aac40bf5926406e953b6c3d13371b` (tabela `relac-class-trib`)
+- **Índice removido:** `t-f0a3b8164a1a4898b71d7c9080fae8` (tabela `relac-class-trib`)
+
+### **mgmnt**
+
+- **Campo adicionado:** `id-origem` (tabela `checklist-modelos`, tipo `integer`)
+- **Campo adicionado:** `codigo` (tabela `checklist-modelos`, tipo `character`)
+- **Campo adicionado:** `versao` (tabela `checklist-modelos`, tipo `integer`)
+
+### **movdbr**
+
+- **Índice adicionado:** `id-pai` (tabela `wtdbr-material`)
+
+### **movdis**
+
+- **Campo atualizado:** `val-tot-deb` (tabela `mtr-apurac-impto`)
+- **Campo atualizado:** `cod-desc-cclass` (tabela `mtr-doctos-cclass-trib`)
+- **Campo atualizado:** `val-cred-pres-cbs` (tabela `mtr-doctos-cred-deb`)
+- **Campo atualizado:** `val-cred-pres-ibs-uf` (tabela `mtr-doctos-cred-deb`)
+- **Campo atualizado:** `cod-desc-cst` (tabela `mtr-doctos-cst-trib`)
+- **Tabela nova:** `preferencias-usuario-fiscal` _(campos omitidos)_
+- **Índice adicionado:** `idx-pk` (tabela `preferencias-usuario-fiscal`)
+
+### **movind**
+
+- **Campo atualizado:** `id-integr` (tabela `recebimento-integr-me`)
+- **Campo atualizado:** `idi-integrado` (tabela `recebimento-integr-me`)
+- **Campo atualizado:** `idi-reg-excluido` (tabela `recebimento-integr-me`)
+- **Campo adicionado:** `sald-ini-mat-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `sald-ini-mob-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `sald-ini-ggf-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `ano-mes-apuracao` (tabela `item-doc-est`, tipo `character`)
+- **Campo adicionado:** `log-integrado` (tabela `recebimento-integr-me`, tipo `logical`)
+- **Campo adicionado:** `log-reg-excluido` (tabela `recebimento-integr-me`, tipo `logical`)
+- **Índice renomeado:** `idx-acao` → `t-d03ca3d41c0241209f61b5b95af1a2`
+- **Índice renomeado:** `idx-situacao` → `t-8c1168821ba343018b12eda819966f`
+- **Índice adicionado:** `data` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `fornecedor` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-idi-reg-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-reg-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `item` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `ordem` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `rcbtmtr-08` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `rejeicao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `ult-entrega` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-d03ca3d41c0241209f61b5b95af1a2` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-8c1168821ba343018b12eda819966f` (tabela `recebimento-integr-me`)
+
+### **srcadger**
+
+- **Tabela nova:** `prospeccao-abrangencia` _(campos omitidos)_
+- **Tabela nova:** `prospeccao-beneficiario` _(campos omitidos)_
+- **Tabela nova:** `prospeccao-contrato` _(campos omitidos)_
+- **Tabela nova:** `restri-clinica-modalidade` _(campos omitidos)_
+- **Índice adicionado:** `ix1` (tabela `prospeccao-abrangencia`)
+- **Índice adicionado:** `ix1` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix2` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix3` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix4` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix1` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix2` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix3` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix4` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `index-1` (tabela `restri-clinica-modalidade`)
+
+### **mgind**
+
+- **Índice renomeado:** `relac-class` → `t-6651edde66174fc38ce08eba21d09f`
+- **Índice adicionado:** `relac-class` (tabela `relac-class-trib`)
+- **Índice removido:** `t-6651edde66174fc38ce08eba21d09f` (tabela `relac-class-trib`)
+
+### **mgmnt**
+
+- **Índice adicionado:** `index-codigo-versao` (tabela `checklist-modelos`)
+
+### **movind**
+
+- **Índice renomeado:** `id1-chave` → `t-c9363c68350547c7900d777251be8c`
+- **Índice renomeado:** `idx-data` → `t-3f0328f478a947b0a7e918e88fc25c`
+- **Índice renomeado:** `idx-excluido` → `t-e70b535369ce4b979650409bb657e1`
+- **Índice renomeado:** `idx-fornecedor` → `t-2207b67907a142c5ab413c1f7fde5d`
+- **Índice renomeado:** `idx-item` → `t-af29ed2947fa4b908e74ea1e61be2d`
+- **Índice renomeado:** `idx-ordem` → `t-4659c7ba18504a91a4ad4894c6913d`
+- **Índice renomeado:** `idx-pedido` → `t-b66903c9794e4ec9a7833e38799e1c`
+- **Índice renomeado:** `idx-rcbtmtr-08` → `t-522ce4af06f140d79af1c06ba6b2f5`
+- **Índice renomeado:** `idx-rejeicao` → `t-089308c8708440debba4ec961357e3`
+- **Índice renomeado:** `idx-ult-entrega` → `t-65dc90b6ced949b38b5d328d12014f`
+- **Índice adicionado:** `pedido` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-c9363c68350547c7900d777251be8c` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-3f0328f478a947b0a7e918e88fc25c` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-e70b535369ce4b979650409bb657e1` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-2207b67907a142c5ab413c1f7fde5d` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-af29ed2947fa4b908e74ea1e61be2d` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-4659c7ba18504a91a4ad4894c6913d` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-b66903c9794e4ec9a7833e38799e1c` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-522ce4af06f140d79af1c06ba6b2f5` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-089308c8708440debba4ec961357e3` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-65dc90b6ced949b38b5d328d12014f` (tabela `recebimento-integr-me`)
