@@ -1,0 +1,131 @@
+# Release Notes - 12.1.2511.2
+
+**Patch:** `acerto-12.1.2511.1-12.1.2511.2`
+**Versão destino:** `12.1.2511.2`
+**Data:** 17/12/2025 23:11
+
+## Alterações no Banco de Dados
+
+### **emsfnd**
+
+- **Campo adicionado:** `dat_ult_sincroniz` (tabela `log_uso_metric`, tipo `datetime`)
+- **Campo adicionado:** `des_label` (tabela `noticia_link`, tipo `character`)
+- **Índice adicionado:** `loguso_ult_sinc` (tabela `log_uso_metric`)
+
+### **mgind**
+
+- **Campo adicionado:** `estorna-credito` (tabela `class-trib`, tipo `integer`)
+- **Campo adicionado:** `ajuste-credito` (tabela `class-trib`, tipo `integer`)
+- **Campo adicionado:** `cred-presumido-ibs-zfm` (tabela `class-trib`, tipo `integer`)
+- **Campo adicionado:** `data-atualizacao` (tabela `class-trib`, tipo `date`)
+- **Campo adicionado:** `cod-tipo-nf-cred-deb` (tabela `doc-orig-nfe`, tipo `character`)
+- **Campo adicionado:** `idi-presenca` (tabela `doc-orig-nfe`, tipo `integer`)
+- **Campo adicionado:** `log-intermediador` (tabela `doc-orig-nfe`, tipo `logical`)
+- **Campo adicionado:** `cnpj-intermediador` (tabela `doc-orig-nfe`, tipo `character`)
+- **Campo adicionado:** `id-cad-intermediador` (tabela `doc-orig-nfe`, tipo `character`)
+- **Campo adicionado:** `dt-prev-entrega` (tabela `doc-orig-nfe`, tipo `date`)
+- **Campo adicionado:** `log-doacao` (tabela `docto-orig-cte`, tipo `logical`)
+- **Campo adicionado:** `log-doacao` (tabela `item-doc-orig-nfe`, tipo `logical`)
+
+### **mgmnt**
+
+- **Campo adicionado:** `etiquetas` (tabela `checklist-modelos`, tipo `character`)
+
+### **mguni**
+
+- **Campo adicionado:** `log-bloq-pagto-parcial` (tabela `param-geral-esoc`, tipo `logical`)
+
+### **movdis**
+
+- **Campo atualizado:** `dec-aliq` (tabela `mtr-config-simulador`)
+- **Campo atualizado:** `dec-perc-reduc` (tabela `mtr-config-simulador`)
+- **Campo atualizado:** `dec-aliquota-is` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-reduc-is` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliq-reduz-is` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliquota-cbs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-reduc-cbs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliq-reduz-cbs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliquota-ibs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-reduc-ibs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliq-reduz-ibs` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliquota-ipi` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-reduc-ipi` (tabela `mtr-docto-simulador-tributario`)
+- **Campo atualizado:** `dec-aliq-reduz-ipi` (tabela `mtr-docto-simulador-tributario`)
+- **Tabela nova:** `mtr-doctos-cclass-trib` _(campos omitidos)_
+- **Tabela nova:** `mtr-doctos-cred-deb` _(campos omitidos)_
+- **Tabela nova:** `mtr-doctos-cst-trib` _(campos omitidos)_
+- **Campo adicionado:** `dt-prev-entrega` (tabela `doc-fiscal`, tipo `date`)
+- **Campo adicionado:** `ind-doacao` (tabela `it-doc-fisc`, tipo `logical`)
+- **Campo adicionado:** `doacao` (tabela `it-nota-fisc-trib`, tipo `logical`)
+- **Campo adicionado:** `val-tot-cred` (tabela `mtr-apurac-impto`, tipo `decimal`)
+- **Campo adicionado:** `val-tot-deb` (tabela `mtr-apurac-impto`, tipo `decimal`)
+- **Campo adicionado:** `dec-bc-ibs-uf` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-aliquota-ibs-uf` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-reduc-ibs-uf` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-aliq-reduz-ibs-uf` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-valor-ibs-uf` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-bc-ibs-mun` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-aliquota-ibs-mun` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-reduc-ibs-mun` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-aliq-reduz-ibs-mun` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `dec-valor-ibs-mun` (tabela `mtr-docto-simulador-tributario`, tipo `decimal`)
+- **Campo adicionado:** `val-tributo` (tabela `mtr-tributos-uf`, tipo `decimal`)
+- **Campo adicionado:** `val-tributo-sn` (tabela `mtr-tributos-uf`, tipo `decimal`)
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cclass-trib`)
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cred-deb`)
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cst-trib`)
+- **Índice adicionado:** `ch-dt-prev-entrega` (tabela `doc-fiscal`)
+
+### **movind**
+
+- **Tabela nova:** `recebimento-integr-me` _(campos omitidos)_
+- **Campo adicionado:** `valor-ggf-prod` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `valor-mob-prod` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `valor-mat-prod` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `medio-calc` (tabela `custo-item`, tipo `logical`)
+- **Campo adicionado:** `qt-produzida` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `log-doacao` (tabela `despesa-aces`, tipo `logical`)
+- **Campo adicionado:** `log-doacao` (tabela `it-doc-fisico`, tipo `logical`)
+- **Campo adicionado:** `log-doacao` (tabela `item-doc-est`, tipo `logical`)
+- **Índice adicionado:** `id1-chave` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-data` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-fornecedor` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-item` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-ordem` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-pedido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-rcbtmtr-08` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-rejeicao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-ult-entrega` (tabela `recebimento-integr-me`)
+
+### **srcadger**
+
+- **Campo atualizado:** `lg-envia-link-whatsapp` (tabela `clinpres`)
+- **Campo adicionado:** `lg-notifica-dispositivo-benef` (tabela `clinpres`, tipo `logical`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `des-versao-cmb` (tabela `faturas-intercambio-ptu`)
+- **Campo atualizado:** `log-ocupacional` (tabela `faturas-intercambio-ptu`)
+- **Índice adicionado:** `gtrzcmp-12` (tabela `guia-autoriz-comp`)
+- **Índice adicionado:** `guiaut23` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut24` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut25` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut26` (tabela `guiautor`)
+
+### **srcadger**
+
+- **Tabela removida:** `param-integr-rd-conversas`
+
+### **srmovcon**
+
+- **Índice renomeado:** `gtrzcmp-10` → `t-958cea357be243158b071bf29a52b5`
+- **Índice renomeado:** `gtrzcmp-11` → `t-7e2ba44d90b14ed5bffab80249badc`
+- **Índice renomeado:** `guiaut21` → `t-b727eb9f8b304f67b821317083e165`
+- **Índice renomeado:** `guiaut22` → `t-a69bb76d141f46e494afa514e8f410`
+- **Índice removido:** `t-958cea357be243158b071bf29a52b5` (tabela `guia-autoriz-comp`)
+- **Índice removido:** `t-7e2ba44d90b14ed5bffab80249badc` (tabela `guia-autoriz-comp`)
+- **Índice removido:** `t-b727eb9f8b304f67b821317083e165` (tabela `guiautor`)
+- **Índice removido:** `t-a69bb76d141f46e494afa514e8f410` (tabela `guiautor`)
