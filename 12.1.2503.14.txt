@@ -2,7 +2,7 @@
 
 **Patch:** `acerto-12.1.2503.13-12.1.2503.14`
 **Versão destino:** `12.1.2503.14`
-**Data:** 17/12/2025 22:38
+**Data:** 17/12/2025 22:44
 
 ## Alterações no Banco de Dados
 
@@ -10,7 +10,7 @@
 
 - **Campo adicionado:** `dat_ult_sincroniz` (tabela `log_uso_metric`)
 - **Campo adicionado:** `des_label` (tabela `noticia_link`)
-- **Índice adicionado:** ADD INDEX "loguso_ult_sinc" ON "log_uso_metric"
+- **Índice adicionado:** `loguso_ult_sinc` (tabela `log_uso_metric`)
 
 ### **mgind**
 
@@ -71,10 +71,10 @@
 - **Campo adicionado:** `dec-valor-ibs-mun` (tabela `mtr-docto-simulador-tributario`)
 - **Campo adicionado:** `val-tributo` (tabela `mtr-tributos-uf`)
 - **Campo adicionado:** `val-tributo-sn` (tabela `mtr-tributos-uf`)
-- **Índice adicionado:** ADD INDEX "idx-primary" ON "mtr-doctos-cclass-trib"
-- **Índice adicionado:** ADD INDEX "idx-primary" ON "mtr-doctos-cred-deb"
-- **Índice adicionado:** ADD INDEX "idx-primary" ON "mtr-doctos-cst-trib"
-- **Índice adicionado:** ADD INDEX "ch-dt-prev-entrega" ON "doc-fiscal"
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cclass-trib`)
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cred-deb`)
+- **Índice adicionado:** `idx-primary` (tabela `mtr-doctos-cst-trib`)
+- **Índice adicionado:** `ch-dt-prev-entrega` (tabela `doc-fiscal`)
 
 ### **movind**
 
@@ -87,18 +87,18 @@
 - **Campo adicionado:** `log-doacao` (tabela `despesa-aces`)
 - **Campo adicionado:** `log-doacao` (tabela `it-doc-fisico`)
 - **Campo adicionado:** `log-doacao` (tabela `item-doc-est`)
-- **Índice adicionado:** ADD INDEX "id1-chave" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-acao" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-data" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-excluido" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-fornecedor" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-item" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-ordem" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-pedido" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-rcbtmtr-08" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-rejeicao" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-situacao" ON "recebimento-integr-me"
-- **Índice adicionado:** ADD INDEX "idx-ult-entrega" ON "recebimento-integr-me"
+- **Índice adicionado:** `id1-chave` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-data` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-fornecedor` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-item` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-ordem` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-pedido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-rcbtmtr-08` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-rejeicao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-ult-entrega` (tabela `recebimento-integr-me`)
 
 ### **srcadger**
 
@@ -109,11 +109,11 @@
 
 - **Campo atualizado:** `des-versao-cmb` (tabela `faturas-intercambio-ptu`)
 - **Campo atualizado:** `log-ocupacional` (tabela `faturas-intercambio-ptu`)
-- **Índice adicionado:** ADD INDEX "gtrzcmp-12" ON "guia-autoriz-comp"
-- **Índice adicionado:** ADD INDEX "guiaut23" ON "guiautor"
-- **Índice adicionado:** ADD INDEX "guiaut24" ON "guiautor"
-- **Índice adicionado:** ADD INDEX "guiaut25" ON "guiautor"
-- **Índice adicionado:** ADD INDEX "guiaut26" ON "guiautor"
+- **Índice adicionado:** `gtrzcmp-12` (tabela `guia-autoriz-comp`)
+- **Índice adicionado:** `guiaut23` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut24` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut25` (tabela `guiautor`)
+- **Índice adicionado:** `guiaut26` (tabela `guiautor`)
 
 ### **srcadger**
 
@@ -121,11 +121,11 @@
 
 ### **srmovcon**
 
-- **Índice renomeado:** RENAME INDEX "gtrzcmp-10" TO "t-3d21a8febc3a47258180ad2ab3e97a" ON "guia-autoriz-comp"
-- **Índice renomeado:** RENAME INDEX "gtrzcmp-11" TO "t-5cbab56d55024bb496e0db21b6a98a" ON "guia-autoriz-comp"
-- **Índice renomeado:** RENAME INDEX "guiaut21" TO "t-0b3a2b54094b413195e5258f4eca59" ON "guiautor"
-- **Índice renomeado:** RENAME INDEX "guiaut22" TO "t-ec078f8173dd4ff1a9f3c7d71af428" ON "guiautor"
-- **Índice removido:** DROP INDEX "t-3d21a8febc3a47258180ad2ab3e97a" ON "guia-autoriz-comp"
-- **Índice removido:** DROP INDEX "t-5cbab56d55024bb496e0db21b6a98a" ON "guia-autoriz-comp"
-- **Índice removido:** DROP INDEX "t-0b3a2b54094b413195e5258f4eca59" ON "guiautor"
-- **Índice removido:** DROP INDEX "t-ec078f8173dd4ff1a9f3c7d71af428" ON "guiautor"
+- **Índice renomeado:** `gtrzcmp-10` → `t-3d21a8febc3a47258180ad2ab3e97a`
+- **Índice renomeado:** `gtrzcmp-11` → `t-5cbab56d55024bb496e0db21b6a98a`
+- **Índice renomeado:** `guiaut21` → `t-0b3a2b54094b413195e5258f4eca59`
+- **Índice renomeado:** `guiaut22` → `t-ec078f8173dd4ff1a9f3c7d71af428`
+- **Índice removido:** `t-3d21a8febc3a47258180ad2ab3e97a` (tabela `guia-autoriz-comp`)
+- **Índice removido:** `t-5cbab56d55024bb496e0db21b6a98a` (tabela `guia-autoriz-comp`)
+- **Índice removido:** `t-0b3a2b54094b413195e5258f4eca59` (tabela `guiautor`)
+- **Índice removido:** `t-ec078f8173dd4ff1a9f3c7d71af428` (tabela `guiautor`)
