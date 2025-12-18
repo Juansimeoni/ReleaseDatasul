@@ -16,7 +16,6 @@
     var GITHUB_PATH_PREFIX = ''; // optional folder inside repo (no leading/trailing slash)
 
     var RAW_BASE = 'https://raw.githubusercontent.com/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/' + GITHUB_BRANCH + '/';
-    var API_BASE = 'https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/';
 
     function buildRepoPath(version) {
       var filename = version + '.txt';
@@ -30,16 +29,6 @@
     function setText(id, text) {
       var el = byId(id);
       if (el) el.textContent = (text == null ? '-' : String(text));
-    }
-
-    function formatDatePtBr(value) {
-      try {
-        var d = new Date(value);
-        if (isNaN(d.getTime())) return null;
-        return d.toLocaleString('pt-BR');
-      } catch (e) {
-        return null;
-      }
     }
 
     function getPageVersion() {
@@ -120,26 +109,6 @@
       return null;
     }
 
-    function tryFetchCommitDate(pathInRepo) {
-      // Use a safe querystring builder (avoid '&' issues in some environments)
-      var url = API_BASE + 'commits?path=' + encodeURIComponent(pathInRepo) +
-        '&sha=' + encodeURIComponent(GITHUB_BRANCH) + '&per_page=1';
-
-      return fetch(url, { cache: 'no-store' })
-        .then(function (resp) {
-          if (!resp.ok) return null;
-          return resp.json();
-        })
-        .then(function (arr) {
-          if (!arr || !arr.length) return null;
-          var c = arr[0] || {};
-          var commit = c.commit || {};
-          var committer = commit.committer || {};
-          var author = commit.author || {};
-          return committer.date || author.date || null;
-        })
-        .catch(function () { return null; });
-    }
 
     function renderNotAvailable(container) {
       container.innerHTML =
@@ -252,21 +221,13 @@
     var titleEl = byId('page-title');
     if (titleEl) titleEl.textContent = 'Dicionário de Dados ' + versionResolved;
 
-    setText('last-update', 'Carregando...');
     container.innerHTML = '<div style="padding:18px; color:#6b778c;">Carregando conteúdo do GitHub...</div>';
 
     var pathInRepo = buildRepoPath(versionResolved);
     var rawUrl = RAW_BASE + pathInRepo;
 
-    Promise.all([
-      fetch(rawUrl, { cache: 'no-store' }),
-      tryFetchCommitDate(pathInRepo)
-    ]).then(function (pair) {
-      var rawResp = pair[0];
-      var commitIso = pair[1];
-
+    fetch(rawUrl, { cache: 'no-store' }).then(function (rawResp) {
       if (!rawResp || !rawResp.ok) {
-        setText('last-update', 'N/A');
         renderNotAvailable(container);
         return;
       }
@@ -274,28 +235,17 @@
       rawResp.text().then(function (t) {
         var content = (t || '').trim();
         if (!content) {
-          setText('last-update', 'N/A');
           renderNotAvailable(container);
           return;
         }
-
-        var lastModifiedHeader = rawResp.headers ? rawResp.headers.get('Last-Modified') : null;
-        var dateText = null;
-        if (commitIso) dateText = formatDatePtBr(commitIso);
-        if (!dateText && lastModifiedHeader) dateText = formatDatePtBr(lastModifiedHeader);
-        setText('last-update', dateText || 'N/A');
-
-        var pre = document.createElement('pre');
 
               // If you want the old monospace behavior back, swap renderMarkup() with the <pre> below.
               // For readability, we render a safe Markdown-ish subset.
               renderMarkup(container, content);
       }).catch(function () {
-        setText('last-update', 'Erro');
         renderNotAvailable(container);
       });
     }).catch(function () {
-      setText('last-update', 'Erro');
       renderNotAvailable(container);
     });
   } catch (e) {
