@@ -159,6 +159,88 @@
         '</div>';
     }
 
+    function escapeHtml(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // Render a tiny, safe Markdown-ish subset to improve readability in TDN.
+    // Supported:
+    // - # / ## / ### headings
+    // - "- " bullets
+    // - **bold**
+    // - `inline code`
+    function renderMarkup(container, contentText) {
+      var lines = String(contentText || '').replace(/\r\n/g, '\n').split('\n');
+      var out = [];
+      var inList = false;
+
+      function closeList() {
+        if (inList) {
+          out.push('</ul>');
+          inList = false;
+        }
+      }
+
+      function inlineFormat(escapedLine) {
+        // **bold**
+        escapedLine = escapedLine.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        // `code`
+        escapedLine = escapedLine.replace(/`([^`]+)`/g, '<code style="background:#f4f5f7; padding:1px 4px; border-radius:4px; font-family: Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;">$1</code>');
+        return escapedLine;
+      }
+
+      for (var i = 0; i < lines.length; i++) {
+        var raw = lines[i];
+        var line = raw == null ? '' : String(raw);
+
+        if (!line.trim()) {
+          closeList();
+          out.push('<div style="height:10px;"></div>');
+          continue;
+        }
+
+        var esc = escapeHtml(line);
+        if (esc.indexOf('### ') === 0) {
+          closeList();
+          out.push('<div style="padding:10px 16px 0; font-size:15px; font-weight:700; color:#172b4d;">' + inlineFormat(esc.slice(4)) + '</div>');
+          continue;
+        }
+        if (esc.indexOf('## ') === 0) {
+          closeList();
+          out.push('<div style="padding:12px 16px 0; font-size:16px; font-weight:800; color:#172b4d;">' + inlineFormat(esc.slice(3)) + '</div>');
+          continue;
+        }
+        if (esc.indexOf('# ') === 0) {
+          closeList();
+          out.push('<div style="padding:14px 16px 4px; font-size:18px; font-weight:900; color:#172b4d;">' + inlineFormat(esc.slice(2)) + '</div>');
+          continue;
+        }
+
+        if (esc.indexOf('- ') === 0) {
+          if (!inList) {
+            out.push('<ul style="margin:8px 0 8px 34px; padding:0; color:#172b4d; line-height:1.45;">');
+            inList = true;
+          }
+          out.push('<li style="margin:4px 0;">' + inlineFormat(esc.slice(2)) + '</li>');
+          continue;
+        }
+
+        closeList();
+        out.push('<div style="padding:0 16px; color:#172b4d; line-height:1.55;">' + inlineFormat(esc) + '</div>');
+      }
+
+      closeList();
+      container.innerHTML =
+        '<div style="padding:10px 0 14px 0; background:#ffffff; border-top:1px solid #dfe1e6;">' +
+          out.join('') +
+        '</div>';
+    }
+
     var container = byId('widget-container');
     if (!container) {
       __rnlog('C', 'tdn_release_widget.js:container', 'container_not_found', { ids: { widget: !!byId('widget-container'), version: !!byId('version-display'), last: !!byId('last-update') } });
@@ -222,15 +304,10 @@
         setText('last-update', dateText || 'N/A');
 
         var pre = document.createElement('pre');
-        pre.style.whiteSpace = 'pre-wrap';
-        pre.style.margin = '0';
-        pre.style.padding = '16px';
-        pre.style.borderTop = '1px solid #dfe1e6';
-        pre.style.fontFamily = 'Consolas, Menlo, Monaco, "Courier New", monospace';
-        pre.textContent = content;
 
-        container.innerHTML = '';
-        container.appendChild(pre);
+              // If you want the old monospace behavior back, swap renderMarkup() with the <pre> below.
+              // For readability, we render a safe Markdown-ish subset.
+              renderMarkup(container, content);
       }).catch(function () {
         __rnlog('E', 'tdn_release_widget.js:fetch', 'raw_text_error', {});
         setText('last-update', 'Erro');
