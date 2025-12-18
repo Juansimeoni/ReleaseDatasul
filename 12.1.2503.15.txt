@@ -1,477 +1,160 @@
-# Release Notes - Patch acerto-12.1.2503.14-12.1.2503.15
+# Release Notes - 12.1.2503.15
 
-**Patch:** acerto-12.1.2503.14-12.1.2503.15
-**Data:** 17/12/2025 15:02
+**Patch:** `acerto-12.1.2503.14-12.1.2503.15`
+**Versão destino:** `12.1.2503.15`
+**Data:** 17/12/2025 23:03
 
 ## Alterações no Banco de Dados
 
-### dthrgst
-
-Adicionada tabela nova "integr_cand_aprov"
-  TABLE-TRIGGER "Create" OVERRIDE PROCEDURE "database/tggt/tcp/tcgt00501.p" CRC "?"
-  TABLE-TRIGGER "Delete" OVERRIDE PROCEDURE "database/tggt/tdp/tdgt00501.p" CRC "?"
-  TABLE-TRIGGER "Write" OVERRIDE PROCEDURE "database/tggt/twp/twgt00501.p" CRC "?"
-
-Adicionada tabela nova "integr_cand_aprov_aux"
-  TABLE-TRIGGER "Create" OVERRIDE PROCEDURE "database/tggt/tcp/tcgt00502.p" CRC "?"
-  TABLE-TRIGGER "Delete" OVERRIDE PROCEDURE "database/tggt/tdp/tdgt00502.p" CRC "?"
-  TABLE-TRIGGER "Write" OVERRIDE PROCEDURE "database/tggt/twp/twgt00502.p" CRC "?"
-
-Adicionado campo "cdn_candempr" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cdn_vaga" OF "integr_cand_aprov"
-
-Adicionado campo "num_seq" OF "integr_cand_aprov"
-
-Adicionado campo "dat_contratacao" OF "integr_cand_aprov" AS date
-
-Adicionado campo "nom_candidato" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_social" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cod_id_feder" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_mail_contat" OF "integr_cand_aprov" AS character
-
-Adicionado campo "dat_nascimento" OF "integr_cand_aprov" AS date
-
-Adicionado campo "num_telef" OF "integr_cand_aprov"
-
-Adicionado campo "cod_cep" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_cidade" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cod_unid_feder" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_ender" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_pto_refer" OF "integr_cand_aprov" AS character
-
-Adicionado campo "nom_bairro" OF "integr_cand_aprov" AS character
-
-Adicionado campo "idi_sexo" OF "integr_cand_aprov"
-
-Adicionado campo "log_deficiencia" OF "integr_cand_aprov"
-
-Adicionado campo "cod_cnpj_estab" OF "integr_cand_aprov" AS character
-
-Adicionado campo "desc_estab" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cod_departamento" OF "integr_cand_aprov" AS character
-
-Adicionado campo "desc_departamento" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cdn_cargo_basic" OF "integr_cand_aprov"
-
-Adicionado campo "desc_cargo_basic" OF "integr_cand_aprov" AS character
-
-Adicionado campo "idi_tip_func" OF "integr_cand_aprov"
-
-Adicionado campo "num_pessoa_fisic" OF "integr_cand_aprov"
-
-Adicionado campo "idi_status_cadastro" OF "integr_cand_aprov"
-
-Adicionado campo "cod_usuar_ult_atualiz" OF "integr_cand_aprov" AS character
-
-Adicionado campo "dat_ult_atualiz" OF "integr_cand_aprov" AS date
-
-Adicionado campo "hra_ult_atualiz" OF "integr_cand_aprov" AS character
-
-Adicionado campo "dat_livre_1" OF "integr_cand_aprov" AS date
-
-Adicionado campo "dat_livre_2" OF "integr_cand_aprov" AS date
-
-Adicionado campo "num_livre_1" OF "integr_cand_aprov"
-
-Adicionado campo "num_livre_2" OF "integr_cand_aprov"
-
-Adicionado campo "val_livre_1" OF "integr_cand_aprov" AS decimal
-
-Adicionado campo "val_livre_2" OF "integr_cand_aprov" AS decimal
-
-Adicionado campo "cod_livre_1" OF "integr_cand_aprov" AS character
-
-Adicionado campo "cod_livre_2" OF "integr_cand_aprov" AS character
-
-Adicionado campo "log_livre_1" OF "integr_cand_aprov"
-
-Adicionado campo "log_livre_2" OF "integr_cand_aprov"
-
-Adicionado campo "cdn_candempr" OF "integr_cand_aprov_aux" AS character
-
-Adicionado campo "cdn_vaga" OF "integr_cand_aprov_aux"
-
-Adicionado campo "num_seq" OF "integr_cand_aprov_aux"
-
-Adicionado campo "blb_msg" OF "integr_cand_aprov_aux" AS blob
-  LOB-BYTES 104857600
-  LOB-SIZE ?
-
-Adicionado campo "cod_usuar_ult_atualiz" OF "integr_cand_aprov_aux" AS character
-
-Adicionado campo "dat_ult_atualiz" OF "integr_cand_aprov_aux" AS date
-
-Adicionado campo "hra_ult_atualiz" OF "integr_cand_aprov_aux" AS character
-
-Adicionado campo "dat_livre_1" OF "integr_cand_aprov_aux" AS date
-
-Adicionado campo "dat_livre_2" OF "integr_cand_aprov_aux" AS date
-
-Adicionado campo "num_livre_1" OF "integr_cand_aprov_aux"
-
-Adicionado campo "num_livre_2" OF "integr_cand_aprov_aux"
-
-Adicionado campo "val_livre_1" OF "integr_cand_aprov_aux" AS decimal
-
-Adicionado campo "val_livre_2" OF "integr_cand_aprov_aux" AS decimal
-
-Adicionado campo "cod_livre_1" OF "integr_cand_aprov_aux" AS character
-
-Adicionado campo "cod_livre_2" OF "integr_cand_aprov_aux" AS character
-
-Adicionado campo "log_livre_1" OF "integr_cand_aprov_aux"
-
-Adicionado campo "log_livre_2" OF "integr_cand_aprov_aux"
-
-Adicionado índice "intcandaprov" ON "integr_cand_aprov"
-
-Adicionado índice "intcandaprovaux" ON "integr_cand_aprov_aux"
-
-### dthrtma
-
-Adicionado campo "idi_trat_cart_pto_transf" OF "param_empres_tma"
-
-### emsfnd
-
-Atualizado campo "char_content" OF "metadata_biz_schema"
-
-Atualizado campo "blb_content" OF "metadata_biz_schema"
-
-Atualizado campo "char_content" OF "metadata_model"
-
-Atualizado campo "blb_content" OF "metadata_model"
-
-Atualizado campo "char_content_custom" OF "metadata_model"
-
-Atualizado campo "blb_content_custom" OF "metadata_model"
-
-Atualizado campo "char_content" OF "metadata_object"
-
-Atualizado campo "blb_content" OF "metadata_object"
-
-Atualizado campo "char_content_custom" OF "metadata_object"
-
-Atualizado campo "blb_content_custom" OF "metadata_object"
-
-Atualizado campo "char_content" OF "metadata_ui"
-
-Atualizado campo "blb_content" OF "metadata_ui"
-
-Atualizado campo "char_content_custom" OF "metadata_ui"
-
-Atualizado campo "blb_content_custom" OF "metadata_ui"
-
-Adicionado campo "char_content_source" OF "metadata_biz_schema" AS character
-
-Adicionado campo "blb_content_source" OF "metadata_biz_schema" AS blob
-  LOB-BYTES 10485760
-  LOB-SIZE "10M"
-
-Adicionado campo "char_content_source" OF "metadata_model" AS character
-
-Adicionado campo "blb_content_source" OF "metadata_model" AS blob
-  LOB-BYTES 5242880
-  LOB-SIZE "5M"
-
-Adicionado campo "char_content_source" OF "metadata_object" AS character
-
-Adicionado campo "blb_content_source" OF "metadata_object" AS blob
-  LOB-BYTES 104857600
-  LOB-SIZE "100M"
-
-Adicionado campo "char_content_source" OF "metadata_ui" AS character
-
-Adicionado campo "blb_content_source" OF "metadata_ui" AS blob
-  LOB-BYTES 10485760
-  LOB-SIZE "10M"
-
-### emsuni
-
-Adicionado campo "val_base_reduc_integral" OF "valid_tab_prgssiv_impto" AS decimal
-
-Adicionado campo "val_base_reduc_parcial" OF "valid_tab_prgssiv_impto" AS decimal
-
-Adicionado campo "val_coef_reduc_parcial" OF "valid_tab_prgssiv_impto" AS decimal
-
-Adicionado campo "val_max_reduc_parcial" OF "valid_tab_prgssiv_impto" AS decimal
-
-### mgind
-
-Adicionado campo "ano-mes-apuracao" OF "item-doc-orig-nfe" AS character
-
-Adicionado campo "cod-nbs" OF "relac-class-trib" AS character
-
-Renomeado índice "ch-class-trib" TO "t-5b2951a425db4d4dbafaceff4ece5e" ON "relac-class-trib"
-
-Renomeado índice "ch-class-trib2" TO "t-bdf5216da0c44c0785b41800c946da" ON "relac-class-trib"
-
-Adicionado índice "ch-class-trib3" ON "relac-class-trib"
-
-Adicionado índice "ch-class-trib" ON "relac-class-trib"
-
-Adicionado índice "ch-class-trib2" ON "relac-class-trib"
-
-Removido índice "t-5b2951a425db4d4dbafaceff4ece5e" ON "relac-class-trib"
-
-Removido índice "t-bdf5216da0c44c0785b41800c946da" ON "relac-class-trib"
-
-### mgmnt
-
-Adicionado campo "id-origem" OF "checklist-modelos"
-
-Adicionado campo "codigo" OF "checklist-modelos" AS character
-
-Adicionado campo "versao" OF "checklist-modelos"
-
-### movdbr
-
-Adicionado índice "id-pai" ON "wtdbr-material"
-
-### movdis
-
-Atualizado campo "val-tot-deb" OF "mtr-apurac-impto"
-
-Atualizado campo "cod-desc-cclass" OF "mtr-doctos-cclass-trib"
-
-Atualizado campo "val-cred-pres-cbs" OF "mtr-doctos-cred-deb"
-
-Atualizado campo "val-cred-pres-ibs-uf" OF "mtr-doctos-cred-deb"
-
-Atualizado campo "cod-desc-cst" OF "mtr-doctos-cst-trib"
-
-Adicionada tabela nova "preferencias-usuario-fiscal"
-
-Adicionado campo "num-id" OF "preferencias-usuario-fiscal" AS decimal
-
-Adicionado campo "cod-nome-grupo" OF "preferencias-usuario-fiscal" AS character
-
-Adicionado campo "cod-usuario" OF "preferencias-usuario-fiscal" AS character
-
-Adicionado campo "num-posicao" OF "preferencias-usuario-fiscal"
-
-Adicionado campo "log-visivel" OF "preferencias-usuario-fiscal"
-
-Adicionado campo "cod-estab" OF "preferencias-usuario-fiscal" AS character
-
-Adicionado índice "idx-pk" ON "preferencias-usuario-fiscal"
-
-### movind
-
-Atualizado campo "id-integr" OF "recebimento-integr-me"
-
-Atualizado campo "idi-integrado" OF "recebimento-integr-me"
-
-Atualizado campo "idi-reg-excluido" OF "recebimento-integr-me"
-
-Adicionado campo "sald-ini-mat-m" OF "custo-item" AS decimal
-  EXTENT 3
-
-Adicionado campo "sald-ini-mob-m" OF "custo-item" AS decimal
-  EXTENT 3
-
-Adicionado campo "sald-ini-ggf-m" OF "custo-item" AS decimal
-  EXTENT 3
-
-Adicionado campo "ano-mes-apuracao" OF "item-doc-est" AS character
-
-Adicionado campo "log-integrado" OF "recebimento-integr-me"
-
-Adicionado campo "log-reg-excluido" OF "recebimento-integr-me"
-
-Renomeado índice "idx-acao" TO "t-5140e3a52d50410ab9108c27bc005d" ON "recebimento-integr-me"
-
-Renomeado índice "idx-situacao" TO "t-7efc7ecf04a54e9a992070c6793aa9" ON "recebimento-integr-me"
-
-Adicionado índice "data" ON "recebimento-integr-me"
-
-Adicionado índice "fornecedor" ON "recebimento-integr-me"
-
-Adicionado índice "idx-idi-reg-excluido" ON "recebimento-integr-me"
-
-Adicionado índice "idx-reg-excluido" ON "recebimento-integr-me"
-
-Adicionado índice "item" ON "recebimento-integr-me"
-
-Adicionado índice "ordem" ON "recebimento-integr-me"
-
-Adicionado índice "rcbtmtr-08" ON "recebimento-integr-me"
-
-Adicionado índice "rejeicao" ON "recebimento-integr-me"
-
-Adicionado índice "ult-entrega" ON "recebimento-integr-me"
-
-Adicionado índice "idx-acao" ON "recebimento-integr-me"
-
-Adicionado índice "idx-situacao" ON "recebimento-integr-me"
-
-Removido índice "t-5140e3a52d50410ab9108c27bc005d" ON "recebimento-integr-me"
-
-Removido índice "t-7efc7ecf04a54e9a992070c6793aa9" ON "recebimento-integr-me"
-
-### srcadger
-
-Adicionada tabela nova "prospeccao-abrangencia"
-
-Adicionada tabela nova "prospeccao-beneficiario"
-
-Adicionada tabela nova "prospeccao-contrato"
-
-Adicionada tabela nova "restri-clinica-modalidade"
-
-Adicionado campo "id-prospeccao" OF "prospeccao-abrangencia"
-
-Adicionado campo "cd-municipio" OF "prospeccao-abrangencia" AS character
-
-Adicionado campo "cd-uf" OF "prospeccao-abrangencia" AS character
-
-Adicionado campo "id-prospeccao" OF "prospeccao-beneficiario"
-
-Adicionado campo "nm-completo-beneficiario" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "cd-cpf" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "cd-dependencia" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "ds-logradouro-principal" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "ds-numero-logradouro" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "cd-municipio" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "cd-uf" OF "prospeccao-beneficiario" AS character
-
-Adicionado campo "id-prospeccao" OF "prospeccao-contrato"
-
-Adicionado campo "cd-protocolo-prospeccao" OF "prospeccao-contrato" AS character
-
-Adicionado campo "tp-contratante" OF "prospeccao-contrato"
-
-Adicionado campo "nr-contratante" OF "prospeccao-contrato" AS character
-
-Adicionado campo "nm-empresa" OF "prospeccao-contrato" AS character
-
-Adicionado campo "ds-logradouro-principal" OF "prospeccao-contrato" AS character
-
-Adicionado campo "ds-numero-logradouro" OF "prospeccao-contrato" AS character
-
-Adicionado campo "cd-municipio" OF "prospeccao-contrato" AS character
-
-Adicionado campo "cd-uf" OF "prospeccao-contrato" AS character
-
-Adicionado campo "lg-indicador-cessao" OF "prospeccao-contrato" AS blob
-  LOB-BYTES 104857600
-  LOB-SIZE "100M"
-
-Adicionado campo "nr-registro-ans-autogestao" OF "prospeccao-contrato" AS character
-
-Adicionado campo "lg-indicador-adm-benef" OF "prospeccao-contrato" AS blob
-  LOB-BYTES 104857600
-  LOB-SIZE "100M"
-
-Adicionado campo "nr-registro-ans-adm-benef" OF "prospeccao-contrato" AS character
-
-Adicionado campo "cd-tipo-contratacao" OF "prospeccao-contrato"
-
-Adicionado campo "cd-tipo-abrangencia" OF "prospeccao-contrato"
-
-Adicionado campo "cdd-anexo" OF "prospeccao-contrato" AS decimal
-
-Adicionado campo "blb-envio" OF "prospeccao-contrato" AS blob
-  LOB-BYTES 10485760
-  LOB-SIZE "10M"
-
-Adicionado campo "blb-retorno" OF "prospeccao-contrato" AS blob
-  LOB-BYTES 10485760
-  LOB-SIZE "10M"
-
-Adicionado campo "cd-tipo-clinica" OF "restri-clinica-modalidade"
-
-Adicionado campo "cd-clinica" OF "restri-clinica-modalidade"
-
-Adicionado campo "cd-modalidade" OF "restri-clinica-modalidade"
-
-Adicionado índice "ix1" ON "prospeccao-abrangencia"
-
-Adicionado índice "ix1" ON "prospeccao-beneficiario"
-
-Adicionado índice "ix2" ON "prospeccao-beneficiario"
-
-Adicionado índice "ix3" ON "prospeccao-beneficiario"
-
-Adicionado índice "ix4" ON "prospeccao-beneficiario"
-
-Adicionado índice "ix1" ON "prospeccao-contrato"
-
-Adicionado índice "ix2" ON "prospeccao-contrato"
-
-Adicionado índice "ix3" ON "prospeccao-contrato"
-
-Adicionado índice "ix4" ON "prospeccao-contrato"
-
-Adicionado índice "index-1" ON "restri-clinica-modalidade"
-
-### mgind
-
-Renomeado índice "relac-class" TO "t-c92175d735db42a6ad2c5703fa9a8a" ON "relac-class-trib"
-
-Adicionado índice "relac-class" ON "relac-class-trib"
-
-Removido índice "t-c92175d735db42a6ad2c5703fa9a8a" ON "relac-class-trib"
-
-### mgmnt
-
-Adicionado índice "index-codigo-versao" ON "checklist-modelos"
-
-### movind
-
-Renomeado índice "id1-chave" TO "t-80a00b23f94640a0aa5f8a07e276e6" ON "recebimento-integr-me"
-
-Renomeado índice "idx-data" TO "t-77b00dbb2fa645fcaa4cab8b7a179c" ON "recebimento-integr-me"
-
-Renomeado índice "idx-excluido" TO "t-5e1c2e8c866e49c6871124833a6e83" ON "recebimento-integr-me"
-
-Renomeado índice "idx-fornecedor" TO "t-344c8e136fd049afb3d0c589e032ae" ON "recebimento-integr-me"
-
-Renomeado índice "idx-item" TO "t-d18b66cc9f86471bbabc6714f233a9" ON "recebimento-integr-me"
-
-Renomeado índice "idx-ordem" TO "t-9a231ffd9b014c84ab38c97beae36c" ON "recebimento-integr-me"
-
-Renomeado índice "idx-pedido" TO "t-8a958a2774e746f7b8fdcd7ad25770" ON "recebimento-integr-me"
-
-Renomeado índice "idx-rcbtmtr-08" TO "t-ae1d77669dc34c158e15c29ffbd3e6" ON "recebimento-integr-me"
-
-Renomeado índice "idx-rejeicao" TO "t-98d79d8c014f4437b20688d896d881" ON "recebimento-integr-me"
-
-Renomeado índice "idx-ult-entrega" TO "t-538f1a0eb8614602b8e3c4fe0bc1d2" ON "recebimento-integr-me"
-
-Adicionado índice "pedido" ON "recebimento-integr-me"
-
-Removido índice "t-80a00b23f94640a0aa5f8a07e276e6" ON "recebimento-integr-me"
-
-Removido índice "t-77b00dbb2fa645fcaa4cab8b7a179c" ON "recebimento-integr-me"
-
-Removido índice "t-5e1c2e8c866e49c6871124833a6e83" ON "recebimento-integr-me"
-
-Removido índice "t-344c8e136fd049afb3d0c589e032ae" ON "recebimento-integr-me"
-
-Removido índice "t-d18b66cc9f86471bbabc6714f233a9" ON "recebimento-integr-me"
-
-Removido índice "t-9a231ffd9b014c84ab38c97beae36c" ON "recebimento-integr-me"
-
-Removido índice "t-8a958a2774e746f7b8fdcd7ad25770" ON "recebimento-integr-me"
-
-Removido índice "t-ae1d77669dc34c158e15c29ffbd3e6" ON "recebimento-integr-me"
-
-Removido índice "t-98d79d8c014f4437b20688d896d881" ON "recebimento-integr-me"
-
-Removido índice "t-538f1a0eb8614602b8e3c4fe0bc1d2" ON "recebimento-integr-me"
+### **dthrgst**
+
+- **Tabela nova:** `integr_cand_aprov` _(campos omitidos)_
+- **Tabela nova:** `integr_cand_aprov_aux` _(campos omitidos)_
+- **Índice adicionado:** `intcandaprov` (tabela `integr_cand_aprov`)
+- **Índice adicionado:** `intcandaprovaux` (tabela `integr_cand_aprov_aux`)
+
+### **dthrtma**
+
+- **Campo adicionado:** `idi_trat_cart_pto_transf` (tabela `param_empres_tma`, tipo `integer`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `char_content` (tabela `metadata_biz_schema`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_biz_schema`)
+- **Campo atualizado:** `char_content` (tabela `metadata_model`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_model`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_model`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_model`)
+- **Campo atualizado:** `char_content` (tabela `metadata_object`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_object`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_object`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_object`)
+- **Campo atualizado:** `char_content` (tabela `metadata_ui`)
+- **Campo atualizado:** `blb_content` (tabela `metadata_ui`)
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_ui`)
+- **Campo atualizado:** `blb_content_custom` (tabela `metadata_ui`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_biz_schema`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_biz_schema`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_model`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_model`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_object`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_object`, tipo `blob`)
+- **Campo adicionado:** `char_content_source` (tabela `metadata_ui`, tipo `character`)
+- **Campo adicionado:** `blb_content_source` (tabela `metadata_ui`, tipo `blob`)
+
+### **emsuni**
+
+- **Campo adicionado:** `val_base_reduc_integral` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_base_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_coef_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+- **Campo adicionado:** `val_max_reduc_parcial` (tabela `valid_tab_prgssiv_impto`, tipo `decimal`)
+
+### **mgind**
+
+- **Campo adicionado:** `ano-mes-apuracao` (tabela `item-doc-orig-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-nbs` (tabela `relac-class-trib`, tipo `character`)
+- **Índice renomeado:** `ch-class-trib` → `t-5b2951a425db4d4dbafaceff4ece5e`
+- **Índice renomeado:** `ch-class-trib2` → `t-bdf5216da0c44c0785b41800c946da`
+- **Índice adicionado:** `ch-class-trib3` (tabela `relac-class-trib`)
+- **Índice adicionado:** `ch-class-trib` (tabela `relac-class-trib`)
+- **Índice adicionado:** `ch-class-trib2` (tabela `relac-class-trib`)
+- **Índice removido:** `t-5b2951a425db4d4dbafaceff4ece5e` (tabela `relac-class-trib`)
+- **Índice removido:** `t-bdf5216da0c44c0785b41800c946da` (tabela `relac-class-trib`)
+
+### **mgmnt**
+
+- **Campo adicionado:** `id-origem` (tabela `checklist-modelos`, tipo `integer`)
+- **Campo adicionado:** `codigo` (tabela `checklist-modelos`, tipo `character`)
+- **Campo adicionado:** `versao` (tabela `checklist-modelos`, tipo `integer`)
+
+### **movdbr**
+
+- **Índice adicionado:** `id-pai` (tabela `wtdbr-material`)
+
+### **movdis**
+
+- **Campo atualizado:** `val-tot-deb` (tabela `mtr-apurac-impto`)
+- **Campo atualizado:** `cod-desc-cclass` (tabela `mtr-doctos-cclass-trib`)
+- **Campo atualizado:** `val-cred-pres-cbs` (tabela `mtr-doctos-cred-deb`)
+- **Campo atualizado:** `val-cred-pres-ibs-uf` (tabela `mtr-doctos-cred-deb`)
+- **Campo atualizado:** `cod-desc-cst` (tabela `mtr-doctos-cst-trib`)
+- **Tabela nova:** `preferencias-usuario-fiscal` _(campos omitidos)_
+- **Índice adicionado:** `idx-pk` (tabela `preferencias-usuario-fiscal`)
+
+### **movind**
+
+- **Campo atualizado:** `id-integr` (tabela `recebimento-integr-me`)
+- **Campo atualizado:** `idi-integrado` (tabela `recebimento-integr-me`)
+- **Campo atualizado:** `idi-reg-excluido` (tabela `recebimento-integr-me`)
+- **Campo adicionado:** `sald-ini-mat-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `sald-ini-mob-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `sald-ini-ggf-m` (tabela `custo-item`, tipo `decimal`)
+- **Campo adicionado:** `ano-mes-apuracao` (tabela `item-doc-est`, tipo `character`)
+- **Campo adicionado:** `log-integrado` (tabela `recebimento-integr-me`, tipo `logical`)
+- **Campo adicionado:** `log-reg-excluido` (tabela `recebimento-integr-me`, tipo `logical`)
+- **Índice renomeado:** `idx-acao` → `t-5140e3a52d50410ab9108c27bc005d`
+- **Índice renomeado:** `idx-situacao` → `t-7efc7ecf04a54e9a992070c6793aa9`
+- **Índice adicionado:** `data` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `fornecedor` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-idi-reg-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-reg-excluido` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `item` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `ordem` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `rcbtmtr-08` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `rejeicao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `ult-entrega` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `recebimento-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-5140e3a52d50410ab9108c27bc005d` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-7efc7ecf04a54e9a992070c6793aa9` (tabela `recebimento-integr-me`)
+
+### **srcadger**
+
+- **Tabela nova:** `prospeccao-abrangencia` _(campos omitidos)_
+- **Tabela nova:** `prospeccao-beneficiario` _(campos omitidos)_
+- **Tabela nova:** `prospeccao-contrato` _(campos omitidos)_
+- **Tabela nova:** `restri-clinica-modalidade` _(campos omitidos)_
+- **Índice adicionado:** `ix1` (tabela `prospeccao-abrangencia`)
+- **Índice adicionado:** `ix1` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix2` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix3` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix4` (tabela `prospeccao-beneficiario`)
+- **Índice adicionado:** `ix1` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix2` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix3` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix4` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `index-1` (tabela `restri-clinica-modalidade`)
+
+### **mgind**
+
+- **Índice renomeado:** `relac-class` → `t-c92175d735db42a6ad2c5703fa9a8a`
+- **Índice adicionado:** `relac-class` (tabela `relac-class-trib`)
+- **Índice removido:** `t-c92175d735db42a6ad2c5703fa9a8a` (tabela `relac-class-trib`)
+
+### **mgmnt**
+
+- **Índice adicionado:** `index-codigo-versao` (tabela `checklist-modelos`)
+
+### **movind**
+
+- **Índice renomeado:** `id1-chave` → `t-80a00b23f94640a0aa5f8a07e276e6`
+- **Índice renomeado:** `idx-data` → `t-77b00dbb2fa645fcaa4cab8b7a179c`
+- **Índice renomeado:** `idx-excluido` → `t-5e1c2e8c866e49c6871124833a6e83`
+- **Índice renomeado:** `idx-fornecedor` → `t-344c8e136fd049afb3d0c589e032ae`
+- **Índice renomeado:** `idx-item` → `t-d18b66cc9f86471bbabc6714f233a9`
+- **Índice renomeado:** `idx-ordem` → `t-9a231ffd9b014c84ab38c97beae36c`
+- **Índice renomeado:** `idx-pedido` → `t-8a958a2774e746f7b8fdcd7ad25770`
+- **Índice renomeado:** `idx-rcbtmtr-08` → `t-ae1d77669dc34c158e15c29ffbd3e6`
+- **Índice renomeado:** `idx-rejeicao` → `t-98d79d8c014f4437b20688d896d881`
+- **Índice renomeado:** `idx-ult-entrega` → `t-538f1a0eb8614602b8e3c4fe0bc1d2`
+- **Índice adicionado:** `pedido` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-80a00b23f94640a0aa5f8a07e276e6` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-77b00dbb2fa645fcaa4cab8b7a179c` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-5e1c2e8c866e49c6871124833a6e83` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-344c8e136fd049afb3d0c589e032ae` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-d18b66cc9f86471bbabc6714f233a9` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-9a231ffd9b014c84ab38c97beae36c` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-8a958a2774e746f7b8fdcd7ad25770` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-ae1d77669dc34c158e15c29ffbd3e6` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-98d79d8c014f4437b20688d896d881` (tabela `recebimento-integr-me`)
+- **Índice removido:** `t-538f1a0eb8614602b8e3c4fe0bc1d2` (tabela `recebimento-integr-me`)
