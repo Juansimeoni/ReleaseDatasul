@@ -2,7 +2,6 @@
 
 **Patch:** `acerto-12.1.2511.2-12.1.2511.3`
 **Versão destino:** `12.1.2511.3`
-**Data:** 17/12/2025 23:11
 
 ## Alterações no Banco de Dados
 
