@@ -1,0 +1,87 @@
+# Release Notes - 12.1.2511.4
+
+**Patch:** `acerto-12.1.2511.3-12.1.2511.4`
+**Versão destino:** `12.1.2511.4`
+
+## Alterações no Banco de Dados
+
+### **cad5loc**
+
+- **Tabela nova:** `mexext_cta_grp_clien` _(campos omitidos)_
+- **Tabela nova:** `mexext_espec_docto` _(campos omitidos)_
+- **Índice adicionado:** `mxxtctgr_id` (tabela `mexext_cta_grp_clien`)
+- **Índice adicionado:** `mxxtspcd_id` (tabela `mexext_espec_docto`)
+
+### **mgadm**
+
+- **Tabela nova:** `local-compras-integr-me` _(campos omitidos)_
+- **Índice adicionado:** `id1-chave` (tabela `local-compras-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `local-compras-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `local-compras-integr-me`)
+
+### **mgdis**
+
+- **Campo adicionado:** `cod-nbs` (tabela `relacto-tributo`, tipo `character`)
+- **Índice adicionado:** `ch-cod-nbs` (tabela `relacto-tributo`)
+
+### **mgind**
+
+- **Campo atualizado:** `ge-codigo` (tabela `contabiliza`)
+
+### **mgmnt**
+
+- **Campo adicionado:** `codigo-checklist` (tabela `manut`, tipo `character`)
+- **Campo adicionado:** `codigo-checklist` (tabela `mi-eq-tag-tar`, tipo `character`)
+- **Campo adicionado:** `codigo-checklist` (tabela `mi-eq-tar`, tipo `character`)
+- **Campo adicionado:** `codigo-checklist` (tabela `mi-taref`, tipo `character`)
+- **Campo adicionado:** `codigo-checklist` (tabela `ord-plan-taref`, tipo `character`)
+
+### **movdis**
+
+- **Campo adicionado:** `cod-mod-dfe` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `perc-red-aliq-regul` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `aliq-cheia-regul` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `perc-difer-regul` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `valor-difer-regul` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Índice adicionado:** `idx-chave-acesso` (tabela `doc-fiscal`)
+
+### **movind**
+
+- **Campo atualizado:** `cod-usuario-integr` (tabela `usuario-compras-integr-me`)
+- **Campo adicionado:** `cod-comprador-integr` (tabela `usuario-compras-integr-me`, tipo `character`)
+- **Campo adicionado:** `cod-requisitante-integr` (tabela `usuario-compras-integr-me`, tipo `character`)
+
+### **movmnt**
+
+- **Campo adicionado:** `codigo-checklist` (tabela `ord-manut`, tipo `character`)
+- **Campo adicionado:** `codigo-checklist` (tabela `ord-taref`, tipo `character`)
+
+### **srcadger**
+
+- **Campo adicionado:** `des-motiv-negac-compl2` (tabela `codiglos`, tipo `character`)
+- **Campo adicionado:** `des-motiv-negac-compl2` (tabela `motiv-negac`, tipo `character`)
+
+### **srmovcon**
+
+- **Tabela nova:** `faturas-inter-ptu-erros` _(campos omitidos)_
+- **Campo adicionado:** `des-motiv-negac-compl2` (tabela `guia-autoriz-comp`, tipo `character`)
+- **Campo adicionado:** `cod-senha` (tabela `histor-tiss-guia`, tipo `character`)
+- **Campo adicionado:** `des-motiv-negac-compl2` (tabela `insumo-guia-comp`, tipo `character`)
+- **Campo adicionado:** `des-motiv-negac-compl2` (tabela `proced-guia-comp`, tipo `character`)
+- **Campo adicionado:** `cod-senha` (tabela `tiss-guia`, tipo `character`)
+- **Índice adicionado:** `fatinterptuerros-id` (tabela `faturas-inter-ptu-erros`)
+- **Índice adicionado:** `fatinterptuerros01` (tabela `faturas-inter-ptu-erros`)
+- **Índice adicionado:** `fatinterptuerros02` (tabela `faturas-inter-ptu-erros`)
+- **Índice adicionado:** `fatinterptuerros03` (tabela `faturas-inter-ptu-erros`)
+- **Índice adicionado:** `fatinterptuerros04` (tabela `faturas-inter-ptu-erros`)
+- **Índice adicionado:** `fatinterptuerros05` (tabela `faturas-inter-ptu-erros`)
+
+### **mgdis**
+
+- **Índice renomeado:** `ch-relac-trib` → `t-c648dac07f7043aeb6c8fb07953b1e`
+- **Índice adicionado:** `ch-relac-trib` (tabela `relacto-tributo`)
+- **Índice removido:** `t-c648dac07f7043aeb6c8fb07953b1e` (tabela `relacto-tributo`)
+
+### **movind**
+
+- **Tabela removida:** `local-compras-integr-me`
