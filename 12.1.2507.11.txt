@@ -1,0 +1,113 @@
+# Release Notes - 12.1.2507.11
+
+**Patch:** `acerto-12.1.2507.10-12.1.2507.11`
+**Versão destino:** `12.1.2507.11`
+
+## Alterações no Banco de Dados
+
+### **emsfnd**
+
+- **Tabela nova:** `dta_assunto_rotina` _(campos omitidos)_
+- **Tabela nova:** `noticia_pais` _(campos omitidos)_
+- **Índice adicionado:** `idx_dta_assunto_rot` (tabela `dta_assunto_rotina`)
+- **Índice adicionado:** `idx_dta_rot_assunto` (tabela `dta_assunto_rotina`)
+- **Índice adicionado:** `notpais_id` (tabela `noticia_pais`)
+- **Índice adicionado:** `notpais_sigla` (tabela `noticia_pais`)
+
+### **mgdis**
+
+- **Campo adicionado:** `log-consid-repres-emit` (tabela `integr-loja`, tipo `logical`)
+- **Campo adicionado:** `log-lib-auto-ped-gerado-cotac` (tabela `portal-configur-clien`, tipo `logical`)
+
+### **movdis**
+
+- **Campo adicionado:** `estado-fato-gerador` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `cidade-fato-gerador` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `ano-mes-apuracao` (tabela `it-doc-fisc`, tipo `character`)
+- **Índice adicionado:** `ch-estab-data` (tabela `doc-fiscal`)
+- **Índice adicionado:** `idc-estab-data` (tabela `doc-fiscal-tributo`)
+- **Índice adicionado:** `ch-estab-data` (tabela `it-doc-fisc`)
+- **Índice adicionado:** `idc-estab-data` (tabela `it-doc-fisc-tributo`)
+
+### **srcadger**
+
+- **Campo atualizado:** `des-motiv-negac-comp-clob` (tabela `codiglos`)
+- **Campo atualizado:** `des-motiv-negac-compl` (tabela `codiglos`)
+- **Campo atualizado:** `des-motiv-negac-compl2` (tabela `codiglos`)
+- **Campo atualizado:** `des-motiv-negac-comp-clob` (tabela `motiv-negac`)
+- **Campo atualizado:** `des-motiv-negac-compl` (tabela `motiv-negac`)
+- **Campo atualizado:** `des-motiv-negac-compl2` (tabela `motiv-negac`)
+- **Campo atualizado:** `cd-municipio` (tabela `prospeccao-beneficiario`)
+- **Campo atualizado:** `cd-municipio` (tabela `prospeccao-contrato`)
+- **Campo atualizado:** `lg-indicador-cessao` (tabela `prospeccao-contrato`)
+- **Campo atualizado:** `lg-indicador-adm-benef` (tabela `prospeccao-contrato`)
+- **Campo adicionado:** `ds-bairro` (tabela `prospeccao-beneficiario`, tipo `character`)
+- **Campo adicionado:** `cd-cidade` (tabela `prospeccao-beneficiario`, tipo `integer`)
+- **Campo adicionado:** `cd-cep` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `cd-status` (tabela `prospeccao-contrato`, tipo `integer`)
+- **Campo adicionado:** `ds-bairro` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `cd-userid` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `dt-atualizacao` (tabela `prospeccao-contrato`, tipo `date`)
+- **Campo adicionado:** `cd-cidade` (tabela `prospeccao-contrato`, tipo `integer`)
+- **Campo adicionado:** `lg-indicador-cessao` (tabela `prospeccao-contrato`, tipo `logical`)
+- **Campo adicionado:** `lg-indicador-adm-benef` (tabela `prospeccao-contrato`, tipo `logical`)
+- **Campo adicionado:** `dt-mov` (tabela `prospeccao-contrato`, tipo `datetime`)
+- **Campo adicionado:** `nr-control-transac` (tabela `prospeccao-contrato`, tipo `decimal`)
+- **Campo adicionado:** `cd-status-http` (tabela `prospeccao-contrato`, tipo `integer`)
+- **Campo adicionado:** `ds-status-http` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `cd-status-servico` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `ds-msg-servico` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `ds-flags` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `ds-stack` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `ds-log` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `ds-erros` (tabela `prospeccao-contrato`, tipo `character`)
+- **Campo adicionado:** `cd-control-transac` (tabela `prospeccao-contrato`, tipo `int64`)
+- **Campo adicionado:** `cd-usuario-envio` (tabela `prospeccao-contrato`, tipo `character`)
+- **Índice adicionado:** `criterioValPag01` (tabela `criterio-valorizacao-pagto`)
+- **Índice adicionado:** `ix5` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix6` (tabela `prospeccao-contrato`)
+- **Índice adicionado:** `ix7` (tabela `prospeccao-contrato`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `des-motiv-negac-compl` (tabela `guia-autoriz-comp`)
+- **Campo atualizado:** `des-motiv-negac-compl2` (tabela `guia-autoriz-comp`)
+- **Campo atualizado:** `des-motiv-negac-comp-clob` (tabela `insumo-guia-comp`)
+- **Campo atualizado:** `des-motiv-negac-compl` (tabela `insumo-guia-comp`)
+- **Campo atualizado:** `des-motiv-negac-compl2` (tabela `insumo-guia-comp`)
+- **Campo atualizado:** `des-motiv-negac-comp-clob` (tabela `proced-guia-comp`)
+- **Campo atualizado:** `des-motiv-negac-compl` (tabela `proced-guia-comp`)
+- **Campo atualizado:** `des-motiv-negac-compl2` (tabela `proced-guia-comp`)
+- **Tabela nova:** `guia-autoriz-comp2` _(campos omitidos)_
+- **Tabela nova:** `sispac-detalhes` _(campos omitidos)_
+- **Tabela nova:** `sispac-itens-alternativos` _(campos omitidos)_
+- **Tabela nova:** `sispac-movi` _(campos omitidos)_
+- **Tabela nova:** `sispac-pacote` _(campos omitidos)_
+- **Tabela nova:** `sispac-prestadores` _(campos omitidos)_
+- **Campo adicionado:** `cod-cnpj-contrat-solic` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-cnpj-hospital` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-cnpj-contrat-exec` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-tip-particip` (tabela `faturas-inter-ptu-erros`, tipo `character`)
+- **Campo adicionado:** `cod-cnpj-fornec` (tabela `servico-ptu`, tipo `character`)
+- **Índice adicionado:** `gtrzcmp1` (tabela `guia-autoriz-comp2`)
+- **Índice adicionado:** `sispacdetalhesID` (tabela `sispac-detalhes`)
+- **Índice adicionado:** `sispacdetalhes01` (tabela `sispac-detalhes`)
+- **Índice adicionado:** `sispacdetalhes02` (tabela `sispac-detalhes`)
+- **Índice adicionado:** `sispacitensalternativosID` (tabela `sispac-itens-alternativos`)
+- **Índice adicionado:** `sispacitensalternativos01` (tabela `sispac-itens-alternativos`)
+- **Índice adicionado:** `sispacitensalternativos02` (tabela `sispac-itens-alternativos`)
+- **Índice adicionado:** `sispacmoviID` (tabela `sispac-movi`)
+- **Índice adicionado:** `sispacmovi01` (tabela `sispac-movi`)
+- **Índice adicionado:** `sispacmovi02` (tabela `sispac-movi`)
+- **Índice adicionado:** `sispacpacoteID` (tabela `sispac-pacote`)
+- **Índice adicionado:** `sispacpacote01` (tabela `sispac-pacote`)
+- **Índice adicionado:** `sispacprestadoresID` (tabela `sispac-prestadores`)
+- **Índice adicionado:** `sispacprestadores01` (tabela `sispac-prestadores`)
+- **Índice adicionado:** `sispacprestadores02` (tabela `sispac-prestadores`)
+- **Índice adicionado:** `doctoptu_ix8` (tabela `docto-ptu`)
+
+### **srcadger**
+
+- **Tabela removida:** `prospeccao-abrangencia`
+- **Índice renomeado:** `criterioValorizacaoPagto01` → `t-21fd07da1fc3417f8a3001b1b4bd15`
+- **Índice removido:** `t-21fd07da1fc3417f8a3001b1b4bd15` (tabela `criterio-valorizacao-pagto`)
