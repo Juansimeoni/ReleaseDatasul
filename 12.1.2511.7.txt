@@ -1,0 +1,272 @@
+# Release Notes - 12.1.2511.7
+
+**Patch:** `acerto-12.1.2511.6-12.1.2511.7`
+**Versão destino:** `12.1.2511.7`
+
+## Alterações no Banco de Dados
+
+### **dthrpyc**
+
+- **Campo adicionado:** `bs_inss_mesmo_empregador` (tabela `movto_serv_prestad_terc`, tipo `decimal`)
+- **Campo adicionado:** `val_inss_mesmo_empregador` (tabela `movto_serv_prestad_terc`, tipo `decimal`)
+- **Campo adicionado:** `dat_envio` (tabela `pre_atstdo`, tipo `date`)
+
+### **emsfin**
+
+- **Tabela nova:** `pagto_online_auto_filtro` _(campos omitidos)_
+- **Tabela nova:** `pagto_online_auto_fornec` _(campos omitidos)_
+- **Tabela nova:** `pagto_online_auto_param` _(campos omitidos)_
+- **Tabela nova:** `pagto_online_auto_usuar` _(campos omitidos)_
+- **Campo adicionado:** `des_ccusto` (tabela `fgl_integr_ccusto_merc`, tipo `character`)
+- **Campo adicionado:** `log_desativ` (tabela `fgl_integr_ccusto_merc`, tipo `logical`)
+- **Campo adicionado:** `log_status` (tabela `fgl_integr_ccusto_merc`, tipo `logical`)
+- **Índice adicionado:** `pgtnlntf_id` (tabela `pagto_online_auto_filtro`)
+- **Índice adicionado:** `pgtnlntf_ativ` (tabela `pagto_online_auto_filtro`)
+- **Índice adicionado:** `pgtnlnta_id` (tabela `pagto_online_auto_fornec`)
+- **Índice adicionado:** `pgtnlntp_id` (tabela `pagto_online_auto_param`)
+- **Índice adicionado:** `pgtnlntp_bxa` (tabela `pagto_online_auto_param`)
+- **Índice adicionado:** `pgtnlnts_id` (tabela `pagto_online_auto_usuar`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `char_content_custom` (tabela `metadata_model`)
+- **Tabela nova:** `smartview_data` _(campos omitidos)_
+- **Índice adicionado:** `id_uuid` (tabela `smartview_data`)
+- **Índice adicionado:** `id_status_created` (tabela `smartview_data`)
+
+### **mgadm**
+
+- **Tabela nova:** `cond-pagto-integr-me` _(campos omitidos)_
+- **Índice adicionado:** `id1-chave` (tabela `cond-pagto-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `cond-pagto-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `cond-pagto-integr-me`)
+
+### **mgdis**
+
+- **Campo adicionado:** `cdn-impto-mun-orig` (tabela `cidad-internac`, tipo `integer`)
+- **Campo adicionado:** `cdn-impto-mun-dest` (tabela `cidad-internac`, tipo `integer`)
+
+### **mgind**
+
+- **Tabela nova:** `agenda-evento-trib` _(campos omitidos)_
+- **Tabela nova:** `cenario-evento-trib` _(campos omitidos)_
+- **Tabela nova:** `cenario-regras-evento-trib` _(campos omitidos)_
+- **Tabela nova:** `conta-recebto` _(campos omitidos)_
+- **Tabela nova:** `hist-evento-trib` _(campos omitidos)_
+- **Tabela nova:** `parametros-api-gov` _(campos omitidos)_
+- **Tabela nova:** `requisicao-api-gov` _(campos omitidos)_
+- **Tabela nova:** `sim-item` _(campos omitidos)_
+- **Tabela nova:** `sim-plano` _(campos omitidos)_
+- **Tabela nova:** `usuario-compras-integr-me` _(campos omitidos)_
+- **Campo adicionado:** `uf-env` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `x-mun-ini` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `x-mun-fim` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `uf-fim` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `ind-ie-toma` (tabela `docto-orig-cte`, tipo `integer`)
+- **Campo adicionado:** `orig-calc` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `dest-calc` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `cst-icms` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `log-sn` (tabela `docto-orig-cte`, tipo `logical`)
+- **Campo adicionado:** `modelo-elet` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `x-mun-env` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `cod-chave-aces-cte-sub` (tabela `docto-orig-cte`, tipo `character`)
+- **Campo adicionado:** `ge-tms` (tabela `param-estoq`, tipo `integer`)
+- **Campo adicionado:** `fm-tms` (tabela `param-estoq`, tipo `character`)
+- **Campo adicionado:** `un-tms` (tabela `param-estoq`, tipo `character`)
+- **Campo adicionado:** `cod-estabel-tms` (tabela `param-estoq`, tipo `character`)
+- **Campo adicionado:** `log-sumar` (tabela `param-re`, tipo `logical`)
+- **Índice adicionado:** `idx-agend-event-1` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-agend-event-2` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-cen-evento-1` (tabela `cenario-evento-trib`)
+- **Índice adicionado:** `idx-cen-evento-2` (tabela `cenario-evento-trib`)
+- **Índice adicionado:** `idx-cen-regra` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-ativo` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-doc` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-emit` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-estab` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-item` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `idx-regra-validade` (tabela `cenario-regras-evento-trib`)
+- **Índice adicionado:** `ix-unico` (tabela `conta-recebto`)
+- **Índice adicionado:** `idx-hist-1` (tabela `hist-evento-trib`)
+- **Índice adicionado:** `idx-hist-2` (tabela `hist-evento-trib`)
+- **Índice adicionado:** `idx-empresa` (tabela `parametros-api-gov`)
+- **Índice adicionado:** `idx-tp-servico` (tabela `requisicao-api-gov`)
+- **Índice adicionado:** `id` (tabela `sim-item`)
+- **Índice adicionado:** `item` (tabela `sim-item`)
+- **Índice adicionado:** `plano-fm` (tabela `sim-item`)
+- **Índice adicionado:** `plano-fm-cod-com` (tabela `sim-item`)
+- **Índice adicionado:** `plano-ge` (tabela `sim-item`)
+- **Índice adicionado:** `plano-item` (tabela `sim-item`)
+- **Índice adicionado:** `id` (tabela `sim-plano`)
+- **Índice adicionado:** `codigo` (tabela `sim-plano`)
+- **Índice adicionado:** `descricao` (tabela `sim-plano`)
+- **Índice adicionado:** `idx-usuario` (tabela `usuario-compras-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `usuario-compras-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `usuario-compras-integr-me`)
+- **Índice adicionado:** `orig-trad-dt-emissao` (tabela `doc-orig-nfe`)
+- **Índice adicionado:** `orig-trad-dt-transacao` (tabela `doc-orig-nfe`)
+- **Índice adicionado:** `orig-trad-nro-docto` (tabela `doc-orig-nfe`)
+- **Índice adicionado:** `orig-trad-dt-emissao` (tabela `docto-orig-cte`)
+- **Índice adicionado:** `orig-trad-dt-trans` (tabela `docto-orig-cte`)
+- **Índice adicionado:** `orig-trad-nro-docto` (tabela `docto-orig-cte`)
+- **Índice adicionado:** `orig-trad-dt-transacao` (tabela `docto-orig-nfse`)
+
+### **movdbr**
+
+- **Campo adicionado:** `op-codigo` (tabela `wtdbr-material`, tipo `integer`)
+
+### **movdis**
+
+- **Tabela nova:** `parametros-extracao-geracao` _(campos omitidos)_
+- **Campo adicionado:** `estorno-cred` (tabela `it-nota-fisc-trib`, tipo `logical`)
+- **Campo adicionado:** `cod-endereco-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-num-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-bairro-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-postal-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-cidade-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-uf-orig` (tabela `remito`, tipo `character`)
+- **Campo adicionado:** `cod-pais-orig` (tabela `remito`, tipo `character`)
+- **Índice adicionado:** `ch-cod-mod-dfe` (tabela `doc-fiscal`)
+- **Índice adicionado:** `ch-ano-mes-apuracao` (tabela `it-doc-fisc`)
+
+### **movfin**
+
+- **Campo adicionado:** `cod_flex_4_gesplan` (tabela `movto_acr_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_5_gesplan` (tabela `movto_acr_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_6_gesplan` (tabela `movto_acr_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_4_gesplan` (tabela `movto_apb_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_5_gesplan` (tabela `movto_apb_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_6_gesplan` (tabela `movto_apb_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_4_gesplan` (tabela `movto_cta_corren_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_5_gesplan` (tabela `movto_cta_corren_gesplan`, tipo `character`)
+- **Campo adicionado:** `cod_flex_6_gesplan` (tabela `movto_cta_corren_gesplan`, tipo `character`)
+- **Índice adicionado:** `mvtcrgsp_dtl` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtcrgsp_mov` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtcrgsp_pgt` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtcrgsp_tit` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_dte` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_dte` (tabela `movto_apb_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_dtl` (tabela `movto_apb_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_mov` (tabela `movto_apb_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_pgt` (tabela `movto_apb_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_tit` (tabela `movto_apb_gesplan`)
+- **Índice adicionado:** `mvtctcrb_cta` (tabela `movto_cta_corren_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_dte` (tabela `movto_cta_corren_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_dtl` (tabela `movto_cta_corren_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_pgt` (tabela `movto_cta_corren_gesplan`)
+
+### **movfis**
+
+- **Tabela nova:** `dwf-dest-deduc-irpj-csll` _(campos omitidos)_
+- **Índice adicionado:** `dwfdestdeduc_id` (tabela `dwf-dest-deduc-irpj-csll`)
+
+### **movind**
+
+- **Tabela nova:** `sumar-recebto` _(campos omitidos)_
+- **Campo adicionado:** `cod-finalidade` (tabela `docum-est`, tipo `character`)
+- **Campo adicionado:** `tipo-dfe` (tabela `docum-est`, tipo `integer`)
+- **Campo adicionado:** `cod-chave-aces-cte-sub` (tabela `docum-est`, tipo `character`)
+- **Campo adicionado:** `log-ctbl-atual` (tabela `docum-est`, tipo `logical`)
+- **Campo adicionado:** `log-sumar` (tabela `docum-est`, tipo `logical`)
+- **Campo adicionado:** `log-tp-gerac` (tabela `evento-trib-dfe`, tipo `logical`)
+- **Índice adicionado:** `ix-unico` (tabela `sumar-recebto`)
+- **Índice adicionado:** `ix-fin-tipo-nf` (tabela `docum-est`)
+- **Índice adicionado:** `ix-finalidade` (tabela `docum-est`)
+- **Índice adicionado:** `ix-tipo-dfe` (tabela `docum-est`)
+- **Índice adicionado:** `log-gerac-auto` (tabela `evento-trib-dfe`)
+- **Índice adicionado:** `log-tp-gerac` (tabela `evento-trib-dfe`)
+
+### **srcadger**
+
+- **Campo adicionado:** `cd-cnpj-hosp` (tabela `preserv-compl`, tipo `character`)
+- **Campo adicionado:** `dt-inaugura-rp` (tabela `preserv-compl`, tipo `date`)
+- **Campo adicionado:** `cd-nivel-atencao` (tabela `preserv-compl`, tipo `integer`)
+- **Campo adicionado:** `cd-tipo-porte-hosp` (tabela `preserv-compl`, tipo `integer`)
+- **Campo adicionado:** `ind-susp-temp` (tabela `preserv-compl`, tipo `logical`)
+- **Campo adicionado:** `cd-motivo-susp` (tabela `preserv-compl`, tipo `integer`)
+- **Campo adicionado:** `dt-inicio-susp` (tabela `preserv-compl`, tipo `date`)
+- **Campo adicionado:** `lg-bloqueio-atend-urgencia` (tabela `ti-pl-sa`, tipo `logical`)
+
+### **srmovben**
+
+- **Campo atualizado:** `char-31` (tabela `usuario`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `des-servico` (tabela `servico-ptu`)
+- **Campo atualizado:** `vl-total` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-pacote` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-mat` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-med` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-opme` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-diarias` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-tax-gas` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vl-proc` (tabela `sispac-pacote`)
+- **Campo atualizado:** `vr-pacote` (tabela `sispac-pacote`)
+- **Tabela nova:** `sispac-mov-realiz` _(campos omitidos)_
+- **Tabela nova:** `sispac-pac-realiz` _(campos omitidos)_
+- **Campo adicionado:** `cod-verificacao-documento-2` (tabela `cabecalho-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-verificacao-documento-1` (tabela `cabecalho-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-guia-oper-glosada` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `cd-userid` (tabela `sispac-detalhes`, tipo `character`)
+- **Campo adicionado:** `dt-atualizacao` (tabela `sispac-detalhes`, tipo `date`)
+- **Campo adicionado:** `cd-userid` (tabela `sispac-itens-alternativos`, tipo `character`)
+- **Campo adicionado:** `dt-atualizacao` (tabela `sispac-itens-alternativos`, tipo `date`)
+- **Campo adicionado:** `val-pacote` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-mat` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-med` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-tax-gas` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `dt-atualizacao` (tabela `sispac-pacote`, tipo `date`)
+- **Campo adicionado:** `cd-userid` (tabela `sispac-pacote`, tipo `character`)
+- **Campo adicionado:** `val-proc` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-diarias` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-opme` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `val-total` (tabela `sispac-pacote`, tipo `decimal`)
+- **Campo adicionado:** `cd-userid` (tabela `sispac-prestadores`, tipo `character`)
+- **Campo adicionado:** `dt-atualizacao` (tabela `sispac-prestadores`, tipo `date`)
+- **Índice adicionado:** `sispacmovID` (tabela `sispac-mov-realiz`)
+- **Índice adicionado:** `sispacmov01` (tabela `sispac-mov-realiz`)
+- **Índice adicionado:** `sispacmov02` (tabela `sispac-mov-realiz`)
+- **Índice adicionado:** `sispacreaID` (tabela `sispac-pac-realiz`)
+- **Índice adicionado:** `sispacrea01` (tabela `sispac-pac-realiz`)
+- **Índice adicionado:** `sispacrea02` (tabela `sispac-pac-realiz`)
+
+### **srmovfi1**
+
+- **Campo adicionado:** `cod-tit-apb-ems` (tabela `titupres`, tipo `character`)
+- **Índice adicionado:** `titupr23` (tabela `titupres`)
+- **Índice adicionado:** `titupr24` (tabela `titupres`)
+
+### **srmovfin**
+
+- **Tabela nova:** `demonst-ctbz-hfp` _(campos omitidos)_
+- **Tabela nova:** `histor-lote-ctbz-hfp` _(campos omitidos)_
+- **Tabela nova:** `lote-ctbz-hfp` _(campos omitidos)_
+- **Índice adicionado:** `dctbzhfp_id` (tabela `demonst-ctbz-hfp`)
+- **Índice adicionado:** `dctbzhfp_ix2` (tabela `demonst-ctbz-hfp`)
+- **Índice adicionado:** `dctbzhfp_ix3` (tabela `demonst-ctbz-hfp`)
+- **Índice adicionado:** `dctbzhfp_ix4` (tabela `demonst-ctbz-hfp`)
+- **Índice adicionado:** `hstrltct_id` (tabela `histor-lote-ctbz-hfp`)
+- **Índice adicionado:** `hstrltct_ix2` (tabela `histor-lote-ctbz-hfp`)
+- **Índice adicionado:** `ltctbzhfp_id` (tabela `lote-ctbz-hfp`)
+- **Índice adicionado:** `ltctbzhfp_ix2` (tabela `lote-ctbz-hfp`)
+- **Índice adicionado:** `ltctbzhfp_ix3` (tabela `lote-ctbz-hfp`)
+- **Índice adicionado:** `ltctbzhfp_ix4` (tabela `lote-ctbz-hfp`)
+
+### **movfin**
+
+- **Índice renomeado:** `mvtcrgsp_id` → `t-5cbd6b1b3b784086b5a8512019034d`
+- **Índice renomeado:** `mvtpbgsp_id` → `t-c9751e944f2f45038824147f0b87da`
+- **Índice adicionado:** `mvtcrgsp_id` (tabela `movto_acr_gesplan`)
+- **Índice adicionado:** `mvtpbgsp_id` (tabela `movto_apb_gesplan`)
+- **Índice removido:** `t-5cbd6b1b3b784086b5a8512019034d` (tabela `movto_acr_gesplan`)
+- **Índice removido:** `t-c9751e944f2f45038824147f0b87da` (tabela `movto_apb_gesplan`)
+
+### **movind**
+
+- **Tabela removida:** `cond-pagto-integr-me`
+- **Tabela removida:** `usuario-compras-integr-me`
+
+### **srmovcon**
+
+- **Tabela removida:** `sispac-movi`
