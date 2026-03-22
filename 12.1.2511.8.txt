@@ -1,0 +1,228 @@
+# Release Notes - 12.1.2511.8
+
+**Patch:** `acerto-12.1.2511.7-12.1.2511.8`
+**Versão destino:** `12.1.2511.8`
+
+## Alterações no Banco de Dados
+
+### **emsfin**
+
+- **Campo atualizado:** `cod_finalid_econ` (tabela `pagto_online_auto_param`)
+- **Campo adicionado:** `ind_sit_liberd` (tabela `pagto_online_auto_filtro`, tipo `character`)
+- **Campo adicionado:** `cod_indic_econ` (tabela `pagto_online_auto_param`, tipo `character`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `json_result` (tabela `smartview_data`)
+- **Tabela nova:** `ls_metrics` _(campos omitidos)_
+- **Campo adicionado:** `json_data` (tabela `smartview_data`, tipo `blob`)
+- **Campo adicionado:** `error_msg` (tabela `smartview_data`, tipo `character`)
+- **Índice adicionado:** `primary_idx` (tabela `ls_metrics`)
+- **Índice adicionado:** `idx_status` (tabela `ls_metrics`)
+
+### **mgadm**
+
+- **Tabela nova:** `fornecedor-compras-integr-me` _(campos omitidos)_
+- **Índice adicionado:** `id1-chave` (tabela `fornecedor-compras-integr-me`)
+- **Índice adicionado:** `idx-acao` (tabela `fornecedor-compras-integr-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `fornecedor-compras-integr-me`)
+
+### **mgcex**
+
+- **Tabela nova:** `item-atrib-cond` _(campos omitidos)_
+- **Índice adicionado:** `itAtribCond` (tabela `item-atrib-cond`)
+
+### **mgdis**
+
+- **Tabela nova:** `param-nf-debito` _(campos omitidos)_
+- **Índice adicionado:** `ch_param_nf` (tabela `param-nf-debito`)
+
+### **mgind**
+
+- **Campo atualizado:** `num-id-agenda` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `cod-tipo-exec` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `numero-pedido` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `dt-cria-agenda` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `cod-hora-agenda` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `cod-evento` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `cod-estabel` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `periodo-execucao` (tabela `agenda-evento-trib`)
+- **Campo atualizado:** `cod-estabelec` (tabela `conta-recebto`)
+- **Campo atualizado:** `log-sumar` (tabela `param-re`)
+- **Campo atualizado:** `vl-tot-ref` (tabela `sim-item`)
+- **Campo atualizado:** `vl-unit-ref` (tabela `sim-item`)
+- **Tabela nova:** `classif-atrib-cond` _(campos omitidos)_
+- **Tabela nova:** `classif-atrib-cond-atrib` _(campos omitidos)_
+- **Tabela nova:** `contrato-for-integr-me` _(campos omitidos)_
+- **Tabela nova:** `item-contrat-integr-me` _(campos omitidos)_
+- **Tabela nova:** `item-integr-compras-me` _(campos omitidos)_
+- **Campo adicionado:** `num-ped-hoje` (tabela `agenda-evento-trib`, tipo `integer`)
+- **Campo adicionado:** `num-ped-hoje-id` (tabela `agenda-evento-trib`, tipo `character`)
+- **Campo adicionado:** `num-ped-recorrente` (tabela `agenda-evento-trib`, tipo `integer`)
+- **Campo adicionado:** `num-ped-recorrente-id` (tabela `agenda-evento-trib`, tipo `character`)
+- **Campo adicionado:** `cod-estabel` (tabela `conta-recebto`, tipo `character`)
+- **Campo adicionado:** `sumar-on-line` (tabela `param-re`, tipo `logical`)
+- **Campo adicionado:** `vl-tot-refugo` (tabela `sim-item`, tipo `decimal`)
+- **Campo adicionado:** `vl-unit-refugo` (tabela `sim-item`, tipo `decimal`)
+- **Índice adicionado:** `classAtCond` (tabela `classif-atrib-cond`)
+- **Índice adicionado:** `clAtCondAtr` (tabela `classif-atrib-cond-atrib`)
+- **Índice adicionado:** `idx-principal` (tabela `contrato-for-integr-me`)
+- **Índice adicionado:** `idx-principal` (tabela `item-contrat-integr-me`)
+- **Índice adicionado:** `id1-chave` (tabela `item-integr-compras-me`)
+- **Índice adicionado:** `idx-acao` (tabela `item-integr-compras-me`)
+- **Índice adicionado:** `idx-situacao` (tabela `item-integr-compras-me`)
+- **Índice adicionado:** `idx-agend-estab` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-pedido` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-pedido-id` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-recorrencia` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `idx-recorrencia-id` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `ix-conta-busca` (tabela `conta-recebto`)
+- **Índice adicionado:** `ix-vigencia` (tabela `conta-recebto`)
+
+### **mgmnt**
+
+- **Campo adicionado:** `idi-libera-om` (tabela `tipo-manut`, tipo `integer`)
+
+### **movdis**
+
+- **Campo atualizado:** `log-primeira-entrega-bloco-g` (tabela `parametros-extracao-geracao`)
+- **Campo atualizado:** `log-bloco-p` (tabela `parametros-extracao-geracao`)
+- **Campo atualizado:** `num-dtaverbacao` (tabela `parametros-extracao-geracao`)
+- **Campo atualizado:** `qt-log-aloca` (tabela `ped-item`)
+- **Tabela nova:** `fat-duplic-gener` _(campos omitidos)_
+- **Índice renomeado:** `idx-fin-nfe` → `t-f70e3def886c4fa0b1d6d4b75f25a0`
+- **Índice adicionado:** `ch_fatura` (tabela `fat-duplic-gener`)
+- **Índice adicionado:** `ch_param` (tabela `fat-duplic-gener`)
+- **Índice adicionado:** `idx-fin-nfe` (tabela `doc-fiscal`)
+- **Índice removido:** `t-f70e3def886c4fa0b1d6d4b75f25a0` (tabela `doc-fiscal`)
+
+### **movfin**
+
+- **Tabela nova:** `movto_ndnc_acr` _(campos omitidos)_
+- **Tabela nova:** `movto_ndnc_acr_dfe` _(campos omitidos)_
+- **Campo adicionado:** `val_ibs_uf` (tabela `ext_tit_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_ibs_mun` (tabela `ext_tit_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_cbs` (tabela `ext_tit_acr`, tipo `decimal`)
+- **Campo adicionado:** `cod_dfe` (tabela `ext_tit_acr`, tipo `character`)
+- **Campo adicionado:** `val_ibs_uf` (tabela `ext_tit_ap`, tipo `decimal`)
+- **Campo adicionado:** `val_ibs_mun` (tabela `ext_tit_ap`, tipo `decimal`)
+- **Campo adicionado:** `val_cbs` (tabela `ext_tit_ap`, tipo `decimal`)
+- **Campo adicionado:** `cod_dfe` (tabela `ext_tit_ap`, tipo `character`)
+- **Índice adicionado:** `movtondncc_id` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `movtondncc_movto` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `movtondncc_tit` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_clemis` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_cltrns` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_clvcto` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_dfetrns` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_espemis` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_esptrns` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndncc_espvcto` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `mvtndnca_id` (tabela `movto_ndnc_acr_dfe`)
+- **Índice adicionado:** `mvtndnca_fat` (tabela `movto_ndnc_acr_dfe`)
+- **Índice adicionado:** `mvtndnca_ndnc` (tabela `movto_ndnc_acr_dfe`)
+- **Índice adicionado:** `mvtndnca_orig` (tabela `movto_ndnc_acr_dfe`)
+- **Índice adicionado:** `extttcr_dfe` (tabela `ext_tit_acr`)
+- **Índice adicionado:** `exttitap_dfe` (tabela `ext_tit_ap`)
+- **Índice adicionado:** `rlcmvtca_seq` (tabela `relac_movto_cobr_inadimp`)
+
+### **movfis**
+
+- **Campo atualizado:** `val-base-calc` (tabela `dwf-dest-deduc-irpj-csll`)
+- **Campo adicionado:** `val-deducao-irpj-csll` (tabela `dwf-dest-deduc-irpj-csll`, tipo `decimal`)
+
+### **movind**
+
+- **Campo atualizado:** `num-id-recebto` (tabela `sumar-recebto`)
+- **Tabela nova:** `medicao-contrat-integr-me` _(campos omitidos)_
+- **Tabela nova:** `sim-componente` _(campos omitidos)_
+- **Tabela nova:** `sim-estrut` _(campos omitidos)_
+- **Tabela nova:** `sim-gm-ccusto` _(campos omitidos)_
+- **Tabela nova:** `sim-log-plano` _(campos omitidos)_
+- **Tabela nova:** `sim-mob-dir` _(campos omitidos)_
+- **Tabela nova:** `sim-operac` _(campos omitidos)_
+- **Campo adicionado:** `nr-ord-produ` (tabela `it-requisicao`, tipo `integer`)
+- **Campo adicionado:** `item-pai` (tabela `it-requisicao`, tipo `character`)
+- **Campo adicionado:** `cod-roteiro` (tabela `it-requisicao`, tipo `character`)
+- **Campo adicionado:** `op-seq` (tabela `it-requisicao`, tipo `integer`)
+- **Índice adicionado:** `idx-principal` (tabela `medicao-contrat-integr-me`)
+- **Índice adicionado:** `id` (tabela `sim-componente`)
+- **Índice adicionado:** `estab-item` (tabela `sim-componente`)
+- **Índice adicionado:** `plano-item` (tabela `sim-componente`)
+- **Índice adicionado:** `id` (tabela `sim-estrut`)
+- **Índice adicionado:** `plano-compon` (tabela `sim-estrut`)
+- **Índice adicionado:** `plano-estrut-pai` (tabela `sim-estrut`)
+- **Índice adicionado:** `plano-item-compon` (tabela `sim-estrut`)
+- **Índice adicionado:** `plano-item-estrut` (tabela `sim-estrut`)
+- **Índice adicionado:** `id` (tabela `sim-gm-ccusto`)
+- **Índice adicionado:** `gm-estab-cc` (tabela `sim-gm-ccusto`)
+- **Índice adicionado:** `plano-item` (tabela `sim-gm-ccusto`)
+- **Índice adicionado:** `id` (tabela `sim-log-plano`)
+- **Índice adicionado:** `item-tipo-reg` (tabela `sim-log-plano`)
+- **Índice adicionado:** `id` (tabela `sim-mob-dir`)
+- **Índice adicionado:** `plano-item` (tabela `sim-mob-dir`)
+- **Índice adicionado:** `plano-mob` (tabela `sim-mob-dir`)
+- **Índice adicionado:** `id` (tabela `sim-operac`)
+- **Índice adicionado:** `item-estrut` (tabela `sim-operac`)
+- **Índice adicionado:** `plano-gm` (tabela `sim-operac`)
+- **Índice adicionado:** `tipo-oper` (tabela `sim-operac`)
+- **Índice adicionado:** `ix-docto-dttrans` (tabela `sumar-recebto`)
+- **Índice adicionado:** `ix-documento` (tabela `sumar-recebto`)
+- **Índice adicionado:** `ix-estab-dttrans` (tabela `sumar-recebto`)
+- **Índice adicionado:** `ix-item-docto` (tabela `sumar-recebto`)
+
+### **srcadger**
+
+- **Campo adicionado:** `ds-caminho-element-ptu` (tabela `element-ptu-contest`, tipo `character`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `ds-motivo-glosa` (tabela `movrcglo`)
+- **Campo atualizado:** `ds-tag-contest-prin` (tabela `movrcglo`)
+- **Campo atualizado:** `ds-tag-contest-comp` (tabela `movrcglo`)
+- **Campo atualizado:** `ds-observacao` (tabela `refmov-insu`)
+- **Campo atualizado:** `ds-tag-contest-prin` (tabela `refmov-insu`)
+- **Campo atualizado:** `ds-tag-contest-comp` (tabela `refmov-insu`)
+- **Campo atualizado:** `ds-observacao` (tabela `refmoviproc`)
+- **Campo atualizado:** `ds-tag-contest-prin` (tabela `refmoviproc`)
+- **Campo atualizado:** `ds-tag-contest-comp` (tabela `refmoviproc`)
+- **Campo adicionado:** `vl-tot-finalizacao` (tabela `lote-import-compltar`, tipo `decimal`)
+- **Campo adicionado:** `vl-juros` (tabela `refmov-insu`, tipo `decimal`)
+- **Campo adicionado:** `vl-multa` (tabela `refmov-insu`, tipo `decimal`)
+- **Campo adicionado:** `vl-cor-monetaria` (tabela `refmov-insu`, tipo `decimal`)
+- **Campo adicionado:** `in-uni-favorecida` (tabela `refmov-insu`, tipo `integer`)
+- **Campo adicionado:** `vl-juros` (tabela `refmoviproc`, tipo `decimal`)
+- **Campo adicionado:** `vl-multa` (tabela `refmoviproc`, tipo `decimal`)
+- **Campo adicionado:** `vl-cor-monetaria` (tabela `refmoviproc`, tipo `decimal`)
+- **Campo adicionado:** `in-uni-favorecida` (tabela `refmoviproc`, tipo `integer`)
+- **Campo adicionado:** `qt-reconhecida` (tabela `sispac-pac-realiz`, tipo `integer`)
+
+### **srmovfin**
+
+- **Tabela nova:** `sdo-movto-ctbz-hfp` _(campos omitidos)_
+- **Índice adicionado:** `sdctbzhfp_id` (tabela `sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `sdctbzhfp_ix2` (tabela `sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `sdctbzhfp_ix3` (tabela `sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `sdctbzhfp_ix4` (tabela `sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `sdctbzhfp_ix5` (tabela `sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `sdctbzhfp_ix6` (tabela `sdo-movto-ctbz-hfp`)
+
+### **mgind**
+
+- **Índice renomeado:** `idx-agend-event-1` → `t-d1641c57673b4654bbf2542ac944a0`
+- **Índice renomeado:** `idx-agend-event-2` → `t-4232a89d2a0c4bcd9d3976d513ace5`
+- **Índice renomeado:** `ix-unico` → `t-545de8b63596490fa8e68dbd161e01`
+- **Índice adicionado:** `idx-agend-event` (tabela `agenda-evento-trib`)
+- **Índice adicionado:** `ix-unico` (tabela `conta-recebto`)
+- **Índice removido:** `t-d1641c57673b4654bbf2542ac944a0` (tabela `agenda-evento-trib`)
+- **Índice removido:** `t-4232a89d2a0c4bcd9d3976d513ace5` (tabela `agenda-evento-trib`)
+- **Índice removido:** `t-545de8b63596490fa8e68dbd161e01` (tabela `conta-recebto`)
+
+### **movdis**
+
+- **Índice adicionado:** `idx-estabel` (tabela `parametros-extracao-geracao`)
+
+### **movind**
+
+- **Tabela removida:** `fornecedor-compras-integr-me`
+- **Tabela removida:** `item-integr-compras-me`
