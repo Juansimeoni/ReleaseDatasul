@@ -1,0 +1,125 @@
+# Release Notes - 12.1.2603.3
+
+**Patch:** `acerto-12.1.2603.2-12.1.2603.3`
+**Versão destino:** `12.1.2603.3`
+
+## Alterações no Banco de Dados
+
+### **dthrgst**
+
+- **Campo adicionado:** `val_infoPatPrec` (tabela `sped_proctrab_processo`, tipo `decimal`)
+
+### **emsfin**
+
+- **Tabela nova:** `pagto_online_erro_msg` _(campos omitidos)_
+- **Índice adicionado:** `pgtnlnrr_id` (tabela `pagto_online_erro_msg`)
+- **Índice adicionado:** `pgtnlnrr_bord` (tabela `pagto_online_erro_msg`)
+
+### **emsfnd**
+
+- **Tabela nova:** `metadata_model_object` _(campos omitidos)_
+- **Campo adicionado:** `pending_update` (tabela `metadata_biz_schema`, tipo `logical`)
+- **Campo adicionado:** `pending_update` (tabela `metadata_model`, tipo `logical`)
+- **Campo adicionado:** `origin` (tabela `metadata_model`, tipo `character`)
+- **Campo adicionado:** `pending_update` (tabela `metadata_object`, tipo `logical`)
+- **Campo adicionado:** `origin` (tabela `metadata_object`, tipo `character`)
+- **Campo adicionado:** `pending_update` (tabela `metadata_ui`, tipo `logical`)
+- **Campo adicionado:** `origin` (tabela `metadata_ui`, tipo `character`)
+- **Índice adicionado:** `idx_md_model_object_id` (tabela `metadata_model_object`)
+- **Índice adicionado:** `idx_md_model_identif` (tabela `metadata_model_object`)
+- **Índice adicionado:** `idx_md_object_identif` (tabela `metadata_model_object`)
+
+### **mgdis**
+
+- **Campo adicionado:** `cod-grp-usuar` (tabela `param-nf-debito`, tipo `character`)
+
+### **mgmnt**
+
+- **Tabela nova:** `checklist-acoes` _(campos omitidos)_
+- **Tabela nova:** `checklist-modelos-acoes` _(campos omitidos)_
+- **Índice adicionado:** `index-id` (tabela `checklist-acoes`)
+- **Índice adicionado:** `index-id` (tabela `checklist-modelos-acoes`)
+
+### **movdis**
+
+- **Tabela nova:** `nota-fisc-insuc-entr` _(campos omitidos)_
+- **Campo adicionado:** `estorno-cred` (tabela `it-doc-fisc`, tipo `logical`)
+- **Campo adicionado:** `perc-reduc-aliq-reg` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Campo adicionado:** `aliquota-efetiva-reg` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Índice adicionado:** `ch-evento` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-cancel-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-chave-seq-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-dtm-canc-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-dtm-env-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-dtm-inc-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-envio-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-inc-sit` (tabela `nota-fisc-insuc-entr`)
+- **Índice adicionado:** `ch-sit-chave-seq` (tabela `nota-fisc-insuc-entr`)
+
+### **movfin**
+
+- **Tabela nova:** `inform_rendto` _(campos omitidos)_
+- **Índice adicionado:** `infrmrnd_id` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_cod_id_feder` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_fornec` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_num_pessoa` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_origin_tit_ap` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_prestac_servic_autom` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_reinf_retenc` (tabela `inform_rendto`)
+- **Índice adicionado:** `infrmrnd_tit_ap` (tabela `inform_rendto`)
+
+### **movind**
+
+- **Campo atualizado:** `tipo-dfe` (tabela `docum-est`)
+- **Campo atualizado:** `vl-unit-ext` (tabela `sim-operac`)
+- **Tabela nova:** `evento-trib-fila` _(campos omitidos)_
+- **Campo adicionado:** `tipo-dfe-docto` (tabela `docum-est`, tipo `character`)
+- **Campo adicionado:** `vl-unit-oper-ext` (tabela `sim-operac`, tipo `decimal`)
+- **Campo adicionado:** `descricao` (tabela `sim-operac`, tipo `character`)
+- **Índice adicionado:** `id-fila` (tabela `evento-trib-fila`)
+- **Índice adicionado:** `id-sefaz` (tabela `evento-trib-fila`)
+- **Índice adicionado:** `id-sit-evento` (tabela `evento-trib-fila`)
+- **Índice adicionado:** `ix-tipo-dfe-docto` (tabela `docum-est`)
+
+### **srcadger**
+
+- **Campo atualizado:** `char-2` (tabela `guia-negada`)
+- **Campo atualizado:** `cod-livre-10` (tabela `histor-obs-guia`)
+- **Tabela nova:** `guia-importacao-sistema` _(campos omitidos)_
+- **Tabela nova:** `tiss-centro-consumo` _(campos omitidos)_
+- **Índice adicionado:** `guia_princ` (tabela `guia-importacao-sistema`)
+- **Índice adicionado:** `guia_2` (tabela `guia-importacao-sistema`)
+- **Índice adicionado:** `centroConsumo01` (tabela `tiss-centro-consumo`)
+- **Índice adicionado:** `centroConsumoId` (tabela `tiss-centro-consumo`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `cod-livre-18` (tabela `insumo-aviso-cob-imp`)
+- **Campo atualizado:** `cod-livre-21` (tabela `insumo-aviso-cob-imp`)
+- **Campo atualizado:** `vl-tot-finalizacao` (tabela `lote-import-compltar`)
+- **Campo atualizado:** `char-18` (tabela `mov-insu`)
+- **Campo atualizado:** `char-21` (tabela `mov-insu`)
+- **Campo atualizado:** `char-18` (tabela `mov-itmp`)
+- **Campo atualizado:** `char-21` (tabela `mov-itmp`)
+- **Campo atualizado:** `char-18` (tabela `moviproc`)
+- **Campo atualizado:** `char-18` (tabela `moviptmp`)
+- **Campo atualizado:** `cod-livre-18` (tabela `proced-aviso-cob-imp`)
+- **Campo atualizado:** `vl-juros` (tabela `refmov-insu`)
+- **Campo atualizado:** `vl-multa` (tabela `refmov-insu`)
+- **Campo atualizado:** `vl-cor-monetaria` (tabela `refmov-insu`)
+- **Campo atualizado:** `vl-juros` (tabela `refmoviproc`)
+- **Campo atualizado:** `vl-multa` (tabela `refmoviproc`)
+- **Campo atualizado:** `vl-cor-monetaria` (tabela `refmoviproc`)
+- **Tabela nova:** `ref-movto-audit` _(campos omitidos)_
+- **Campo adicionado:** `cdn-centro-consumo` (tabela `tiss-outras-despesas`, tipo `integer`)
+- **Índice adicionado:** `refaudit1` (tabela `ref-movto-audit`)
+
+### **srmovfin**
+
+- **Campo atualizado:** `cod-livre-10` (tabela `seqcial-nf`)
+- **Campo adicionado:** `cod-estabel-descons` (tabela `lote-ctbz-hfp`, tipo `character`)
+
+### **movind**
+
+- **Índice renomeado:** `ix-tipo-dfe` → `t-282afcc5a60345ffbc00205b794ec0`
+- **Índice removido:** `t-282afcc5a60345ffbc00205b794ec0` (tabela `docum-est`)
