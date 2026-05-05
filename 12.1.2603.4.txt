@@ -1,0 +1,162 @@
+# Release Notes - 12.1.2603.4
+
+**Patch:** `acerto-12.1.2603.3-12.1.2603.4`
+**Versão destino:** `12.1.2603.4`
+
+## Alterações no Banco de Dados
+
+### **dthrgst**
+
+- **Tabela nova:** `sped_relat_dirf` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_ded_depend` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_ide_dep` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_info_dep_sau` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_pen_alim` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_plan_sau` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_previd_compl` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_reemb_ded_dep` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_reemb_dep` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_reemb_med` _(campos omitidos)_
+- **Tabela nova:** `sped_relat_dirf_reemb_tit` _(campos omitidos)_
+- **Tabela nova:** `sped_rendto_isentos` _(campos omitidos)_
+- **Índice adicionado:** `spdrltdrf_id` (tabela `sped_relat_dirf`)
+- **Índice adicionado:** `spdrltdrf_idx2` (tabela `sped_relat_dirf`)
+- **Índice adicionado:** `spdrltdrfdd_id` (tabela `sped_relat_dirf_ded_depend`)
+- **Índice adicionado:** `spdrltdrfid_id` (tabela `sped_relat_dirf_ide_dep`)
+- **Índice adicionado:** `spdrltdrfins_id` (tabela `sped_relat_dirf_info_dep_sau`)
+- **Índice adicionado:** `spdrltdfpn_id` (tabela `sped_relat_dirf_pen_alim`)
+- **Índice adicionado:** `spdrltdrfpln_id` (tabela `sped_relat_dirf_plan_sau`)
+- **Índice adicionado:** `spdrltdfpvd_id` (tabela `sped_relat_dirf_previd_compl`)
+- **Índice adicionado:** `spdrltreemdd_id` (tabela `sped_relat_dirf_reemb_ded_dep`)
+- **Índice adicionado:** `spdrltdrfree_id` (tabela `sped_relat_dirf_reemb_dep`)
+- **Índice adicionado:** `spdrltdrfremb_id` (tabela `sped_relat_dirf_reemb_med`)
+- **Índice adicionado:** `spdrltdrfrmbt_id` (tabela `sped_relat_dirf_reemb_tit`)
+- **Índice adicionado:** `spdrndtst_id` (tabela `sped_rendto_isentos`)
+- **Índice adicionado:** `spdrndtst_idx2` (tabela `sped_rendto_isentos`)
+
+### **emsfnd**
+
+- **Tabela nova:** `smt_svc_account` _(campos omitidos)_
+- **Tabela nova:** `smt_svc_account_tool` _(campos omitidos)_
+- **Campo adicionado:** `cod_url_base_conhec` (tabela `dta_contexto`, tipo `character`)
+- **Índice adicionado:** `idx_svc_account` (tabela `smt_svc_account`)
+- **Índice adicionado:** `idx_svc_account_tool` (tabela `smt_svc_account_tool`)
+
+### **mgind**
+
+- **Tabela nova:** `configur-conta-ctbz` _(campos omitidos)_
+- **Campo adicionado:** `idi-custeio-co-produto` (tabela `sim-plano`, tipo `integer`)
+- **Campo adicionado:** `idi-custeio-refugo` (tabela `sim-plano`, tipo `integer`)
+- **Campo adicionado:** `log-consid-oper-compr` (tabela `sim-plano`, tipo `logical`)
+- **Campo adicionado:** `vl-tot-up-prep` (tabela `sim-plano`, tipo `decimal`)
+- **Campo adicionado:** `vl-tot-up` (tabela `sim-plano`, tipo `decimal`)
+- **Índice adicionado:** `ix-unico` (tabela `configur-conta-ctbz`)
+- **Índice adicionado:** `idx-conta-busca` (tabela `configur-conta-ctbz`)
+- **Índice adicionado:** `idx-vigencia` (tabela `configur-conta-ctbz`)
+- **Índice adicionado:** `vigencia` (tabela `configur-conta-ctbz`)
+
+### **movdis**
+
+- **Tabela nova:** `dia-am-multiplicadores` _(campos omitidos)_
+- **Tabela nova:** `pedido-erro-integ-loja` _(campos omitidos)_
+- **Tabela nova:** `pedido-erro-integ-loja-log` _(campos omitidos)_
+- **Campo adicionado:** `log-estorna-nfcom-subst` (tabela `configur-ajust`, tipo `logical`)
+- **Campo adicionado:** `idi-fin-nfag` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `cod-chave-aces-subs-nfag` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `idi-mot-subs-nfag` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-tipo-fat-nfag` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `cod-chave-aces-fat-conj-nfag` (tabela `doc-fiscal`, tipo `character`)
+- **Índice adicionado:** `idx-trib-uf` (tabela `dia-am-multiplicadores`)
+- **Índice adicionado:** `idx-id` (tabela `pedido-erro-integ-loja`)
+- **Índice adicionado:** `idx-pedido` (tabela `pedido-erro-integ-loja`)
+- **Índice adicionado:** `idx-id` (tabela `pedido-erro-integ-loja-log`)
+- **Índice adicionado:** `idx-ped-fase-loja` (tabela `pedido-erro-integ-loja-log`)
+
+### **movfin**
+
+- **Campo atualizado:** `val_ibs_uf` (tabela `ext_tit_acr`)
+- **Campo atualizado:** `val_ibs_mun` (tabela `ext_tit_acr`)
+- **Campo atualizado:** `val_cbs` (tabela `ext_tit_acr`)
+- **Campo atualizado:** `val_ibs_uf` (tabela `ext_tit_ap`)
+- **Campo atualizado:** `val_ibs_mun` (tabela `ext_tit_ap`)
+- **Campo atualizado:** `val_cbs` (tabela `ext_tit_ap`)
+- **Campo atualizado:** `val_contdo_campo` (tabela `tit_acr_trib`)
+- **Campo atualizado:** `val_contdo_campo` (tabela `tit_ap_trib`)
+- **Tabela nova:** `tit_acr_docto_fisc` _(campos omitidos)_
+- **Tabela nova:** `tit_ap_docto_fisc` _(campos omitidos)_
+- **Campo adicionado:** `log_devol_clien` (tabela `financ_docto_fisc`, tipo `logical`)
+- **Campo adicionado:** `log_devol_fornec` (tabela `financ_docto_fisc`, tipo `logical`)
+- **Campo adicionado:** `dat_ult_liquidac` (tabela `financ_docto_fisc`, tipo `date`)
+- **Campo adicionado:** `ind_sit_proces_ant` (tabela `movto_ndnc_acr`, tipo `character`)
+- **Campo adicionado:** `ind_orig_tit_acr` (tabela `movto_ndnc_acr`, tipo `character`)
+- **Índice adicionado:** `ttcrdctf_id` (tabela `tit_acr_docto_fisc`)
+- **Índice adicionado:** `ttcrdctf_doc_princ` (tabela `tit_acr_docto_fisc`)
+- **Índice adicionado:** `ttpdctfs_id` (tabela `tit_ap_docto_fisc`)
+- **Índice adicionado:** `ttpdctfs_doc_princ` (tabela `tit_ap_docto_fisc`)
+- **Índice adicionado:** `fnncdcta_liquid` (tabela `financ_docto_fisc`)
+- **Índice adicionado:** `mvtndncc_orig` (tabela `movto_ndnc_acr`)
+- **Índice adicionado:** `ttcrtrb_tit_docto` (tabela `tit_acr_trib`)
+- **Índice adicionado:** `ttptrb_tit_docto` (tabela `tit_ap_trib`)
+
+### **movfis**
+
+- **Campo atualizado:** `cod-cta-ctbl-ant` (tabela `dwf-transf-sdo-ctbl`)
+- **Tabela nova:** `dwf-docto-item-pis-cofins` _(campos omitidos)_
+- **Índice adicionado:** `idx-docto` (tabela `dwf-docto-item-pis-cofins`)
+- **Índice adicionado:** `idx-data-docto` (tabela `dwf-docto-item-pis-cofins`)
+
+### **movind**
+
+- **Campo adicionado:** `dt-competencia` (tabela `docum-est`, tipo `date`)
+- **Campo adicionado:** `es-codigo-orig` (tabela `sim-estrut`, tipo `character`)
+- **Campo adicionado:** `op-codigo` (tabela `sim-estrut`, tipo `integer`)
+- **Campo adicionado:** `nivel` (tabela `sim-estrut`, tipo `integer`)
+- **Campo adicionado:** `gm-codigo-orig` (tabela `sim-operac`, tipo `character`)
+- **Campo adicionado:** `log-operacao-final` (tabela `sim-operac`, tipo `logical`)
+- **Campo adicionado:** `val-perc-refugo` (tabela `sim-operac`, tipo `decimal`)
+- **Campo adicionado:** `val-unit-refugo` (tabela `sim-operac`, tipo `decimal`)
+
+### **srmovcon**
+
+- **Campo adicionado:** `cod-numero-doc-2-ea` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-operadora-ea` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-prestador-ea` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `num-lote-prestador-ea` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `log-evento-adverso` (tabela `docto-ptu`, tipo `logical`)
+- **Campo adicionado:** `cod-numero-doc-1-ea` (tabela `docto-ptu`, tipo `character`)
+- **Campo adicionado:** `cod-numero-doc-1-ea` (tabela `docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `cod-numero-doc-2-ea` (tabela `docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-operadora-ea` (tabela `docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-prestador-ea` (tabela `docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-lote-prestador-ea` (tabela `docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `log-evento-adverso` (tabela `docto-revis-ctas-comp`, tipo `logical`)
+- **Campo adicionado:** `cod-numero-doc-1-ea` (tabela `hist-docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `cod-numero-doc-2-ea` (tabela `hist-docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-operadora-ea` (tabela `hist-docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-guia-tiss-prestador-ea` (tabela `hist-docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `num-lote-prestador-ea` (tabela `hist-docto-revis-ctas-comp`, tipo `character`)
+- **Campo adicionado:** `log-evento-adverso` (tabela `hist-docto-revis-ctas-comp`, tipo `logical`)
+- **Campo adicionado:** `val-taxa-adm-reemb` (tabela `servico-ptu`, tipo `decimal`)
+
+### **srmovfin**
+
+- **Campo atualizado:** `cdd-seq` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq-lote` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `cod-estabel` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `cd-contratante` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `nr-fatura` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `cd-especie` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `parcela` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `vl-evento` (tabela `demonst-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq` (tabela `sdo-movto-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq-histor-incl` (tabela `sdo-movto-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq-lote-incl` (tabela `sdo-movto-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq-histor-exc-cancel` (tabela `sdo-movto-ctbz-hfp`)
+- **Campo atualizado:** `cdd-seq-lote-exc-cancel` (tabela `sdo-movto-ctbz-hfp`)
+- **Tabela nova:** `histor-sdo-movto-ctbz-hfp` _(campos omitidos)_
+- **Índice adicionado:** `hsdctbzhfp_id` (tabela `histor-sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `hsdctbzhfp_ix2` (tabela `histor-sdo-movto-ctbz-hfp`)
+
+### **mgind**
+
+- **Tabela removida:** `conta-recebto`
