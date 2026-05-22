@@ -1,0 +1,119 @@
+# Release Notes - 12.1.2603.5
+
+**Patch:** `acerto-12.1.2603.4-12.1.2603.5`
+**Versão destino:** `12.1.2603.5`
+
+## Alterações no Banco de Dados
+
+### **dthrgst**
+
+- **Campo atualizado:** `dat_nascimento` (tabela `sped_relat_dirf_ide_dep`)
+- **Campo atualizado:** `cod_depend_ir` (tabela `sped_relat_dirf_ide_dep`)
+- **Campo atualizado:** `cod_tipo_depend` (tabela `sped_relat_dirf_ide_dep`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `cod_url_base_conhec` (tabela `dta_contexto`)
+- **Tabela nova:** `tool` _(campos omitidos)_
+- **Tabela nova:** `tool_segur` _(campos omitidos)_
+- **Campo adicionado:** `cod_projeto_base_conhec` (tabela `dta_contexto`, tipo `character`)
+- **Campo adicionado:** `cod_chave_base_conhec` (tabela `dta_contexto`, tipo `character`)
+- **Índice adicionado:** `idx_tool` (tabela `tool`)
+- **Índice adicionado:** `idx_tool_segur` (tabela `tool_segur`)
+
+### **mdtcrm**
+
+- **Tabela nova:** `crm_ocor_hist_alter` _(campos omitidos)_
+- **Índice adicionado:** `idx_id` (tabela `crm_ocor_hist_alter`)
+- **Índice adicionado:** `idx_dtm_alt` (tabela `crm_ocor_hist_alter`)
+- **Índice adicionado:** `idx_ocor` (tabela `crm_ocor_hist_alter`)
+- **Índice adicionado:** `idx_orig` (tabela `crm_ocor_hist_alter`)
+
+### **mgind**
+
+- **Campo adicionado:** `cod-lote-wms-ext` (tabela `param-estoq`, tipo `character`)
+
+### **movdis**
+
+- **Tabela nova:** `nota-fisc-relac` _(campos omitidos)_
+- **Tabela nova:** `ped-pag-antecipado` _(campos omitidos)_
+- **Índice adicionado:** `ch-nota` (tabela `nota-fisc-relac`)
+- **Índice adicionado:** `ch-nota-rel` (tabela `nota-fisc-relac`)
+- **Índice adicionado:** `idx_seq_antecip` (tabela `ped-pag-antecipado`)
+- **Índice adicionado:** `idx_chave_tit` (tabela `ped-pag-antecipado`)
+- **Índice adicionado:** `idx_estab_ser_nf` (tabela `ped-pag-antecipado`)
+- **Índice adicionado:** `idx_pedido` (tabela `ped-pag-antecipado`)
+- **Índice adicionado:** `ch-cclass-emis` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-class-regul-emis` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-cst-emis` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-cst-regul-emis` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-emis-cclass` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-emis-class-regul` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-emis-cst` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-emis-cst-regul` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-emis-pres` (tabela `it-nota-fisc-trib`)
+- **Índice adicionado:** `ch-pres-emis` (tabela `it-nota-fisc-trib`)
+
+### **movfin**
+
+- **Tabela nova:** `tit_acr_event_trib_dfe` _(campos omitidos)_
+- **Índice adicionado:** `ttcrvntt_id` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_chave_aces` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_cliente` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_data_pagto` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_docto_fisc` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_movto_tit_acr` (tabela `tit_acr_event_trib_dfe`)
+- **Índice adicionado:** `ttcrvntt_tit_acr` (tabela `tit_acr_event_trib_dfe`)
+
+### **movind**
+
+- **Tabela nova:** `pedido-compr-gesplan` _(campos omitidos)_
+- **Tabela nova:** `rastrea-compras-gesplan` _(campos omitidos)_
+- **Campo adicionado:** `tempo-mob-calc` (tabela `sim-operac`, tipo `decimal`)
+- **Campo adicionado:** `ref-producao` (tabela `ws-docto-transf-depos`, tipo `character`)
+- **Índice adicionado:** `pk_pedido_compr_gesplan` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `id-cond-pgto` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `id-fornec` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `id-itCodigo` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `id-ordem-compra` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `id-pedido` (tabela `pedido-compr-gesplan`)
+- **Índice adicionado:** `pk_rastrea_compras_gesplan` (tabela `rastrea-compras-gesplan`)
+
+### **srcadger**
+
+- **Campo adicionado:** `in-classe-pacote-inter` (tabela `claserro`, tipo `integer`)
+- **Campo adicionado:** `lg-integra-pmed` (tabela `clinicas`, tipo `logical`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `char-1` (tabela `iemovneg`)
+- **Campo atualizado:** `char-4` (tabela `insuguia`)
+- **Campo atualizado:** `char-21` (tabela `insuusos`)
+- **Campo atualizado:** `char-5` (tabela `procguia`)
+- **Campo atualizado:** `char-18` (tabela `procusos`)
+- **Campo adicionado:** `log-junta-medica` (tabela `guia-autoriz-comp`, tipo `logical`)
+- **Campo adicionado:** `ds-justificativa` (tabela `sispac-pac-realiz`, tipo `character`)
+- **Campo adicionado:** `cd-cod-glo` (tabela `sispac-pac-realiz`, tipo `integer`)
+- **Campo adicionado:** `cd-classe-erro` (tabela `sispac-pac-realiz`, tipo `integer`)
+
+### **srmovfin**
+
+- **Campo adicionado:** `cdd-seq-baixa-rec` (tabela `sdo-movto-ctbz-hfp`, tipo `decimal`)
+- **Campo adicionado:** `cdd-seq-baixa-taxa` (tabela `sdo-movto-ctbz-hfp`, tipo `decimal`)
+- **Índice adicionado:** `hsdctbzhfp_ix3` (tabela `histor-sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `hsdctbzhfp_ix4` (tabela `histor-sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `hsdctbzhfp_ix5` (tabela `histor-sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `hsdctbzhfp_ix6` (tabela `histor-sdo-movto-ctbz-hfp`)
+- **Índice adicionado:** `hsdctbzhfp_ix7` (tabela `histor-sdo-movto-ctbz-hfp`)
+
+### **dthrgst**
+
+- **Índice renomeado:** `spdrltdrfpln_id` → `t-ff26f1c52f6e468694acc7c4cc922f`
+- **Índice adicionado:** `spdrltdrfpln_id` (tabela `sped_relat_dirf_plan_sau`)
+- **Índice removido:** `t-ff26f1c52f6e468694acc7c4cc922f` (tabela `sped_relat_dirf_plan_sau`)
+
+### **movdis**
+
+- **Índice renomeado:** `idx-trib-uf` → `t-40c898e6fea9402fae28ae7383e900`
+- **Índice adicionado:** `idx-trib-uf` (tabela `dia-am-multiplicadores`)
+- **Índice removido:** `t-40c898e6fea9402fae28ae7383e900` (tabela `dia-am-multiplicadores`)
