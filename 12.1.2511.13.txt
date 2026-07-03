@@ -1,0 +1,145 @@
+# Release Notes - 12.1.2511.13
+
+**Patch:** `acerto-12.1.2511.12-12.1.2511.13`
+**Versão destino:** `12.1.2511.13`
+
+## Alterações no Banco de Dados
+
+### **dthrgst**
+
+- **Campo adicionado:** `cdn_receita` (tabela `sped_previd_compl`, tipo `character`)
+- **Campo adicionado:** `cdn_receita` (tabela `sped_rendto_isentos`, tipo `character`)
+- **Índice adicionado:** `spdprvcomp_idx1` (tabela `sped_previd_compl`)
+- **Índice adicionado:** `spdrndtst_idx3` (tabela `sped_rendto_isentos`)
+
+### **dthrpmg**
+
+- **Campo adicionado:** `log_integra_rh_orcamento` (tabela `param_slr`, tipo `logical`)
+- **Campo adicionado:** `log_integra_ats` (tabela `param_slr`, tipo `logical`)
+- **Campo adicionado:** `idi_tipo_contrato` (tabela `req_pessoal`, tipo `integer`)
+
+### **dthrpyc**
+
+- **Campo adicionado:** `val_adc_ferias_corrig` (tabela `histor_utiliz_media_adc`, tipo `decimal`)
+- **Campo adicionado:** `val_adc_13o_corrig` (tabela `histor_utiliz_media_adc`, tipo `decimal`)
+- **Campo adicionado:** `val_adc_corrig_salario_matern` (tabela `histor_utiliz_media_adc`, tipo `decimal`)
+- **Campo adicionado:** `num_ano_adc_corrig` (tabela `histor_utiliz_media_adc`, tipo `int64`)
+- **Campo adicionado:** `num_mes_adc_corrig` (tabela `histor_utiliz_media_adc`, tipo `int64`)
+
+### **emsfnd**
+
+- **Tabela nova:** `metadata_filter` _(campos omitidos)_
+- **Tabela nova:** `metadata_preference` _(campos omitidos)_
+- **Índice adicionado:** `pk_metadata_filter` (tabela `metadata_filter`)
+- **Índice adicionado:** `idx_metadata_filter` (tabela `metadata_filter`)
+- **Índice adicionado:** `pk_metadata_preference` (tabela `metadata_preference`)
+- **Índice adicionado:** `idx_metadata_preference` (tabela `metadata_preference`)
+
+### **emsuni**
+
+- **Tabela nova:** `lmiext_espec_docto` _(campos omitidos)_
+- **Índice adicionado:** `lmxtspcd_id` (tabela `lmiext_espec_docto`)
+
+### **mgind**
+
+- **Campo adicionado:** `cod-tipo-ente-gov` (tabela `doc-orig-nfe`, tipo `integer`)
+- **Campo adicionado:** `cod-tipo-oper-gov` (tabela `doc-orig-nfe`, tipo `integer`)
+
+### **movdis**
+
+- **Campo atualizado:** `qt-alocada` (tabela `ped-item`)
+- **Campo atualizado:** `qt-log-aloca` (tabela `ped-item`)
+- **Tabela nova:** `ag-doc-eletro-log-exec` _(campos omitidos)_
+- **Tabela nova:** `ag-doc-eletro-sum-dia` _(campos omitidos)_
+- **Tabela nova:** `ag-doc-eletro-sum-dia-insight` _(campos omitidos)_
+- **Tabela nova:** `ag-doc-eletro-sum-dia-item` _(campos omitidos)_
+- **Tabela nova:** `per-cred-imposto` _(campos omitidos)_
+- **Campo adicionado:** `cod-chave-aces-subs-nfgas` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `idi-mot-subs-nfgas` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-tipo-fat-nfgas` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-fin-nfgas` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-tip-nfse-cred-deb` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-cons-final` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `cod-indoper` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `idi-tipo-ente-gov` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-tipo-operac` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-ind-zfm-alc` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `idi-ind-destinat` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `dt-competencia` (tabela `doc-fiscal`, tipo `date`)
+- **Campo adicionado:** `idi-fin-nfse` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `perc-reduc-aliq-gov` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Índice adicionado:** `pk-log-exec` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-correlacao` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-documento` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-msg` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-origem-idemp` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-periodo-status` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `pk-ag-doc-sum-dia` (tabela `ag-doc-eletro-sum-dia`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-exec` (tabela `ag-doc-eletro-sum-dia`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-per` (tabela `ag-doc-eletro-sum-dia`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-sta` (tabela `ag-doc-eletro-sum-dia`)
+- **Índice adicionado:** `uk-ag-doc-sum-dia` (tabela `ag-doc-eletro-sum-dia`)
+- **Índice adicionado:** `pk-ag-doc-sum-dia-ins` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-per` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-prior` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-regra` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-sum` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `pk-ag-doc-sum-dia-item` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-item-caus` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-item-per` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-item-rank` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice adicionado:** `uk-ag-doc-sum-dia-item` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice adicionado:** `idx-id` (tabela `per-cred-imposto`)
+- **Índice adicionado:** `idx-estab` (tabela `per-cred-imposto`)
+- **Índice adicionado:** `idx-item` (tabela `per-cred-imposto`)
+- **Índice adicionado:** `idx-param` (tabela `per-cred-imposto`)
+- **Índice adicionado:** `idx-periodo` (tabela `per-cred-imposto`)
+- **Índice adicionado:** `idx-usuario` (tabela `per-cred-imposto`)
+
+### **movfin**
+
+- **Tabela nova:** `movto_ndnc_acr_orig` _(campos omitidos)_
+- **Campo adicionado:** `val_juros_liquidac` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_avdeb_liquidac` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `cod_refer_renegoc` (tabela `movto_ndnc_acr`, tipo `character`)
+- **Campo adicionado:** `val_renegoc_cobr_acr` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_tit_acr_renegoc` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_tot_juros_renegoc` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_perc_liquidac_renegoc` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_juros_renegoc_proporc` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_liquidac_tit_acr` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `cod_indic_econ_renegoc` (tabela `movto_ndnc_acr`, tipo `character`)
+- **Campo adicionado:** `val_cotac_liquidac` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `val_juros_renegoc_corren` (tabela `movto_ndnc_acr`, tipo `decimal`)
+- **Campo adicionado:** `cod_estab_renegoc` (tabela `movto_ndnc_acr`, tipo `character`)
+- **Índice adicionado:** `mvtndncb_id` (tabela `movto_ndnc_acr_orig`)
+- **Índice adicionado:** `mvtndncb_tit` (tabela `movto_ndnc_acr_orig`)
+
+### **movind**
+
+- **Campo adicionado:** `valor-tot-rt` (tabela `despesa-aces`, tipo `decimal`)
+- **Campo adicionado:** `valor-tot-nf-rt` (tabela `docum-est`, tipo `decimal`)
+- **Campo adicionado:** `cod-tipo-oper-gov` (tabela `docum-est`, tipo `integer`)
+- **Campo adicionado:** `cod-tipo-ente-gov` (tabela `docum-est`, tipo `integer`)
+
+### **srcadger**
+
+- **Tabela nova:** `audit-benef-ia` _(campos omitidos)_
+- **Índice adicionado:** `index-1` (tabela `audit-benef-ia`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `cod-verificacao-documento-2` (tabela `cabecalho-ptu`)
+- **Campo atualizado:** `cod-verificacao-documento-1` (tabela `cabecalho-ptu`)
+- **Campo adicionado:** `des-pedido-revisao` (tabela `insumo-guia-comp`, tipo `character`)
+- **Campo adicionado:** `des-pedido-revisao` (tabela `proced-guia-comp`, tipo `character`)
+
+### **dthrgst**
+
+- **Tabela removida:** `sped_relat_dirf_ide_dep`
+
+### **movind**
+
+- **Índice renomeado:** `ix-unico` → `t-9b0d01b3f9554ee5a431a893f2539f`
+- **Índice adicionado:** `idx-sumar-recebto` (tabela `sumar-recebto`)
+- **Índice removido:** `t-9b0d01b3f9554ee5a431a893f2539f` (tabela `sumar-recebto`)
