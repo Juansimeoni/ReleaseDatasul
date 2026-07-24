@@ -1,0 +1,182 @@
+# Release Notes - 12.1.2603.8
+
+**Patch:** `acerto-12.1.2603.7-12.1.2603.8`
+**Versão destino:** `12.1.2603.8`
+
+## Alterações no Banco de Dados
+
+### **cad5loc**
+
+- **Campo adicionado:** `ind_base_retenc` (tabela `lmiext_classif_impto`, tipo `character`)
+
+### **dthrgst**
+
+- **Tabela nova:** `integr_ahgora_empres` _(campos omitidos)_
+- **Índice adicionado:** `intgrahgremp_id` (tabela `integr_ahgora_empres`)
+
+### **dthrtma**
+
+- **Tabela nova:** `matriz_escal_turno` _(campos omitidos)_
+- **Índice adicionado:** `mtrzscltrn_id` (tabela `matriz_escal_turno`)
+- **Índice adicionado:** `mtrzscltrn_seq` (tabela `matriz_escal_turno`)
+
+### **emsfin**
+
+- **Tabela nova:** `concil_financ_autom` _(campos omitidos)_
+- **Tabela nova:** `operdra_trans_online` _(campos omitidos)_
+- **Tabela nova:** `usuar_concil_autom` _(campos omitidos)_
+- **Campo adicionado:** `num_admdra_integr_api` (tabela `admdra_operdra_cartao_cr`, tipo `integer`)
+- **Índice adicionado:** `cnclfnnc_id` (tabela `concil_financ_autom`)
+- **Índice adicionado:** `oprdrtrn_id` (tabela `operdra_trans_online`)
+- **Índice adicionado:** `usrcnclt_id` (tabela `usuar_concil_autom`)
+
+### **emsfnd**
+
+- **Tabela nova:** `ped_exec_task` _(campos omitidos)_
+- **Campo adicionado:** `log_multitask` (tabela `servid_exec`, tipo `logical`)
+- **Campo adicionado:** `qtd_exec_task_simult_usuar` (tabela `servid_exec`, tipo `integer`)
+- **Campo adicionado:** `cod_servid_multitask` (tabela `servid_exec`, tipo `character`)
+- **Índice adicionado:** `pdtx_id` (tabela `ped_exec_task`)
+
+### **emsuni**
+
+- **Campo adicionado:** `ind_tip_autentic` (tabela `configur_conex_online`, tipo `character`)
+- **Campo adicionado:** `des_usuar_autentic` (tabela `configur_conex_online`, tipo `character`)
+- **Campo adicionado:** `des_token` (tabela `configur_conex_online`, tipo `character`)
+
+### **mgdis**
+
+- **Tabela nova:** `prev-entrega` _(campos omitidos)_
+- **Campo adicionado:** `ind-prev-entrega` (tabela `para-fat`, tipo `integer`)
+- **Índice adicionado:** `ch-orig-dest` (tabela `prev-entrega`)
+- **Índice adicionado:** `ch-dest-orig` (tabela `prev-entrega`)
+
+### **mguni**
+
+- **Campo adicionado:** `log-consid-dias-uteis` (tabela `moeda`, tipo `logical`)
+- **Campo adicionado:** `cod-calend` (tabela `moeda`, tipo `character`)
+
+### **mov5loc**
+
+- **Campo adicionado:** `val_dif_impto` (tabela `ury_impto_vincul_tit_ap`, tipo `decimal`)
+- **Campo adicionado:** `val_base_liq_impto` (tabela `ury_impto_vincul_tit_ap`, tipo `decimal`)
+- **Índice adicionado:** `argrcbtt_titulo` (tabela `arg_recibo_tit_vincul`)
+
+### **movdis**
+
+- **Campo atualizado:** `cod-fin-nfe` (tabela `doc-fiscal`)
+- **Tabela nova:** `ag-doc-eletro-orientacao` _(campos omitidos)_
+- **Tabela nova:** `ag-doc-eletro-param` _(campos omitidos)_
+- **Campo adicionado:** `localizador` (tabela `ag-doc-eletro-log-exec`, tipo `character`)
+- **Campo adicionado:** `cod-status-http` (tabela `ag-doc-eletro-log-exec`, tipo `integer`)
+- **Campo adicionado:** `localizador` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `id-assinatura-analise` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `nr-versao-analise` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `integer`)
+- **Campo adicionado:** `des-acao-sugerida` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `log-falha-cadastro` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `logical`)
+- **Campo adicionado:** `log-falha-valid-previa` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `logical`)
+- **Campo adicionado:** `dat-retorno-lynn` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `datetime`)
+- **Campo adicionado:** `localizador` (tabela `ag-doc-eletro-sum-dia-item`, tipo `character`)
+- **Campo adicionado:** `idi-mot-subs-dfe` (tabela `doc-fiscal`, tipo `integer`)
+- **Campo adicionado:** `des-mot-subs-dfe` (tabela `doc-fiscal`, tipo `character`)
+- **Campo adicionado:** `idi-tip-fat-dfe` (tabela `doc-fiscal`, tipo `integer`)
+- **Índice adicionado:** `pk-ag-doc-eletro-orient` (tabela `ag-doc-eletro-orientacao`)
+- **Índice adicionado:** `idx-ag-doc-eletro-orient-doc` (tabela `ag-doc-eletro-orientacao`)
+- **Índice adicionado:** `uk-ag-doc-eletro-orient-loc` (tabela `ag-doc-eletro-orientacao`)
+- **Índice adicionado:** `uk-ag-doc-eletro-orient-ret` (tabela `ag-doc-eletro-orientacao`)
+- **Índice adicionado:** `pk-ag-doc-eletro-param` (tabela `ag-doc-eletro-param`)
+- **Índice adicionado:** `idx-ag-doc-eletro-param-ativo` (tabela `ag-doc-eletro-param`)
+- **Índice adicionado:** `uk-ag-doc-eletro-param-esc` (tabela `ag-doc-eletro-param`)
+- **Índice adicionado:** `idx-localizador` (tabela `ag-doc-eletro-log-exec`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-loc` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `idx-ped-bonif` (tabela `ped-venda`)
+
+### **movind**
+
+- **Campo atualizado:** `externalCode` (tabela `pedido-compr-gesplan`)
+- **Campo atualizado:** `divisionGroup` (tabela `pedido-compr-gesplan`)
+- **Campo adicionado:** `businessUnit` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `originSystem` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `originSystemName` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `description` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `documentType` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `documentTypeName_ptBR` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `beneficiaryName` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `beneficiaryType` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `beneficiaryOrigin` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `beneficiaryFederalCode` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `motionWayName_ptBR` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `accountingAccountClassification` (tabela `pedido-compr-gesplan`, tipo `integer`)
+- **Campo adicionado:** `unid-negocio` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `tipo-fluxo` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `tipo-despesa` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `integrationType` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `scenario` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `costCenterPlan` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `costCenterName_ptBR` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `accountingAccountName_ptBR` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `conversionBusiness` (tabela `pedido-compr-gesplan`, tipo `decimal`)
+- **Campo adicionado:** `fixedRateBusiness` (tabela `pedido-compr-gesplan`, tipo `decimal`)
+- **Campo adicionado:** `conversionAccount` (tabela `pedido-compr-gesplan`, tipo `decimal`)
+- **Campo adicionado:** `fixedRateAccount` (tabela `pedido-compr-gesplan`, tipo `decimal`)
+- **Campo adicionado:** `externalCodeDetail` (tabela `pedido-compr-gesplan`, tipo `character`)
+- **Campo adicionado:** `tipo-ajuste` (tabela `sim-log-plano`, tipo `integer`)
+- **Campo adicionado:** `log-sem-lote` (tabela `ws-docto-transf-depos`, tipo `logical`)
+- **Campo adicionado:** `log-envio-docto` (tabela `ws-docto-transf-depos`, tipo `logical`)
+- **Índice adicionado:** `item-tipo-ajuste` (tabela `sim-log-plano`)
+
+### **srcadger**
+
+- **Campo atualizado:** `codigoProcedimento` (tabela `tiss-mov-anexo-doc`, tipo `int64`)
+- **Tabela nova:** `audit-cad-ia` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia-hist` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia-insu` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia-insu-hist` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia-proc` _(campos omitidos)_
+- **Tabela nova:** `guia-dig-ia-proc-hist` _(campos omitidos)_
+- **Campo adicionado:** `id-tip-tar` (tabela `audit-benef-ia`, tipo `character`)
+- **Índice renomeado:** `index-1` → `t-e89fd10e0bd04d14b732f461616d23`
+- **Índice adicionado:** `index-1` (tabela `audit-cad-ia`)
+- **Índice adicionado:** `guia-dig-ia-1` (tabela `guia-dig-ia`)
+- **Índice adicionado:** `guia-dig-ia-2` (tabela `guia-dig-ia`)
+- **Índice adicionado:** `guia-dig-ia-3` (tabela `guia-dig-ia`)
+- **Índice adicionado:** `guia-dig-ia-4` (tabela `guia-dig-ia`)
+- **Índice adicionado:** `guia-dig-ia-5` (tabela `guia-dig-ia`)
+- **Índice adicionado:** `guia-dig-ia-hist-1` (tabela `guia-dig-ia-hist`)
+- **Índice adicionado:** `guia-dig-ia-hist-2` (tabela `guia-dig-ia-hist`)
+- **Índice adicionado:** `guia-dig-ia-insu-1` (tabela `guia-dig-ia-insu`)
+- **Índice adicionado:** `guia-dig-ia-insu-2` (tabela `guia-dig-ia-insu`)
+- **Índice adicionado:** `guia-dig-ia-insu-3` (tabela `guia-dig-ia-insu`)
+- **Índice adicionado:** `guia-dig-ia-insu-hist-1` (tabela `guia-dig-ia-insu-hist`)
+- **Índice adicionado:** `guia-dig-ia-insu-hist-2` (tabela `guia-dig-ia-insu-hist`)
+- **Índice adicionado:** `guia-dig-ia-proc-1` (tabela `guia-dig-ia-proc`)
+- **Índice adicionado:** `guia-dig-ia-proc-2` (tabela `guia-dig-ia-proc`)
+- **Índice adicionado:** `guia-dig-ia-proc-3` (tabela `guia-dig-ia-proc`)
+- **Índice adicionado:** `guia-dig-ia-proc-hist-1` (tabela `guia-dig-ia-proc-hist`)
+- **Índice adicionado:** `guia-dig-ia-proc-hist-2` (tabela `guia-dig-ia-proc-hist`)
+- **Índice adicionado:** `index-1` (tabela `audit-benef-ia`)
+- **Índice removido:** `t-e89fd10e0bd04d14b732f461616d23` (tabela `audit-benef-ia`)
+
+### **srmovcon**
+
+- **Tabela nova:** `tiss-lote-imp` _(campos omitidos)_
+- **Campo adicionado:** `cd-cnpj-contratante` (tabela `out-uni`, tipo `character`)
+- **Índice adicionado:** `tissloteimp1` (tabela `tiss-lote-imp`)
+- **Índice adicionado:** `tissloteimp2` (tabela `tiss-lote-imp`)
+- **Índice adicionado:** `tissloteimp4` (tabela `tiss-lote-imp`)
+- **Índice adicionado:** `tissloteimp5` (tabela `tiss-lote-imp`)
+- **Índice adicionado:** `tissloteimp6` (tabela `tiss-lote-imp`)
+- **Índice adicionado:** `movatgl2` (tabela `movatglo`)
+
+### **cad5loc**
+
+- **Tabela removida:** `uryext_classif_impto`
+
+### **movdis**
+
+- **Índice adicionado:** `uk-ag-doc-sum-dia-item-loc` (tabela `ag-doc-eletro-sum-dia-item`)
+
+### **movind**
+
+- **Índice adicionado:** `pk_ped_ordem_gesplan` (tabela `pedido-compr-gesplan`)
