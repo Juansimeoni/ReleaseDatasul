@@ -1,0 +1,211 @@
+# Release Notes - 12.1.2603.9
+
+**Patch:** `acerto-12.1.2603.8-12.1.2603.9`
+**Versão destino:** `12.1.2603.9`
+
+## Alterações no Banco de Dados
+
+### **emsfin**
+
+- **Tabela nova:** `techfin_antecip_param` _(campos omitidos)_
+- **Tabela nova:** `techfin_antecip_parcei` _(campos omitidos)_
+- **Tabela nova:** `techfin_limit_sacad` _(campos omitidos)_
+- **Tabela nova:** `techfin_regra_antecip` _(campos omitidos)_
+- **Campo adicionado:** `log_techfin_mais_praz` (tabela `techfin_configur`, tipo `logical`)
+- **Campo adicionado:** `log_techfin_mais_giro` (tabela `techfin_configur`, tipo `logical`)
+- **Campo adicionado:** `log_techfin_antecip_dtsul` (tabela `techfin_configur`, tipo `logical`)
+- **Índice adicionado:** `tchfnntc_id` (tabela `techfin_antecip_param`)
+- **Índice adicionado:** `tchfnnta_id` (tabela `techfin_antecip_parcei`)
+- **Índice adicionado:** `tchfnrgr_id` (tabela `techfin_regra_antecip`)
+- **Índice adicionado:** `tchfnrgr_estab` (tabela `techfin_regra_antecip`)
+
+### **emsfnd**
+
+- **Campo atualizado:** `routine_identifier` (tabela `metadata_filter`)
+- **Campo atualizado:** `cod_empresa` (tabela `metadata_filter`)
+- **Campo atualizado:** `cod_servid_multitask` (tabela `servid_exec`)
+- **Tabela nova:** `configur_ipaas` _(campos omitidos)_
+- **Tabela nova:** `dss_tasks_msgs` _(campos omitidos)_
+- **Tabela nova:** `pagina_externa` _(campos omitidos)_
+- **Tabela nova:** `ped_exec_task_main` _(campos omitidos)_
+- **Tabela nova:** `user_jornada_pref` _(campos omitidos)_
+- **Campo adicionado:** `cod_ult_obj_procesdo` (tabela `ped_exec_task`, tipo `character`)
+- **Campo adicionado:** `dtz_ult_atualiz` (tabela `ped_exec_task`, tipo `datetime-tz`)
+- **Campo adicionado:** `cod_jornada` (tabela `proces_menu`, tipo `character`)
+- **Campo adicionado:** `des_jornada` (tabela `proces_menu`, tipo `character`)
+- **Índice adicionado:** `idx_configur_ipaas` (tabela `configur_ipaas`)
+- **Índice adicionado:** `pk_tasks_id` (tabela `dss_tasks_msgs`)
+- **Índice adicionado:** `pf_tasks_email` (tabela `dss_tasks_msgs`)
+- **Índice adicionado:** `pk_tasks_ident` (tabela `dss_tasks_msgs`)
+- **Índice adicionado:** `pk_pagina_externa` (tabela `pagina_externa`)
+- **Índice adicionado:** `pk_user_jornada_pref` (tabela `user_jornada_pref`)
+
+### **emsuni**
+
+- **Campo atualizado:** `ind_orig_cta_ctbl_ext` (tabela `matriz_trad_cta_ctbl_ext`)
+- **Campo adicionado:** `cod_plano_cta_refer_dere` (tabela `matriz_trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `cod_freq_encert_dere` (tabela `matriz_trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `des_cta_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `cod_natur_cta_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `cod_natur_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `cod_trib_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `ind_trib_iss_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `lei_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+
+### **mgfis**
+
+- **Campo atualizado:** `log-livre-1` (tabela `dwf-mit-dados-iniciais`)
+- **Campo atualizado:** `log-livre-2` (tabela `dwf-mit-dados-iniciais`)
+- **Campo atualizado:** `log-balanc-lucro-real` (tabela `dwf-mit-debito`)
+- **Campo atualizado:** `log-livre-1` (tabela `dwf-mit-debito`)
+- **Campo atualizado:** `log-livre-2` (tabela `dwf-mit-debito`)
+- **Campo atualizado:** `log-livre-1` (tabela `dwf-mit-evento-espec`)
+- **Campo atualizado:** `log-livre-2` (tabela `dwf-mit-evento-espec`)
+- **Campo atualizado:** `log-livre-1` (tabela `dwf-mit-susp`)
+- **Campo atualizado:** `log-livre-2` (tabela `dwf-mit-susp`)
+
+### **mgind**
+
+- **Tabela nova:** `param-gerais-rec` _(campos omitidos)_
+- **Índice adicionado:** `unico` (tabela `param-gerais-rec`)
+
+### **mgmnt**
+
+- **Tabela nova:** `agenda-cenario` _(campos omitidos)_
+- **Tabela nova:** `agenda-ordens` _(campos omitidos)_
+- **Tabela nova:** `agenda-ordens-tecnicos` _(campos omitidos)_
+- **Índice adicionado:** `id` (tabela `agenda-cenario`)
+- **Índice adicionado:** `codigo` (tabela `agenda-cenario`)
+- **Índice adicionado:** `ID` (tabela `agenda-ordens`)
+- **Índice adicionado:** `Ordem` (tabela `agenda-ordens`)
+- **Índice adicionado:** `id` (tabela `agenda-ordens-tecnicos`)
+
+### **movdis**
+
+- **Campo atualizado:** `des-payload-entrada` (tabela `ag-doc-eletro-log-exec`)
+- **Campo atualizado:** `des-payload-saida` (tabela `ag-doc-eletro-log-exec`)
+- **Campo atualizado:** `log-falha-cadastro` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `log-falha-valid-previa` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `des-insight` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `cod-prioridade` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `localizador` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `id-assinatura-analise` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `des-acao-sugerida` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Campo atualizado:** `cod-causa-provavel` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Campo atualizado:** `des-causa-provavel` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Campo atualizado:** `cod-prioridade` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Campo atualizado:** `des-acao-sugerida` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Campo atualizado:** `localizador` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Tabela nova:** `parametros-extracao-inventario` _(campos omitidos)_
+- **Campo adicionado:** `cod-canal-retorno` (tabela `ag-doc-eletro-log-exec`, tipo `character`)
+- **Campo adicionado:** `id-trace-lynn` (tabela `ag-doc-eletro-log-exec`, tipo `character`)
+- **Campo adicionado:** `cod-canal-retorno` (tabela `ag-doc-eletro-orientacao`, tipo `character`)
+- **Campo adicionado:** `id-trace-lynn` (tabela `ag-doc-eletro-orientacao`, tipo `character`)
+- **Campo adicionado:** `des-hash-chave-callback` (tabela `ag-doc-eletro-param`, tipo `character`)
+- **Campo adicionado:** `id-assinatura-sumario` (tabela `ag-doc-eletro-sum-dia`, tipo `character`)
+- **Campo adicionado:** `id-sum-item` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `cod-situacao-fonte` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `des-motivo-criticidade` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `cod-falha-cadastro` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `cod-prevencao-emissao` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `des-programas-relacionados` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `id-trace-lynn` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `id-session-lynn` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `cod-versao-contrato` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `dat-envio-lynn` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `datetime`)
+- **Campo adicionado:** `dat-aceite-lynn` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `datetime`)
+- **Campo adicionado:** `qtd-tentativas-envio` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `integer`)
+- **Campo adicionado:** `dat-proxima-tentativa` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `datetime`)
+- **Campo adicionado:** `des-erro-integracao` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `cod-canal-retorno` (tabela `ag-doc-eletro-sum-dia-insight`, tipo `character`)
+- **Campo adicionado:** `id-assinatura-item` (tabela `ag-doc-eletro-sum-dia-item`, tipo `character`)
+- **Campo adicionado:** `tp-operacao` (tabela `parametros-extracao-geracao`, tipo `integer`)
+- **Campo adicionado:** `log-mot-final-per` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `log-mot-mudanca-trib` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `log-mot-solic-baixa-cad` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `log-mot-alter-pagto` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `log-mot-solic-fisc` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `log-mot-ressarcto-icms-st` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Campo adicionado:** `tp-preco-final-per` (tabela `parametros-extracao-geracao`, tipo `character`)
+- **Campo adicionado:** `tp-preco-mudanca-trib` (tabela `parametros-extracao-geracao`, tipo `character`)
+- **Campo adicionado:** `tp-preco-solic-baixa-cad` (tabela `parametros-extracao-geracao`, tipo `character`)
+- **Campo adicionado:** `tp-preco-alter-pagto` (tabela `parametros-extracao-geracao`, tipo `character`)
+- **Campo adicionado:** `tp-preco-solic-fisc` (tabela `parametros-extracao-geracao`, tipo `character`)
+- **Campo adicionado:** `margem-final-per` (tabela `parametros-extracao-geracao`, tipo `decimal`)
+- **Campo adicionado:** `margem-mudanca-trib` (tabela `parametros-extracao-geracao`, tipo `decimal`)
+- **Campo adicionado:** `margem-solic-cad` (tabela `parametros-extracao-geracao`, tipo `decimal`)
+- **Campo adicionado:** `margem-alter-pagto` (tabela `parametros-extracao-geracao`, tipo `decimal`)
+- **Campo adicionado:** `margem-solic-fisc` (tabela `parametros-extracao-geracao`, tipo `decimal`)
+- **Campo adicionado:** `log-cons-prod-fab` (tabela `parametros-extracao-geracao`, tipo `logical`)
+- **Índice adicionado:** `idx-estab-motivo-item` (tabela `parametros-extracao-inventario`)
+- **Índice adicionado:** `idx-ag-doc-sum-dia-ins-fila` (tabela `ag-doc-eletro-sum-dia-insight`)
+
+### **movfin**
+
+- **Tabela nova:** `techfin_antecip_rastreab` _(campos omitidos)_
+- **Tabela nova:** `techfin_antecip_solicit` _(campos omitidos)_
+- **Tabela nova:** `techfin_antecip_tit` _(campos omitidos)_
+- **Índice adicionado:** `tchfnntd_id` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnntd_dat` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnntd_sit` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnnte_id` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_sit` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_solicit` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_tit` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_trans` (tabela `techfin_antecip_tit`)
+
+### **movfis**
+
+- **Campo atualizado:** `val-energ-eletr` (tabela `dwf-docto-energ-eletr`)
+- **Campo atualizado:** `val-outras-deduc` (tabela `dwf-docto-energ-eletr`)
+
+### **movind**
+
+- **Campo atualizado:** `val-ctbl-debito` (tabela `sumar-recebto`)
+- **Campo atualizado:** `val-ctbl-cred` (tabela `sumar-recebto`)
+- **Campo adicionado:** `cod-prog-orig` (tabela `ord-prod`, tipo `character`)
+- **Campo adicionado:** `dt-hr-criacao` (tabela `ord-prod`, tipo `datetime`)
+- **Campo adicionado:** `num-id-operacao` (tabela `sim-operac`, tipo `integer`)
+- **Campo adicionado:** `valor-ctbl-debito` (tabela `sumar-recebto`, tipo `decimal`)
+- **Campo adicionado:** `valor-ctbl-credito` (tabela `sumar-recebto`, tipo `decimal`)
+
+### **movmnt**
+
+- **Tabela nova:** `ord-mob-andamento` _(campos omitidos)_
+- **Índice adicionado:** `Primaria` (tabela `ord-mob-andamento`)
+
+### **srcadger**
+
+- **Campo adicionado:** `dt-validade-carteira` (tabela `guia-dig-ia`, tipo `date`)
+- **Campo adicionado:** `cd-cnes-executante` (tabela `guia-dig-ia`, tipo `character`)
+- **Campo adicionado:** `ds-json-validacao` (tabela `guia-dig-ia`, tipo `character`)
+- **Campo adicionado:** `dt-validade-carteira` (tabela `guia-dig-ia-hist`, tipo `date`)
+- **Campo adicionado:** `cd-cnes-executante` (tabela `guia-dig-ia-hist`, tipo `character`)
+
+### **srmovcon**
+
+- **Campo atualizado:** `char-21` (tabela `histor-movimen-insumo`)
+- **Campo atualizado:** `char-18` (tabela `histor-movimen-proced`)
+- **Campo adicionado:** `log-resultado-audit-externa` (tabela `guia-autoriz-comp2`, tipo `logical`)
+- **Campo adicionado:** `dat-parecer-audit-externa` (tabela `guia-autoriz-comp2`, tipo `date`)
+- **Campo adicionado:** `des-status-audit-externa` (tabela `insumo-guia-comp`, tipo `character`)
+- **Campo adicionado:** `des-parecer-audit-externa` (tabela `insumo-guia-comp`, tipo `character`)
+- **Campo adicionado:** `des-status-audit-externa` (tabela `proced-guia-comp`, tipo `character`)
+- **Campo adicionado:** `des-parecer-audit-externa` (tabela `proced-guia-comp`, tipo `character`)
+
+### **emsfnd**
+
+- **Índice renomeado:** `idx_metadata_filter` → `t-2bf177a19bf5471d9986027eee205c`
+- **Índice adicionado:** `idx_metadata_filter` (tabela `metadata_filter`)
+- **Índice removido:** `t-2bf177a19bf5471d9986027eee205c` (tabela `metadata_filter`)
+
+### **movdis**
+
+- **Índice renomeado:** `idx-ag-doc-sum-dia-ins-loc` → `t-afe6ef69e9dc4bf38c2a0f02d5b4aa`
+- **Índice renomeado:** `idx-ag-doc-sum-dia-item-caus` → `t-b0a73a1890f0435ebf7afe501f7c84`
+- **Índice renomeado:** `uk-ag-doc-sum-dia-item-loc` → `t-8f2061361ca74d5aaa655fa4fe16ff`
+- **Índice adicionado:** `uk-ag-doc-sum-dia-ins-item` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice adicionado:** `uk-ag-doc-sum-dia-ins-loc` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice removido:** `t-afe6ef69e9dc4bf38c2a0f02d5b4aa` (tabela `ag-doc-eletro-sum-dia-insight`)
+- **Índice removido:** `t-b0a73a1890f0435ebf7afe501f7c84` (tabela `ag-doc-eletro-sum-dia-item`)
+- **Índice removido:** `t-8f2061361ca74d5aaa655fa4fe16ff` (tabela `ag-doc-eletro-sum-dia-item`)
