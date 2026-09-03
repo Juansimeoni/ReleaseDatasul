@@ -1,0 +1,470 @@
+# Release Notes - 12.1.2607.4
+
+**Patch:** `acerto-12.1.2607.3-12.1.2607.4`
+**Versão destino:** `12.1.2607.4`
+
+## Alterações no Banco de Dados
+
+### **emsfin**
+
+- **Campo atualizado:** `cod_empresa` (tabela `concil_financ_autom`)
+- **Campo atualizado:** `log_prorrog_dia_nao_uti` (tabela `techfin_antecip_param`)
+- **Campo atualizado:** `cdn_cliente` (tabela `techfin_limit_sacad`)
+- **Campo atualizado:** `des_justif` (tabela `techfin_limit_sacad`)
+- **Campo atualizado:** `dat_solicit_lim` (tabela `techfin_limit_sacad`)
+- **Campo atualizado:** `cod_estab` (tabela `techfin_regra_antecip`)
+- **Campo adicionado:** `cod_configur_relat` (tabela `concil_financ_autom`, tipo `character`)
+- **Campo adicionado:** `cod_estab_lista` (tabela `concil_financ_autom`, tipo `character`)
+- **Campo adicionado:** `cod_admdra_lista` (tabela `concil_financ_autom`, tipo `character`)
+- **Campo adicionado:** `qti_dias_estende_dat_base` (tabela `concil_financ_autom`, tipo `integer`)
+- **Campo adicionado:** `qti_temp_aguard_req` (tabela `concil_financ_autom`, tipo `integer`)
+- **Campo adicionado:** `log_prorrog_dia_nao_util` (tabela `techfin_antecip_param`, tipo `logical`)
+- **Campo adicionado:** `num_dias_histor_lim_longo` (tabela `techfin_antecip_param`, tipo `integer`)
+- **Campo adicionado:** `num_id_solicit_lim` (tabela `techfin_limit_sacad`, tipo `integer`)
+- **Campo adicionado:** `cod_cnpj_raiz` (tabela `techfin_limit_sacad`, tipo `character`)
+- **Campo adicionado:** `log_solicit_autom` (tabela `techfin_limit_sacad`, tipo `logical`)
+- **Campo adicionado:** `log_ult_reg` (tabela `techfin_limit_sacad`, tipo `logical`)
+- **Campo adicionado:** `num_id_solicit` (tabela `techfin_limit_sacad`, tipo `integer`)
+- **Campo adicionado:** `val_lim_ant` (tabela `techfin_limit_sacad`, tipo `decimal`)
+- **Campo adicionado:** `val_solicit_lim` (tabela `techfin_limit_sacad`, tipo `decimal`)
+- **Campo adicionado:** `ind_status_lim` (tabela `techfin_limit_sacad`, tipo `character`)
+- **Campo adicionado:** `cod_usuario` (tabela `techfin_limit_sacad`, tipo `character`)
+- **Campo adicionado:** `dat_ult_atualiz` (tabela `techfin_regra_antecip`, tipo `date`)
+- **Campo adicionado:** `hra_ult_atualiz` (tabela `techfin_regra_antecip`, tipo `character`)
+- **Campo adicionado:** `cod_id_feder` (tabela `techfin_regra_antecip`, tipo `character`)
+- **Índice adicionado:** `tchfnnta_emp` (tabela `techfin_antecip_parcei`)
+- **Índice adicionado:** `tchfnnta_estab` (tabela `techfin_antecip_parcei`)
+- **Índice adicionado:** `tchfnlmt_cnpj_dat` (tabela `techfin_limit_sacad`)
+- **Índice adicionado:** `tchfnlmt_cnpj_sit` (tabela `techfin_limit_sacad`)
+- **Índice adicionado:** `tchfnlmt_ult` (tabela `techfin_limit_sacad`)
+- **Índice adicionado:** `tchfnlmt_ult_cnpj` (tabela `techfin_limit_sacad`)
+- **Índice adicionado:** `tchfnrgr_id_feder` (tabela `techfin_regra_antecip`)
+- **Índice adicionado:** `tchfnrgr_status` (tabela `techfin_regra_antecip`)
+
+### **emsfnd**
+
+- **Tabela nova:** `agent_mcp` _(campos omitidos)_
+- **Tabela nova:** `dss_notification_msgs` _(campos omitidos)_
+- **Índice adicionado:** `idx_agent_mcp` (tabela `agent_mcp`)
+- **Índice adicionado:** `notification_id` (tabela `dss_notification_msgs`)
+- **Índice adicionado:** `notification_01` (tabela `dss_notification_msgs`)
+
+### **emsuni**
+
+- **Campo atualizado:** `cod_trib_dere` (tabela `trad_cta_ctbl_ext`)
+- **Campo atualizado:** `lei_dere` (tabela `trad_cta_ctbl_ext`)
+- **Tabela nova:** `lmiext_empresa` _(campos omitidos)_
+- **Campo adicionado:** `log_alug` (tabela `classif_impto`, tipo `logical`)
+- **Campo adicionado:** `cod_lei_dere` (tabela `trad_cta_ctbl_ext`, tipo `character`)
+- **Campo adicionado:** `num_trib_dere` (tabela `trad_cta_ctbl_ext`, tipo `integer`)
+- **Índice adicionado:** `lmxtmprs_id` (tabela `lmiext_empresa`)
+
+### **mdtcrm**
+
+- **Tabela nova:** `crm_ocor_notif` _(campos omitidos)_
+- **Campo adicionado:** `log_notif_ocor` (tabela `crm_ocor_fluxo_status`, tipo `logical`)
+- **Índice adicionado:** `crmcrntf_id2` (tabela `crm_ocor_notif`)
+
+### **mgadm**
+
+- **Tabela nova:** `dere-param-config-tss` _(campos omitidos)_
+- **Índice adicionado:** `drprmcnfgtss_id1` (tabela `dere-param-config-tss`)
+
+### **mgdis**
+
+- **Tabela nova:** `param-monofasico` _(campos omitidos)_
+- **Campo adicionado:** `perc-efet-alczfm` (tabela `relacto-tributo`, tipo `decimal`)
+- **Índice adicionado:** `ch_pr_mono` (tabela `param-monofasico`)
+
+### **mgfis**
+
+- **Campo atualizado:** `log-com-depos` (tabela `dwf-mit-susp`)
+- **Campo atualizado:** `log-proces-terc` (tabela `dwf-mit-susp`)
+- **Tabela nova:** `dwf-dere-contrib` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-cta-ctbl-refer` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-reg-trib` _(campos omitidos)_
+- **Índice adicionado:** `dwfdrcntrb_id1` (tabela `dwf-dere-contrib`)
+- **Índice adicionado:** `dwfdrcntrb_ix2` (tabela `dwf-dere-contrib`)
+- **Índice adicionado:** `dwfdrcntrb_ix3` (tabela `dwf-dere-contrib`)
+- **Índice adicionado:** `dwfdrctctblrfr_ix1` (tabela `dwf-dere-cta-ctbl-refer`)
+- **Índice adicionado:** `dwfdrctctblrfr_ix2` (tabela `dwf-dere-cta-ctbl-refer`)
+- **Índice adicionado:** `dwfdrctctblrfr_ix3` (tabela `dwf-dere-cta-ctbl-refer`)
+- **Índice adicionado:** `dwfdrctctblrfr_ix4` (tabela `dwf-dere-cta-ctbl-refer`)
+- **Índice adicionado:** `dwfdrrgtrb_id1` (tabela `dwf-dere-reg-trib`)
+- **Índice adicionado:** `dwfdrrgtrb_ix2` (tabela `dwf-dere-reg-trib`)
+- **Índice adicionado:** `dwfdrrgtrb_ix3` (tabela `dwf-dere-reg-trib`)
+
+### **mgind**
+
+- **Campo atualizado:** `idi-dest-impto` (tabela `item-contrat-trib`)
+- **Campo atualizado:** `log-CBS-incluso` (tabela `item-contrat-trib`)
+- **Campo adicionado:** `log-contr-ag-ia` (tabela `fam-uni-estab`, tipo `logical`)
+- **Campo adicionado:** `dias-ocioso` (tabela `fam-uni-estab`, tipo `integer`)
+- **Campo adicionado:** `perc-excesso` (tabela `fam-uni-estab`, tipo `integer`)
+- **Campo adicionado:** `log-contr-ag-ia` (tabela `familia-mat`, tipo `logical`)
+- **Campo adicionado:** `dias-ocioso` (tabela `familia-mat`, tipo `integer`)
+- **Campo adicionado:** `perc-excesso` (tabela `familia-mat`, tipo `integer`)
+- **Campo adicionado:** `nom-trib` (tabela `item-contrat-trib`, tipo `character`)
+- **Campo adicionado:** `cod-campo` (tabela `item-contrat-trib`, tipo `character`)
+- **Campo adicionado:** `cod-conteudo` (tabela `item-contrat-trib`, tipo `character`)
+- **Campo adicionado:** `log-contr-ag-ia` (tabela `item-mat`, tipo `logical`)
+- **Campo adicionado:** `dias-ocioso` (tabela `item-mat`, tipo `integer`)
+- **Campo adicionado:** `perc-excesso` (tabela `item-mat`, tipo `integer`)
+- **Campo adicionado:** `log-contr-ag-ia` (tabela `item-uni-estab`, tipo `logical`)
+- **Campo adicionado:** `dias-ocioso` (tabela `item-uni-estab`, tipo `integer`)
+- **Campo adicionado:** `perc-excesso` (tabela `item-uni-estab`, tipo `integer`)
+
+### **mgmnt**
+
+- **Campo atualizado:** `val-dt-hr-invertida-criacao` (tabela `agenda-cenario`)
+- **Campo atualizado:** `val-dt-hr-invertida-alteracao` (tabela `agenda-cenario`)
+- **Campo atualizado:** `hr-criacao` (tabela `agenda-cenario`)
+- **Campo adicionado:** `dt-ini-horizonte-cenario` (tabela `agenda-cenario`, tipo `date`)
+- **Campo adicionado:** `dt-fim-horizonte-cenario` (tabela `agenda-cenario`, tipo `date`)
+- **Campo adicionado:** `dt-referencia-cenario` (tabela `agenda-cenario`, tipo `date`)
+- **Campo adicionado:** `hr-alteracao` (tabela `agenda-cenario`, tipo `character`)
+- **Campo adicionado:** `descricao` (tabela `agenda-cenario`, tipo `character`)
+
+### **mgscm**
+
+- **Campo adicionado:** `log-atualiza-tarefa` (tabela `wm-param`, tipo `logical`)
+
+### **mguni**
+
+- **Campo atualizado:** `cod-conf-endpoint` (tabela `jornada-assistente-implant`)
+- **Campo atualizado:** `cod-nome-endpoint` (tabela `passo-jornada`)
+- **Campo atualizado:** `cod-nome-prog` (tabela `passo-tipo-exec`)
+- **Campo atualizado:** `cod-nome-campo` (tabela `passo-tipo-param`)
+- **Campo atualizado:** `cod-valor-lookup` (tabela `passo-tipo-param`)
+- **Campo atualizado:** `cod-label-lookup` (tabela `passo-tipo-param`)
+- **Campo atualizado:** `cod-endpoint-lookup` (tabela `passo-tipo-param`)
+- **Campo atualizado:** `cod-label-campo` (tabela `passo-tipo-param`)
+- **Campo atualizado:** `cod-nome-campo` (tabela `passo-valor-param`)
+- **Campo atualizado:** `cod-valor-item` (tabela `passo-valor-param`)
+- **Campo atualizado:** `cod-label-item` (tabela `passo-valor-param`)
+
+### **mov2loc**
+
+- **Campo adicionado:** `periodo-fiscal` (tabela `ecu-comprov-retenc-recebto`, tipo `character`)
+- **Campo adicionado:** `periodo-fiscal` (tabela `ecu-impto-comprov-retenc`, tipo `character`)
+
+### **movadm**
+
+- **Tabela nova:** `dere-cta-ctbl-refer` _(campos omitidos)_
+- **Tabela nova:** `dere-log-envio` _(campos omitidos)_
+- **Tabela nova:** `dere-log-envio-cta-refer` _(campos omitidos)_
+- **Tabela nova:** `dere-log-envio-xml` _(campos omitidos)_
+- **Índice adicionado:** `drctctblrfr_id1` (tabela `dere-cta-ctbl-refer`)
+- **Índice adicionado:** `drctctblrfr_ix2` (tabela `dere-cta-ctbl-refer`)
+- **Índice adicionado:** `drctctblrfr_ix3` (tabela `dere-cta-ctbl-refer`)
+- **Índice adicionado:** `drctctblrfr_ix4` (tabela `dere-cta-ctbl-refer`)
+- **Índice adicionado:** `drlgnv_id1` (tabela `dere-log-envio`)
+- **Índice adicionado:** `drlgnv_ix2` (tabela `dere-log-envio`)
+- **Índice adicionado:** `drlgnv_ix3` (tabela `dere-log-envio`)
+- **Índice adicionado:** `drlgnv_ix4` (tabela `dere-log-envio`)
+- **Índice adicionado:** `drlgnvctrfr_id1` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvctrfr_ix2` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvctrfr_ix3` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvctrfr_ix4` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvctrfr_ix5` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvctrfr_ix6` (tabela `dere-log-envio-cta-refer`)
+- **Índice adicionado:** `drlgnvxml_id1` (tabela `dere-log-envio-xml`)
+
+### **movdis**
+
+- **Campo atualizado:** `log-gera-bloco-k` (tabela `parametros-extracao-geracao`)
+- **Campo adicionado:** `aliquota-gov` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Campo adicionado:** `aliquota-efetiva-gov` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Campo adicionado:** `valor-tributo-gov` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Campo adicionado:** `valor-base-gov` (tabela `it-doc-fisc-tributo`, tipo `decimal`)
+- **Campo adicionado:** `perc-efet-alczfm` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `valor-efet-alczfm` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `proces-suframa` (tabela `it-nota-fisc-trib`, tipo `character`)
+- **Campo adicionado:** `aliq-adrem` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `valor-difer-mono` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `tip-tribut-mono` (tabela `it-nota-fisc-trib`, tipo `integer`)
+- **Campo adicionado:** `valor-ref-petro` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `valor-ref-biocomb` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `qtde-combpetro` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `qtde-biocomb` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `aliq-combpetro` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `aliq-biocomb` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `perc-pbio-obrig` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `perc-pbio` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `cod-gera-bloco-K` (tabela `parametros-extracao-geracao`, tipo `character`)
+
+### **movfin**
+
+- **Campo atualizado:** `num_id_solicit` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `blb_json_saida` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `blb_json_retorno` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `dat_saida` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `hra_saida` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `dat_retorno` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `hra_retorno` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `cod_livre_1` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `cod_livre_2` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `dat_livre_1` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `dat_livre_2` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `log_livre_1` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `log_livre_2` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `num_livre_1` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `num_livre_2` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `val_livre_1` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `val_livre_2` (tabela `techfin_antecip_rastreab`)
+- **Campo atualizado:** `ind_sit_techfin` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `cod_lote_solicit` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_pagto_solicit` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_liq_solicit` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_tax_cust_efet` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_tax_antecip` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `ind_tip_tax_solicit` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_tax_abert_cr` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_impto_mensal` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `val_impto_diario` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `des_retorno_solicit` (tabela `techfin_antecip_solicit`)
+- **Campo atualizado:** `cod_docto_dtsul` (tabela `techfin_antecip_tit`)
+- **Campo atualizado:** `ind_sit_techfin` (tabela `techfin_antecip_tit`)
+- **Tabela nova:** `ext_tit_acr_cobr_esp` _(campos omitidos)_
+- **Campo adicionado:** `dat_ult_status_invent` (tabela `invent_patrim`, tipo `datetime`)
+- **Campo adicionado:** `val_base_orig` (tabela `movto_ndnc_acr_orig`, tipo `decimal`)
+- **Campo adicionado:** `des_base_orig` (tabela `movto_ndnc_acr_orig`, tipo `character`)
+- **Campo adicionado:** `num_id_rastreab` (tabela `techfin_antecip_rastreab`, tipo `integer`)
+- **Campo adicionado:** `ind_tip_rastreab` (tabela `techfin_antecip_rastreab`, tipo `character`)
+- **Campo adicionado:** `des_motiv_rej` (tabela `techfin_antecip_solicit`, tipo `character`)
+- **Campo adicionado:** `val_brut_solicit_orig` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `dat_envio_simul` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `dat_retorno_simul` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `val_simul_liq_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_brut_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_cust_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_tax_cust_efet_tot` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_tax_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_tax_abert_cr` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_iof_mensal` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_simul_iof_diario` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `num_id_lote_techfin` (tabela `techfin_antecip_solicit`, tipo `integer`)
+- **Campo adicionado:** `val_efet_brut_aprov` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_efet_tax_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_efet_cust_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `val_efet_liq_antecip` (tabela `techfin_antecip_solicit`, tipo `decimal`)
+- **Campo adicionado:** `dat_pagto_parcei` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `dat_lim_confir` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `dat_envio_pre_aprovac` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `dat_retorno_pre_aprovac` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `dat_retorno_autoriz_final` (tabela `techfin_antecip_solicit`, tipo `date`)
+- **Campo adicionado:** `num_sit_techfin` (tabela `techfin_antecip_solicit`, tipo `integer`)
+- **Campo adicionado:** `num_simul_tip_tax_abert_cr` (tabela `techfin_antecip_solicit`, tipo `integer`)
+- **Campo adicionado:** `cod_espec_docto` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cod_ser_docto` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cod_tit_acr` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cod_parcela` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cdn_cliente` (tabela `techfin_antecip_tit`, tipo `integer`)
+- **Campo adicionado:** `val_efet_tax_antecip` (tabela `techfin_antecip_tit`, tipo `decimal`)
+- **Campo adicionado:** `val_efet_cust_antecip` (tabela `techfin_antecip_tit`, tipo `decimal`)
+- **Campo adicionado:** `val_efet_liq_antecip` (tabela `techfin_antecip_tit`, tipo `decimal`)
+- **Campo adicionado:** `cod_chave_aces_docto_fisc` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cod_nota_fisc` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `num_sit_techfin` (tabela `techfin_antecip_tit`, tipo `integer`)
+- **Campo adicionado:** `cod_id_feder_parcei` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Campo adicionado:** `cod_id_feder_sacad` (tabela `techfin_antecip_tit`, tipo `character`)
+- **Índice renomeado:** `tchfnnte_tit` → `t-2f8132e71ae84119b7e30391dc2996`
+- **Índice adicionado:** `extttcre_id` (tabela `ext_tit_acr_cobr_esp`)
+- **Índice adicionado:** `tchfnntf_id_solici` (tabela `techfin_antecip_rastreab`)
+- **Índice adicionado:** `tchfnntd_dat_pagto` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnntd_dat_solicit` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnntd_usuar_dat` (tabela `techfin_antecip_solicit`)
+- **Índice adicionado:** `tchfnnte_cnpj_pagto` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_cod_trans` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_empres` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_id_tit` (tabela `techfin_antecip_tit`)
+- **Índice adicionado:** `tchfnnte_tit` (tabela `techfin_antecip_tit`)
+- **Índice removido:** `t-2f8132e71ae84119b7e30391dc2996` (tabela `techfin_antecip_tit`)
+
+### **movfis**
+
+- **Tabela nova:** `dwf-dere-balanc` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-deb-operac` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-deb-operac-cta` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-fecham` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-identific-apl` _(campos omitidos)_
+- **Tabela nova:** `dwf-dere-identific-apl-cta` _(campos omitidos)_
+- **Índice adicionado:** `dwfdrblnc_id1` (tabela `dwf-dere-balanc`)
+- **Índice adicionado:** `dwfdrblnc_ix2` (tabela `dwf-dere-balanc`)
+- **Índice adicionado:** `ind-id` (tabela `dwf-dere-deb-operac`)
+- **Índice adicionado:** `ind-cta` (tabela `dwf-dere-deb-operac`)
+- **Índice adicionado:** `ind-dat` (tabela `dwf-dere-deb-operac`)
+- **Índice adicionado:** `ind-operac` (tabela `dwf-dere-deb-operac`)
+- **Índice adicionado:** `ind-orig` (tabela `dwf-dere-deb-operac`)
+- **Índice adicionado:** `ind-id` (tabela `dwf-dere-deb-operac-cta`)
+- **Índice adicionado:** `ind-cta` (tabela `dwf-dere-deb-operac-cta`)
+- **Índice adicionado:** `ind-dat` (tabela `dwf-dere-deb-operac-cta`)
+- **Índice adicionado:** `ind-orig` (tabela `dwf-dere-deb-operac-cta`)
+- **Índice adicionado:** `dwfdrfchm_id1` (tabela `dwf-dere-fecham`)
+- **Índice adicionado:** `dwfdrfchm_ix2` (tabela `dwf-dere-fecham`)
+- **Índice adicionado:** `dwfdrfchm_ix3` (tabela `dwf-dere-fecham`)
+- **Índice adicionado:** `ind-id` (tabela `dwf-dere-identific-apl`)
+- **Índice adicionado:** `ind-cta` (tabela `dwf-dere-identific-apl`)
+- **Índice adicionado:** `ind-dat` (tabela `dwf-dere-identific-apl`)
+- **Índice adicionado:** `ind-operac` (tabela `dwf-dere-identific-apl`)
+- **Índice adicionado:** `ind-orig` (tabela `dwf-dere-identific-apl`)
+- **Índice adicionado:** `ind-id` (tabela `dwf-dere-identific-apl-cta`)
+- **Índice adicionado:** `ind-cta` (tabela `dwf-dere-identific-apl-cta`)
+- **Índice adicionado:** `ind-dat` (tabela `dwf-dere-identific-apl-cta`)
+- **Índice adicionado:** `ind-orig` (tabela `dwf-dere-identific-apl-cta`)
+
+### **movind**
+
+- **Campo atualizado:** `idi-dest-impto` (tabela `cotacao-item-trib`)
+- **Campo atualizado:** `log-CBS-incluso` (tabela `cotacao-item-trib`)
+- **Campo atualizado:** `char-1` (tabela `custo-item`)
+- **Campo atualizado:** `char-2` (tabela `custo-item`)
+- **Campo atualizado:** `dec-1` (tabela `custo-item`)
+- **Campo atualizado:** `dec-2` (tabela `custo-item`)
+- **Campo atualizado:** `int-1` (tabela `custo-item`)
+- **Campo atualizado:** `int-2` (tabela `custo-item`)
+- **Campo atualizado:** `log-1` (tabela `custo-item`)
+- **Campo atualizado:** `log-2` (tabela `custo-item`)
+- **Campo atualizado:** `data-1` (tabela `custo-item`)
+- **Campo atualizado:** `data-2` (tabela `custo-item`)
+- **Campo atualizado:** `val-unit-mob-m` (tabela `custo-item`)
+- **Campo atualizado:** `val-unit-ggf-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-1-m` (tabela `custo-item`)
+- **Campo atualizado:** `val-unit-mat-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-2-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-3-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-4-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-5-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-6-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-ggf-c-m` (tabela `custo-item`)
+- **Campo atualizado:** `valor-mob-c-m` (tabela `custo-item`)
+- **Campo atualizado:** `val-perc-evol` (tabela `custo-item`)
+- **Campo atualizado:** `val-variac-evol` (tabela `custo-item`)
+- **Campo atualizado:** `sald-ini-mat-m` (tabela `custo-item`)
+- **Campo atualizado:** `sald-ini-mob-m` (tabela `custo-item`)
+- **Campo atualizado:** `sald-ini-ggf-m` (tabela `custo-item`)
+- **Campo atualizado:** `num-seq-medicao-integr` (tabela `medicao-contrat-integr-me`)
+- **Campo atualizado:** `valor-lancto` (tabela `pedido-compr-gesplan`)
+- **Tabela nova:** `ag-estoque-analise` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-analise-agregado` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-analise-item` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-log-exec` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-param` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-recomendacao` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-relac-transf-estab` _(campos omitidos)_
+- **Tabela nova:** `ag-estoque-responsavel-estab` _(campos omitidos)_
+- **Tabela nova:** `pedido-compr-trib` _(campos omitidos)_
+- **Campo adicionado:** `nom-trib` (tabela `cotacao-item-trib`, tipo `character`)
+- **Campo adicionado:** `cod-campo` (tabela `cotacao-item-trib`, tipo `character`)
+- **Campo adicionado:** `cod-conteudo` (tabela `cotacao-item-trib`, tipo `character`)
+- **Campo adicionado:** `nom-trib` (tabela `ordem-compra-trib`, tipo `character`)
+- **Campo adicionado:** `cod-campo` (tabela `ordem-compra-trib`, tipo `character`)
+- **Campo adicionado:** `cod-conteudo` (tabela `ordem-compra-trib`, tipo `character`)
+- **Campo adicionado:** `dtm-criac` (tabela `pedido-compr-gesplan`, tipo `datetime`)
+- **Índice adicionado:** `pk-ag-estoque-analise` (tabela `ag-estoque-analise`)
+- **Índice adicionado:** `idx-ag-est-analise-correl` (tabela `ag-estoque-analise`)
+- **Índice adicionado:** `idx-ag-est-analise-dashboard` (tabela `ag-estoque-analise`)
+- **Índice adicionado:** `idx-ag-est-analise-rpw` (tabela `ag-estoque-analise`)
+- **Índice adicionado:** `pk-ag-est-analise-agreg` (tabela `ag-estoque-analise-agregado`)
+- **Índice adicionado:** `idx-ag-est-agreg-dashboard` (tabela `ag-estoque-analise-agregado`)
+- **Índice adicionado:** `idx-ag-est-agreg-periodo` (tabela `ag-estoque-analise-agregado`)
+- **Índice adicionado:** `uk-ag-est-analise-agreg` (tabela `ag-estoque-analise-agregado`)
+- **Índice adicionado:** `pk-ag-est-analise-item` (tabela `ag-estoque-analise-item`)
+- **Índice adicionado:** `idx-ag-est-item-cadastro` (tabela `ag-estoque-analise-item`)
+- **Índice adicionado:** `idx-ag-est-item-dashboard` (tabela `ag-estoque-analise-item`)
+- **Índice adicionado:** `idx-ag-est-item-familia` (tabela `ag-estoque-analise-item`)
+- **Índice adicionado:** `uk-ag-est-analise-item` (tabela `ag-estoque-analise-item`)
+- **Índice adicionado:** `pk-ag-estoque-log-exec` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `idx-ag-est-log-correlacao` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `idx-ag-est-log-idemp` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `idx-ag-est-log-item` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `idx-ag-est-log-localiz` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `idx-ag-est-log-periodo` (tabela `ag-estoque-log-exec`)
+- **Índice adicionado:** `pk-ag-estoque-param` (tabela `ag-estoque-param`)
+- **Índice adicionado:** `idx-ag-estoque-param-ativo` (tabela `ag-estoque-param`)
+- **Índice adicionado:** `uk-ag-estoque-param-esc` (tabela `ag-estoque-param`)
+- **Índice adicionado:** `pk-ag-estoque-recomend` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `idx-ag-est-recom-analise` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `idx-ag-est-recom-detalhe` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `idx-ag-est-recom-item` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `idx-ag-est-recom-localiz` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `idx-ag-est-recom-status` (tabela `ag-estoque-recomendacao`)
+- **Índice adicionado:** `pk-ag-est-relac-transf` (tabela `ag-estoque-relac-transf-estab`)
+- **Índice adicionado:** `idx-ag-est-relac-destino` (tabela `ag-estoque-relac-transf-estab`)
+- **Índice adicionado:** `idx-ag-est-relac-familia` (tabela `ag-estoque-relac-transf-estab`)
+- **Índice adicionado:** `idx-ag-est-relac-item` (tabela `ag-estoque-relac-transf-estab`)
+- **Índice adicionado:** `uk-ag-est-relac-transf` (tabela `ag-estoque-relac-transf-estab`)
+- **Índice adicionado:** `pk-ag-est-respons-estab` (tabela `ag-estoque-responsavel-estab`)
+- **Índice adicionado:** `idx-ag-est-respons-etapa` (tabela `ag-estoque-responsavel-estab`)
+- **Índice adicionado:** `idx-ag-est-respons-usuario` (tabela `ag-estoque-responsavel-estab`)
+- **Índice adicionado:** `uk-ag-est-respons-estab` (tabela `ag-estoque-responsavel-estab`)
+- **Índice adicionado:** `ped-trib` (tabela `pedido-compr-trib`)
+- **Índice adicionado:** `idx-situacao` (tabela `medicao-contrat-integr-me`)
+
+### **srcadger**
+
+- **Campo atualizado:** `cd-area-abrangencia` (tabela `ptuespec`)
+- **Tabela nova:** `param-upflux` _(campos omitidos)_
+- **Campo adicionado:** `dt-inicial-validade` (tabela `assoc-profis-prestador`, tipo `date`)
+- **Campo adicionado:** `dt-fim-validade` (tabela `assoc-profis-prestador`, tipo `date`)
+- **Índice adicionado:** `paramupflux1` (tabela `param-upflux`)
+
+### **srmovcon**
+
+- **Campo adicionado:** `cdd-anexo` (tabela `tiss-lote-imp`, tipo `integer`)
+- **Campo adicionado:** `in-status-proces` (tabela `tiss-lote-imp`, tipo `integer`)
+
+### **emsfin**
+
+- **Índice renomeado:** `cnclfnnc_id` → `t-bd3679e60a77498987b9a81f610a12`
+- **Índice renomeado:** `tchfnntc_id` → `t-ab39eeab6e0646698f3ee95b15a886`
+- **Índice renomeado:** `tchfnnta_id` → `t-a571c737567a466eb30bfd9d919d36`
+- **Índice renomeado:** `tchfnrgr_estab` → `t-3853545dafd0418f9123a899f030fb`
+- **Índice renomeado:** `tchfnrgr_id` → `t-2438c06639ab4f3892ae5cf6587078`
+- **Índice adicionado:** `cnclfnnc_id` (tabela `concil_financ_autom`)
+- **Índice adicionado:** `tchfnntc_id` (tabela `techfin_antecip_param`)
+- **Índice adicionado:** `tchfnnta_id` (tabela `techfin_antecip_parcei`)
+- **Índice adicionado:** `tchfnlmt_id` (tabela `techfin_limit_sacad`)
+- **Índice adicionado:** `tchfnrgr_id` (tabela `techfin_regra_antecip`)
+- **Índice removido:** `t-bd3679e60a77498987b9a81f610a12` (tabela `concil_financ_autom`)
+- **Índice removido:** `t-ab39eeab6e0646698f3ee95b15a886` (tabela `techfin_antecip_param`)
+- **Índice removido:** `t-a571c737567a466eb30bfd9d919d36` (tabela `techfin_antecip_parcei`)
+- **Índice removido:** `t-2438c06639ab4f3892ae5cf6587078` (tabela `techfin_regra_antecip`)
+- **Índice removido:** `t-3853545dafd0418f9123a899f030fb` (tabela `techfin_regra_antecip`)
+
+### **mgfis**
+
+- **Índice renomeado:** `idx-dwf-mit-dados-iniciais` → `t-602bdbcbd9c54c9d87b157add59cd2`
+- **Índice adicionado:** `idx-dwf-mit-dados-iniciais` (tabela `dwf-mit-dados-iniciais`)
+- **Índice removido:** `t-602bdbcbd9c54c9d87b157add59cd2` (tabela `dwf-mit-dados-iniciais`)
+
+### **mgind**
+
+- **Índice renomeado:** `itcntrib` → `t-af0373ef7c5d4b82a4a638b10c0417`
+- **Índice adicionado:** `itcntrib` (tabela `item-contrat-trib`)
+- **Índice removido:** `t-af0373ef7c5d4b82a4a638b10c0417` (tabela `item-contrat-trib`)
+
+### **movfin**
+
+- **Índice renomeado:** `tchfnntd_dat` → `t-14ea7912b6eb43dbbec7a882361bdf`
+- **Índice renomeado:** `tchfnntd_id` → `t-6ba085e74d294a0f868e63f3c85aa5`
+- **Índice renomeado:** `tchfnnte_solicit` → `t-310884b2e5f544d398921850f386c7`
+- **Índice renomeado:** `tchfnnte_trans` → `t-65e270c9d41d475082614879438580`
+- **Índice adicionado:** `tchfnntf_id` (tabela `techfin_antecip_rastreab`)
+- **Índice adicionado:** `tchfnntd_id` (tabela `techfin_antecip_solicit`)
+- **Índice removido:** `t-6ba085e74d294a0f868e63f3c85aa5` (tabela `techfin_antecip_solicit`)
+- **Índice removido:** `t-14ea7912b6eb43dbbec7a882361bdf` (tabela `techfin_antecip_solicit`)
+- **Índice removido:** `t-310884b2e5f544d398921850f386c7` (tabela `techfin_antecip_tit`)
+- **Índice removido:** `t-65e270c9d41d475082614879438580` (tabela `techfin_antecip_tit`)
+
+### **movind**
+
+- **Índice renomeado:** `cotitemtrib` → `t-138d3848943d4bd6a9824e089c0a04`
+- **Índice renomeado:** `idx-principal` → `t-3e97f7848d5b42e9a698ed19bdc147`
+- **Índice renomeado:** `ordem-trib` → `t-6983b7c1396e44cb9e9da8c54b1419`
+- **Índice adicionado:** `cotitemtrib` (tabela `cotacao-item-trib`)
+- **Índice adicionado:** `idx-medicao` (tabela `medicao-contrat-integr-me`)
+- **Índice adicionado:** `ordem-trib` (tabela `ordem-compra-trib`)
+- **Índice removido:** `t-138d3848943d4bd6a9824e089c0a04` (tabela `cotacao-item-trib`)
+- **Índice removido:** `t-3e97f7848d5b42e9a698ed19bdc147` (tabela `medicao-contrat-integr-me`)
+- **Índice removido:** `t-6983b7c1396e44cb9e9da8c54b1419` (tabela `ordem-compra-trib`)
