@@ -1,0 +1,38 @@
+# Release Notes - 12.1.2611
+
+**Patch:** `acerto-12.1.2607.6-12.1.2611`
+**Versão destino:** `12.1.2611`
+
+## Alterações no Banco de Dados
+
+### **srcadger**
+
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `abraplan`)
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `abraunid`)
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `assabran`)
+- **Campo atualizado:** `cdn-abrangen-plano` (tabela `grp-estado-cidad-exp`)
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `modalid`)
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `tpplabra`)
+- **Campo adicionado:** `cd-usuario` (tabela `partic-limit`, tipo `integer`)
+- **Índice renomeado:** `prtclmt-1` → `t-c136149e73b94ee3a3b724671a21d1`
+- **Índice renomeado:** `prtclmt-2` → `t-caa04408cfa04e2585dc5f3d6413ba`
+- **Índice renomeado:** `prtclmt-3` → `t-37dea5436a3c41059f37131ca98bb5`
+- **Índice adicionado:** `prtclmt-1` (tabela `partic-limit`)
+- **Índice adicionado:** `prtclmt-2` (tabela `partic-limit`)
+- **Índice adicionado:** `prtclmt-3` (tabela `partic-limit`)
+- **Índice removido:** `t-c136149e73b94ee3a3b724671a21d1` (tabela `partic-limit`)
+- **Índice removido:** `t-caa04408cfa04e2585dc5f3d6413ba` (tabela `partic-limit`)
+- **Índice removido:** `t-37dea5436a3c41059f37131ca98bb5` (tabela `partic-limit`)
+
+### **srmovben**
+
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `blreptmp`)
+- **Campo atualizado:** `cd-abrangencia-plano` (tabela `propabra`)
+- **Campo adicionado:** `cdn-usuar` (tabela `his-regra-partic-escalnda`, tipo `integer`)
+- **Campo adicionado:** `cdn-usuar` (tabela `regra-particip-escalnda`, tipo `integer`)
+- **Índice renomeado:** `rgrprtcp_ix2` → `t-c1a399b5ab44479fad499471e8d835`
+- **Índice renomeado:** `rgrprtcp_ix4` → `t-93d96a512b6d4db08d59126aab4384`
+- **Índice adicionado:** `rgrprtcp_ix2` (tabela `regra-particip-escalnda`)
+- **Índice adicionado:** `rgrprtcp_ix4` (tabela `regra-particip-escalnda`)
+- **Índice removido:** `t-c1a399b5ab44479fad499471e8d835` (tabela `regra-particip-escalnda`)
+- **Índice removido:** `t-93d96a512b6d4db08d59126aab4384` (tabela `regra-particip-escalnda`)
