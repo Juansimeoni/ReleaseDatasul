@@ -1,0 +1,241 @@
+# Release Notes - 12.1.2607.8
+
+**Patch:** `acerto-12.1.2607.7-12.1.2607.8`
+**Versão destino:** `12.1.2607.8`
+
+## Alterações no Banco de Dados
+
+### **cad2loc**
+
+- **Campo atualizado:** `cod-livre-1` (tabela `internac-conex-nfe`)
+- **Campo adicionado:** `cod-livre-4` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-livre-5` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-livre-6` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-livre-7` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `cod-livre-8` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `log-livre-3` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `log-livre-4` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `log-livre-5` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `log-livre-6` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `log-livre-7` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `log-livre-8` (tabela `internac-conex-nfe`, tipo `logical`)
+- **Campo adicionado:** `num-livre-3` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `num-livre-4` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `num-livre-5` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `num-livre-6` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `num-livre-7` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `num-livre-8` (tabela `internac-conex-nfe`, tipo `integer`)
+- **Campo adicionado:** `val-livre-3` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `val-livre-4` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `val-livre-5` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `val-livre-6` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `val-livre-7` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `val-livre-8` (tabela `internac-conex-nfe`, tipo `decimal`)
+- **Campo adicionado:** `dat-livre-3` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `dat-livre-4` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `dat-livre-5` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `dat-livre-6` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `dat-livre-7` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `dat-livre-8` (tabela `internac-conex-nfe`, tipo `date`)
+- **Campo adicionado:** `cod-livre-3` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `nom-url-estado-teste-2` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `nom-url-pdf-produc-2` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `nom-url-pdf-teste-2` (tabela `internac-conex-nfe`, tipo `character`)
+- **Campo adicionado:** `nom-url-estado-produc-2` (tabela `internac-conex-nfe`, tipo `character`)
+
+### **emsfin**
+
+- **Campo atualizado:** `cod_tip_trans_cx_liber` (tabela `techfin_giro_param`)
+- **Campo atualizado:** `cod_tip_trans_cx_impto` (tabela `techfin_giro_param`)
+- **Campo atualizado:** `cod_pagto_padr_curto` (tabela `techfin_giro_param`)
+- **Campo atualizado:** `cod_pagto_padr_longo` (tabela `techfin_giro_param`)
+- **Campo atualizado:** `cod_tip_trans_cx_juros` (tabela `techfin_giro_param`)
+- **Campo adicionado:** `log_rad_ibs_uf` (tabela `clien_financ`, tipo `logical`)
+- **Campo adicionado:** `log_rad_ibs_mun` (tabela `clien_financ`, tipo `logical`)
+- **Campo adicionado:** `log_rad_cbs` (tabela `clien_financ`, tipo `logical`)
+- **Campo adicionado:** `ind_finalid_rat` (tabela `rat_padr_pagto`, tipo `character`)
+- **Campo adicionado:** `cod_espec` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_espec_lp` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_plano_cta` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_cta_ctbl_trans_emprest` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_cta_ctbl_juros_cp` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_cta_ctbl_juros_lp` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_portad` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_tip_fluxo_financ_tit` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_unid_neg` (tabela `techfin_giro_param`, tipo `character`)
+- **Campo adicionado:** `cod_cta_ctbl_desp_iof` (tabela `techfin_giro_param`, tipo `character`)
+
+### **emsuni**
+
+- **Campo atualizado:** `log_rad_cbs` (tabela `cliente`)
+- **Campo atualizado:** `log_rad_ibs_uf` (tabela `cliente`)
+- **Campo atualizado:** `log_rad_ibs_mun` (tabela `cliente`)
+- **Campo atualizado:** `log_rad_is` (tabela `cliente`)
+- **Campo atualizado:** `log_rad_is` (tabela `fornecedor`)
+
+### **mgdis**
+
+- **Campo atualizado:** `cdn-sit-tribut` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cdn-tribut` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-estab` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-natur-operac` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-ncm` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-item` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cdn-grp-emit` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cdn-emitente` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `dat-valid-inic` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `idi-tip-docto` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `val-livre-1` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `val-livre-2` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `num-livre-1` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `num-livre-2` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `dat-livre-1` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `dat-livre-2` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `log-livre-1` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `log-livre-2` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-livre-1` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cod-livre-2` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `ind-cbs-base` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `ind-ibsuf-base` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `ind-ibsmun-base` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `cidade` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `fator` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `uf` (tabela `sit-tribut-relacto-rt`)
+- **Campo adicionado:** `aliq-sn` (tabela `relacto-tributo`, tipo `decimal`)
+- **Índice renomeado:** `sttrbtrl-estab` → `t-54c68179fe2f4120bf9418436b44df`
+- **Índice renomeado:** `sttrbtrl-item` → `t-ac8dcf82a30c49edb026cdbae680c0`
+- **Índice renomeado:** `sttrbtrl-ncm` → `t-782d8ad6562546dc827e3515215245`
+- **Índice adicionado:** `sttrbtrl-cidade` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-emitente` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-grp-emit` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-natur-operac` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-uf` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-estab` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-item` (tabela `sit-tribut-relacto-rt`)
+- **Índice adicionado:** `sttrbtrl-ncm` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-54c68179fe2f4120bf9418436b44df` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-ac8dcf82a30c49edb026cdbae680c0` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-782d8ad6562546dc827e3515215245` (tabela `sit-tribut-relacto-rt`)
+
+### **movdbr**
+
+- **Tabela nova:** `wtdbr-item-calc` _(campos omitidos)_
+- **Índice adicionado:** `wtitcalc_id` (tabela `wtdbr-item-calc`)
+- **Índice adicionado:** `wtitcalc_abaixo_segur` (tabela `wtdbr-item-calc`)
+- **Índice adicionado:** `wtitcalc_acima_segur` (tabela `wtdbr-item-calc`)
+- **Índice adicionado:** `wtitcalc_atraso` (tabela `wtdbr-item-calc`)
+- **Índice adicionado:** `wtitcalc_cobertura` (tabela `wtdbr-item-calc`)
+- **Índice adicionado:** `wtitcalc_qtd_disp` (tabela `wtdbr-item-calc`)
+
+### **movdis**
+
+- **Tabela nova:** `doc-fiscal-compl` _(campos omitidos)_
+- **Tabela nova:** `it-doc-fisc-compl` _(campos omitidos)_
+- **Campo adicionado:** `valor-base-sn` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `aliq-sn` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Campo adicionado:** `valor-trib-sn` (tabela `it-nota-fisc-trib`, tipo `decimal`)
+- **Índice adicionado:** `idx-chave` (tabela `doc-fiscal-compl`)
+- **Índice adicionado:** `idx-chave` (tabela `it-doc-fisc-compl`)
+
+### **movfin**
+
+- **Campo atualizado:** `log_rad_is` (tabela `ext_tit_acr`)
+- **Campo atualizado:** `log_rad_is` (tabela `ext_tit_ap`)
+- **Campo atualizado:** `log_rad_is` (tabela `financ_docto_fisc`)
+- **Campo atualizado:** `val_sdo_devdor_emprest` (tabela `tfn_giro_contrat`)
+- **Tabela nova:** `techfin_giro_rastreab` _(campos omitidos)_
+- **Campo adicionado:** `num_id_tit_an_devol` (tabela `tfn_antecip_event_tit`, tipo `integer`)
+- **Campo adicionado:** `num_lancto_ctbl` (tabela `tfn_giro_contrat`, tipo `integer`)
+- **Campo adicionado:** `dat_emis_nota_fisc` (tabela `tfn_giro_contrat`, tipo `date`)
+- **Campo adicionado:** `nom_razao_social_fornec` (tabela `tfn_giro_contrat`, tipo `character`)
+- **Campo adicionado:** `num_lote_ctbl` (tabela `tfn_giro_contrat`, tipo `integer`)
+- **Campo adicionado:** `dat_ult_vencto` (tabela `tfn_giro_contrat`, tipo `date`)
+- **Campo adicionado:** `dat_cancel` (tabela `tfn_giro_contrat`, tipo `date`)
+- **Campo adicionado:** `num_dias_atraso` (tabela `tfn_giro_contrat`, tipo `integer`)
+- **Campo adicionado:** `cod_sit_contrat` (tabela `tfn_giro_contrat`, tipo `character`)
+- **Campo adicionado:** `cod_livre_1` (tabela `tfn_giro_contrat`, tipo `character`)
+- **Campo adicionado:** `cod_livre_2` (tabela `tfn_giro_contrat`, tipo `character`)
+- **Campo adicionado:** `log_livre_1` (tabela `tfn_giro_contrat`, tipo `logical`)
+- **Campo adicionado:** `log_livre_2` (tabela `tfn_giro_contrat`, tipo `logical`)
+- **Campo adicionado:** `num_livre_1` (tabela `tfn_giro_contrat`, tipo `integer`)
+- **Campo adicionado:** `num_livre_2` (tabela `tfn_giro_contrat`, tipo `integer`)
+- **Campo adicionado:** `val_livre_1` (tabela `tfn_giro_contrat`, tipo `decimal`)
+- **Campo adicionado:** `val_livre_2` (tabela `tfn_giro_contrat`, tipo `decimal`)
+- **Campo adicionado:** `dat_livre_1` (tabela `tfn_giro_contrat`, tipo `date`)
+- **Campo adicionado:** `dat_livre_2` (tabela `tfn_giro_contrat`, tipo `date`)
+- **Campo adicionado:** `cod_livre_1` (tabela `tfn_giro_parc_contrat`, tipo `character`)
+- **Campo adicionado:** `cod_livre_2` (tabela `tfn_giro_parc_contrat`, tipo `character`)
+- **Campo adicionado:** `log_livre_1` (tabela `tfn_giro_parc_contrat`, tipo `logical`)
+- **Campo adicionado:** `log_livre_2` (tabela `tfn_giro_parc_contrat`, tipo `logical`)
+- **Campo adicionado:** `num_livre_1` (tabela `tfn_giro_parc_contrat`, tipo `integer`)
+- **Campo adicionado:** `num_livre_2` (tabela `tfn_giro_parc_contrat`, tipo `integer`)
+- **Campo adicionado:** `val_livre_1` (tabela `tfn_giro_parc_contrat`, tipo `decimal`)
+- **Campo adicionado:** `val_livre_2` (tabela `tfn_giro_parc_contrat`, tipo `decimal`)
+- **Campo adicionado:** `dat_livre_1` (tabela `tfn_giro_parc_contrat`, tipo `date`)
+- **Campo adicionado:** `dat_livre_2` (tabela `tfn_giro_parc_contrat`, tipo `date`)
+- **Índice adicionado:** `tchfnntf_id` (tabela `techfin_giro_rastreab`)
+- **Índice adicionado:** `tchfnntf_empresa` (tabela `techfin_giro_rastreab`)
+- **Índice adicionado:** `tchfnaet_dev` (tabela `tfn_antecip_event_tit`)
+- **Índice adicionado:** `tfngicon_can` (tabela `tfn_giro_contrat`)
+- **Índice adicionado:** `tfngicon_fgl` (tabela `tfn_giro_contrat`)
+- **Índice adicionado:** `tfngicon_rec` (tabela `tfn_giro_contrat`)
+- **Índice adicionado:** `tfngicon_sdo` (tabela `tfn_giro_contrat`)
+- **Índice adicionado:** `tfngicon_sit2` (tabela `tfn_giro_contrat`)
+- **Índice adicionado:** `tfngicon_vct` (tabela `tfn_giro_contrat`)
+
+### **movfis**
+
+- **Campo atualizado:** `qtd-cotistas` (tabela `dwf-dere-classe-fund-invest`)
+- **Campo atualizado:** `val-cota` (tabela `dwf-dere-cotista-fund-invest`)
+- **Campo adicionado:** `val-qtd-cotistas` (tabela `dwf-dere-classe-fund-invest`, tipo `decimal`)
+
+### **movind**
+
+- **Tabela nova:** `dta-agente-exec-relac` _(campos omitidos)_
+- **Índice adicionado:** `idx_exec` (tabela `dta-agente-exec-relac`)
+- **Índice adicionado:** `idx_data` (tabela `dta-agente-exec-relac`)
+
+### **srcadger**
+
+- **Campo atualizado:** `ds-json-validacao` (tabela `guia-dig-ia`)
+- **Tabela nova:** `mensaproced` _(campos omitidos)_
+- **Campo adicionado:** `ds-calendario` (tabela `calendario-envio-lote-guia`, tipo `character`)
+- **Campo adicionado:** `dt-atendimento` (tabela `guia-dig-ia`, tipo `date`)
+- **Campo adicionado:** `cl-json-validacao` (tabela `guia-dig-ia`, tipo `clob`)
+- **Campo adicionado:** `dt-atendimento` (tabela `guia-dig-ia-hist`, tipo `date`)
+- **Índice adicionado:** `mensaproced1` (tabela `mensaproced`)
+
+### **srmovfin**
+
+- **Tabela nova:** `dev-mensalidade` _(campos omitidos)_
+- **Tabela nova:** `dev-mensalidade-benef` _(campos omitidos)_
+- **Campo adicionado:** `nr-nfe` (tabela `mov-ptu-recebe-fatura`, tipo `character`)
+- **Campo adicionado:** `ds-link-nfe` (tabela `mov-ptu-recebe-fatura`, tipo `character`)
+- **Campo adicionado:** `cd-verificacao-nfe` (tabela `mov-ptu-recebe-fatura`, tipo `character`)
+- **Índice adicionado:** `idx-seq` (tabela `dev-mensalidade`)
+- **Índice adicionado:** `idx-termo-sit` (tabela `dev-mensalidade`)
+- **Índice adicionado:** `idx-seq-reg` (tabela `dev-mensalidade-benef`)
+- **Índice adicionado:** `idx-reg-usuar` (tabela `dev-mensalidade-benef`)
+- **Índice adicionado:** `idx-usuario` (tabela `dev-mensalidade-benef`)
+
+### **emsfin**
+
+- **Índice renomeado:** `tchgipar_id` → `t-9a5c8237f72a4e1ea2eace2cdc2969`
+- **Índice adicionado:** `tchgipar_id2` (tabela `techfin_giro_param`)
+- **Índice removido:** `t-9a5c8237f72a4e1ea2eace2cdc2969` (tabela `techfin_giro_param`)
+
+### **mgdis**
+
+- **Campo atualizado:** `cidade` (tabela `sit-tribut-relacto-rt`)
+- **Campo atualizado:** `uf` (tabela `sit-tribut-relacto-rt`)
+- **Índice renomeado:** `sttrbtrl-cst` → `t-bb48b6963eec419389d39fa46c388e`
+- **Índice renomeado:** `sttrbtrl-emit` → `t-686ec57d749b490997fd2a74472dd6`
+- **Índice renomeado:** `sttrbtrl-gp-emit` → `t-3a8a6056aa764a3b97ae1643b6e549`
+- **Índice renomeado:** `sttrbtrl-oper` → `t-93059df82add4c3ab296c080ae4c32`
+- **Índice renomeado:** `sttrbtrl-id` → `t-dc84251c83ce497d9ec8306127c810`
+- **Índice adicionado:** `sttrbtrl-id` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-dc84251c83ce497d9ec8306127c810` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-bb48b6963eec419389d39fa46c388e` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-686ec57d749b490997fd2a74472dd6` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-3a8a6056aa764a3b97ae1643b6e549` (tabela `sit-tribut-relacto-rt`)
+- **Índice removido:** `t-93059df82add4c3ab296c080ae4c32` (tabela `sit-tribut-relacto-rt`)
